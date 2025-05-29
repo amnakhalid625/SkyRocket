@@ -12,7 +12,8 @@ export default {
         accent: '#848689', 
         hoverColor: '#B9E024', 
         textColor: '#0A0D14', 
-        secondaryTextColor: '#898A8E', 
+        secondaryTextColor: '#525866', 
+        backgroundColor: '#F4F7FB',
 
       },
       fontFamily: {

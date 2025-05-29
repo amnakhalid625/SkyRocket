@@ -91,7 +91,7 @@ const ServicesSection = () => {
                     <h1 className="text-4xl md:text-[56px] lg:text-5xl font-semibold text-white mb-8 leading-tight">
                         Skyrocket Your Business with All-in-One Digital Solutions
                     </h1>
-                    <p className="md:text-[18px] text-white max-w-2xl mx-auto leading-tight mb-8">
+                    <p className="md:text-[18px] text-white max-w-2xl mx-auto tracking-tightest mb-8">
                         We help businesses grow online with custom detroit web design, smart SEO,
                         engaging social media, and eye-catching branding. Whether you're starting
                         fresh or scaling up, we'll tailor everything to fit your goals — with a clear
