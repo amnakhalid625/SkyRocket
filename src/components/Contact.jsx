@@ -40,10 +40,10 @@ const Contact = () => {
             {/* Content */}
             <div className="cta-content relative z-10">
               <div className="inline-block bg-secondary text-black px-4 py-1 rounded-full text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
-              OUR PROCESS
+contact us
             </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Skyrocket Results with Marketing That Makes Sense!
+               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-white mb-4 sm:mb-6 leading-tight">
+                Skyrocket Results with Marketing That Makes Sense!           
               </h2>
               <div className="max-w-lg">
                 <p className="text-blue-100 text-lg leading-relaxed mb-8">
