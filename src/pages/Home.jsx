@@ -5,6 +5,8 @@ import Process from '../components/Process'
 import About from '../components/About'
 import CaseStudies from '../components/CaseStudy'
 import Testimonials from '../components/Testimonials'
+import Blogs from '../components/Blogs'
+import Contact from '../components/Contact'
 
 const Home = () => {
   return (
@@ -15,6 +17,8 @@ const Home = () => {
     <About />
     <CaseStudies />
     <Testimonials />
+    <Blogs />
+    <Contact />
     </>
   )
 }
