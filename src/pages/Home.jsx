@@ -4,6 +4,7 @@ import ServicesSection from '../components/DigitalSolutions'
 import Process from '../components/Process'
 import About from '../components/About'
 import CaseStudies from '../components/CaseStudy'
+import Testimonials from '../components/Testimonials'
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
     <Process />
     <About />
     <CaseStudies />
+    <Testimonials />
     </>
   )
 }
