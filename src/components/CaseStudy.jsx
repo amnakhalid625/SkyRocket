@@ -1,4 +1,3 @@
-import React from 'react';
 import arrow from '../assets/images/staright-arrow.svg';
 import form1 from '../assets/images/form1.webp';
 import form2 from '../assets/images/form2.webp';
