@@ -5,6 +5,7 @@ import rockImage from '../assets/images/rocket.png';
 import batchImg from '../assets/images/batch.svg';
 import puzzleImg from '../assets/images/puzzle.svg';
 import graphLineImg from '../assets/images/graphLine.svg';
+import navArrow from '../assets/images/NavArrow.svg';
 
 const Hero = () => {
   return (
@@ -20,41 +21,59 @@ const Hero = () => {
             <span className="text-xs font-semibold">ALL-IN-ONE WEB DESIGN & MARKETING AGENCY</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 mb-6 leading-tight tracking-tight">
             Skyrocket your Detroit<br />Business with Proven<br />Strategies
           </h1>
 
-          <p className="text-base sm:text-lg text-secondaryTextColor mb-8 max-w-[450px]">
+          <p className="text-base sm:text-lg text-secondaryTextColor mb-8 max-w-[450px] tracking-tight">
             <span className='font-bold'>Custom Websites. Smart Marketing. Real Results.</span> We design, build, and grow your online presence—so you can focus on what you do best.
           </p>
 
           <div className="flex flex-row sm:flex-row gap-4 mb-12">
-            <button className="w-full sm:w-auto bg-secondary hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition duration-200">
-              Get in Touch →
-            </button>
-            <button className="w-full sm:w-auto border border-primary hover:border-blue-600 text-primary hover:text-blue-600 font-medium py-3 px-6 rounded-full transition duration-200">
+            <a
+              href="/get-in-touch"
+              className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
+            >
+              <span className="transition-transform duration-300 group-hover:translate-x-1 font-medium">
+                Get in Touch 
+              </span>
+              <img
+                src={navArrow}
+                alt="navigation arrow"
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </a>
+
+            <button className="w-full sm:w-auto border border-primary hover:border-primary text-primary hover:text-bluehover font-medium py-3 px-6 rounded-full transition duration-200">
               See all Services
             </button>
           </div>
 
           <div className="flex flex-wrap gap-6 sm:gap-10">
-            <div className="min-w-[100px] text-center sm:text-left">
-              <p className="text-2xl sm:text-3xl font-medium text-black">350+</p>
-              <p className="text-gray-600">Web Design Projects</p>
-            </div>
-            <div className="min-w-[100px] text-center sm:text-left">
-              <p className="text-2xl sm:text-3xl font-medium text-black">170+</p>
-              <p className="text-gray-600">Marketing Projects</p>
-            </div>
-            <div className="min-w-[100px] text-center sm:text-left">
-              <p className="text-2xl sm:text-3xl font-medium text-black">90+</p>
-              <p className="text-gray-600">Social Media Projects</p>
-            </div>
-          </div>
+  <div className="min-w-[100px] text-center sm:text-left">
+    <p className="text-2xl sm:text-3xl font-medium text-black">
+      350<span className="text-primary">+</span>
+    </p>
+    <p className="text-gray-600">Web Design Projects</p>
+  </div>
+  <div className="min-w-[100px] text-center sm:text-left">
+    <p className="text-2xl sm:text-3xl font-medium text-black">
+      170<span className="text-primary">+</span>
+    </p>
+    <p className="text-gray-600">Marketing Projects</p>
+  </div>
+  <div className="min-w-[100px] text-center sm:text-left">
+    <p className="text-2xl sm:text-3xl font-medium text-black">
+      90<span className="text-primary">+</span>
+    </p>
+    <p className="text-gray-600">Social Media Projects</p>
+  </div>
+</div>
+
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full md:w-[40%] relative mt-6 md:mt-0">
+        <div className="w-full md:w-[40%] relative mt-6 md:mt-0 lg:mt-[-30px]">
           <div className="relative">
             <img
               src={HomeImage}
@@ -75,21 +94,21 @@ const Hero = () => {
                 <div className="p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <img src={batchImg} alt="Award" className="w-7 h-7" />
                 </div>
-                <h3 className="font-medium text-lg text-gray-800">Award-Winning Team</h3>
+                <h3 className="font-medium text-lg text-textColor text-tighter">Award-Winning Team</h3>
               </div>
 
               <div className="flex items-center mb-3">
                 <div className="p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <img src={puzzleImg} alt="Solutions" className="w-7 h-7" />
                 </div>
-                <h3 className="font-medium text-lg text-gray-800">Tailored Solutions</h3>
+                <h3 className="font-medium text-lg text-textColor text-tighter">Tailored Solutions</h3>
               </div>
 
               <div className="flex items-center">
                 <div className="p-2 rounded-full w-10 h-10 flex items-center justify-center">
                   <img src={graphLineImg} alt="Results" className="w-7 h-7" />
                 </div>
-                <h3 className="font-medium text-lg text-gray-800">Proven Results</h3>
+                <h3 className="font-medium text-lg text-textColor text-tighter">Proven Results</h3>
               </div>
             </div>
           </div>

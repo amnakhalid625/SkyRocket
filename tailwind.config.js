@@ -14,6 +14,8 @@ export default {
         textColor: '#0A0D14',
         secondaryTextColor: '#525866',
         backgroundColor: '#F4F7FB',
+        buttonhover:'#B9E024',
+        bluehover:'#2563EB'
       },
       fontFamily: {
         // Primary font stack - Inter first, then system sans-serif fallback
