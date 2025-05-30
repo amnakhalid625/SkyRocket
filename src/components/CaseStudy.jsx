@@ -4,15 +4,15 @@ import topArrow from '../assets/images/topArrow.svg';
 
 const CaseStudies = () => {
     return (
-        <div className="bg-white text-gray-700 px-4 sm:px-6 py-12 md:py-16">
+        <div className="bg-white text-secondaryTextColor px-4 sm:px-6 py-12 md:py-16">
             <div className="max-w-[83rem] mx-auto">
                 {/* Header Section */}
                 <div className="flex flex-col lg:flex-row justify-between items-start mb-8 md:mb-16">
                     <div className="flex-1">
-                        <div className="inline-block bg-secondary text-black px-4 py-1 rounded-full text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
+                        <div className="inline-block bg-secondary text-textColor px-4 py-1 rounded-full text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
                             skyrocket business in Action
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-gray-900 mb-4 sm:mb-6 leading-tight tracking-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-textColor mb-4 sm:mb-6 leading-tight tracking-tight">
                             Transforming Brands with Detroit Web Design & Marketing Excellence.
                         </h2>
                         <div className="flex flex-col lg:flex-row items-start justify-between lg:items-center gap-4 sm:gap-6">
