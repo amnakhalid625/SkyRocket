@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import HomeImage from "../assets/images/man.webp";
 import rockImage from "../assets/images/rocket.png";
 import batchImg from "../assets/images/batch.svg";
@@ -10,19 +9,13 @@ import navArrow from "../assets/images/NavArrow.svg";
 const Hero = () => {
   return (
     <>
-      <Navbar />
-
       {/* Main container */}
       <div className="mt-10 flex flex-col md:flex-wrap lg:flex-nowrap lg:flex-row lg:gap-6 items-start justify-between px-4 sm:px-6 md:px-12 pb-8 lg:pt-20 bg-white w-full max-w-[1450px] mx-auto container">
         {/* Left Section */}
         <div className="w-full mb-8">
           <div className="flex items-center w-fit bg-[#D1FF00] text-black py-2 px-4 md:py-2.5 md:px-5 rounded-full mb-2">
             <div className="bg-[#3B00FF] p-1 rounded-sm md:p-1.5 mr-2 flex items-center justify-center">
-              <img
-                src={rockImage}
-                alt="rocket"
-                className="w-2 h-2 object-cover"
-              />
+              <img src={rockImage} alt="rocket" className="w-2 h-2 object-cover" />
             </div>
             <span className="text-[0.75rem] font-medium break-words">
               ALL-IN-ONE WEB DESIGN & MARKETING AGENCY
@@ -34,11 +27,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-secondaryTextColor mb-8 max-w-[450px] tracking-tight">
-            <span className="font-bold">
-              Custom Websites. Smart Marketing. Real Results.
-            </span>{" "}
-            We design, build, and grow your online presence—so you can focus on
-            what you do best.
+            <span className="font-bold">Custom Websites. Smart Marketing. Real Results.</span>{" "}
+            We design, build, and grow your online presence—so you can focus on what you do best.
           </p>
 
           <div className="flex flex-wrap items-center flex-row sm:flex-row gap-4 mb-12">
@@ -61,44 +51,36 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="flex items-center justify-center md:justify-start">
-            <div className="grid grid-cols-3 gap-3 sm:gap-28 lg:gap-10 text-center sm:text-left">
-              <div className="max-w-[90px] text-center md:text-start">
-                <p className="text-2xl sm:text-3xl md:text-[2rem] font-medium text-black">
-                  350<span className="text-primary">+</span>
-                </p>
-                <p className="text-[.75rem] md:text-[1rem] text-gray-600">
-                  Web Design Projects
-                </p>
-              </div>
-              <div className="min-w-[90px] text-center md:text-start">
-                <p className="text-2xl sm:text-3xl md:text-[2rem] font-medium text-black">
-                  170<span className="text-primary">+</span>
-                </p>
-                <p className="text-[.75rem] md:text-[1rem] text-gray-600">
-                  Marketing Projects
-                </p>
-              </div>
-              <div className="min-w-[90px] text-center md:text-start">
-                <p className="text-2xl sm:text-3xl md:text-[2rem] font-medium text-black">
-                  90<span className="text-primary">+</span>
-                </p>
-                <p className="text-[.75rem] md:text-[1rem] text-gray-600">
-                  Social Media Projects
-                </p>
-              </div>
+          {/* Stats section merged and cleaned */}
+          <div className="flex flex-wrap gap-6 sm:gap-10">
+            <div className="min-w-[100px] text-center sm:text-left">
+              <p className="text-2xl sm:text-3xl font-medium text-black">
+                350<span className="text-primary">+</span>
+              </p>
+              <p className="text-gray-600">Web Design Projects</p>
+            </div>
+            <div className="min-w-[100px] text-center sm:text-left">
+              <p className="text-2xl sm:text-3xl font-medium text-black">
+                170<span className="text-primary">+</span>
+              </p>
+              <p className="text-gray-600">Marketing Projects</p>
+            </div>
+            <div className="min-w-[100px] text-center sm:text-left">
+              <p className="text-2xl sm:text-3xl font-medium text-black">
+                90<span className="text-primary">+</span>
+              </p>
+              <p className="text-gray-600">Social Media Projects</p>
             </div>
           </div>
         </div>
+
         {/* Right Image Section */}
         <div className="w-full md:w-[70%] pb-20 lg:max-w-lg md:mx-0 relative md:left-20 lg:left-0 mt-6 md:mt-0 lg:mt-[-30px]">
           <img
             src={HomeImage}
             alt="Business man"
             className="w-full sm:w-[90%] sm:mx-auto md:w-full h-auto sm:max-h-[25rem] md:max-h-[30rem] lg:max-h-[35rem] rounded-[20px] object-cover"
-            style={{
-              objectPosition: "top",
-            }}
+            style={{ objectPosition: "top" }}
           />
 
           <div

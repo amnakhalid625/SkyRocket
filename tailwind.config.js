@@ -26,6 +26,13 @@ export default {
         
         'serif': ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       },
+      top: {
+        '9': '18rem',   
+        '72': '18rem',    
+      },
+      screens: {
+        'custom-md': '982px',
+      },
     },
   },
   plugins: [],

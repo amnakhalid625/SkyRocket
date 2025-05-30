@@ -1,3 +1,4 @@
+import React from 'react';
 import navArrow from '../assets/images/NavArrow.svg';
 import servicesPattern from '../assets/images/bg.svg';
 import servicesPattern2 from '../assets/images/backImg.svg';
@@ -8,25 +9,24 @@ import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-
 const AboutUsDetails = () => {
   return (
     <>
-      <section className="  bg-white">
-        <div className="px-4 sm:px-6 md:padding-global py-12">
-          <div className="mx-auto">
+      <section className="bg-white">
+        <div className="px-4 sm:px-6 md:padding-global py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
+          <div className="mx-auto max-w-7xl">
             {/* Intro Text */}
             <div className="text-center">
               <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1">
                 Discover skyrocket business
               </div>
-              <div className="h-4"></div>
+              <div className="h-4" />
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight tracking-tight">
                   Your Partner in Web Design & Marketing Excellence
                 </h2>
               </div>
-              <div className="h-4"></div>
+              <div className="h-4" />
               <div className="max-w-2xl mx-auto">
                 <p className="text-base md:text-lg text-secondaryTextColor leading-relaxed mb-8 font-medium">
                   Welcome to Skyrocket Business, where innovation meets strategy to drive your brand's success.
@@ -51,7 +51,7 @@ const AboutUsDetails = () => {
                 />
               </a>
 
-              {/* Join the Team Button (same width) */}
+              {/* Join the Team Button */}
               <button className="border border-primary hover:border-primary text-primary hover:text-bluehover font-medium py-3 px-6 rounded-full transition duration-200 min-w-[180px]">
                 Join the Team
               </button>
@@ -69,45 +69,45 @@ const AboutUsDetails = () => {
         </div>
 
         {/* Stats Section */}
-<div className="bg-primary px-3 sm:px-4 md:px-6 lg:px-10 xl:px-20 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-16 relative overflow-hidden text-white text-center">
-  {/* Top Pattern */}
-  <img
-    src={servicesPattern}
-    alt=""
-    className="absolute -top-16 -right-16 sm:-top-20 sm:-right-20 md:-top-24 md:-right-24 lg:-top-28 lg:-right-32 w-32 sm:w-40 md:w-48 lg:w-64 xl:w-72 pointer-events-none transform scale-110 hover:scale-125 transition-transform duration-500 ease-in-out opacity-90"
-  />
+        <div className="bg-primary px-3 sm:px-4 md:px-6 lg:px-10 xl:px-20 py-4 sm:py-6 md:py-8 lg:py-10 xl:py-16 relative overflow-hidden text-white text-center">
+          {/* Top Pattern */}
+          <img
+            src={servicesPattern}
+            alt=""
+            className="absolute -top-16 -right-16 sm:-top-20 sm:-right-20 md:-top-24 md:-right-24 lg:-top-28 lg:-right-32 w-32 sm:w-40 md:w-48 lg:w-64 xl:w-72 pointer-events-none transform scale-110 hover:scale-125 transition-transform duration-500 ease-in-out opacity-90"
+          />
 
-  {/* Bottom Pattern */}
-  <img
-    src={servicesPattern2}
-    alt=""
-    className="absolute -bottom-16 -left-16 sm:-bottom-20 sm:-left-20 md:-bottom-24 md:-left-24 lg:-bottom-28 lg:-left-32 w-32 sm:w-40 md:w-48 lg:w-64 xl:w-72 pointer-events-none transform scale-110 hover:scale-125 transition-transform duration-500 ease-in-out opacity-90"
-  />
+          {/* Bottom Pattern */}
+          <img
+            src={servicesPattern2}
+            alt=""
+            className="absolute -bottom-16 -left-16 sm:-bottom-20 sm:-left-20 md:-bottom-24 md:-left-24 lg:-bottom-28 lg:-left-32 w-32 sm:w-40 md:w-48 lg:w-64 xl:w-72 pointer-events-none transform scale-110 hover:scale-125 transition-transform duration-500 ease-in-out opacity-90"
+          />
 
-  {/* Flex Items */}
-<div className="relative z-10 flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 max-w-7xl mx-auto mt-4 sm:mt-6 md:mt-8">
-    <div className="min-w-[100px]">
-      <div className="text-3xl sm:text-4xl md:text-5xl font-medium">
-        350<span className="text-secondary">+</span>
-      </div>
-      <p className="mt-1 sm:mt-2 text-sm sm:text-base md:text-lg">Web Design Projects</p>
-    </div>
-    <div className="min-w-[100px]">
-      <div className="text-3xl sm:text-4xl md:text-5xl font-medium">
-        170<span className="text-secondary">+</span>
-      </div>
-      <p className="mt-1 sm:mt-2 text-sm sm:text-base md:text-lg">Marketing Projects</p>
-    </div>
-    <div className="min-w-[100px]">
-      <div className="text-3xl sm:text-4xl md:text-5xl font-medium">
-        90<span className="text-secondary">+</span>
-      </div>
-      <p className="mt-1 sm:mt-2 text-sm sm:text-base md:text-lg">Social Media Projects</p>
-    </div>
-  </div>
-</div>
+          {/* Flex Items */}
+          <div className="relative z-10 flex flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 max-w-7xl mx-auto mt-4 sm:mt-6 md:mt-8">
+            <div className="min-w-[100px]">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-medium">
+                350<span className="text-secondary">+</span>
+              </div>
+              <p className="mt-1 sm:mt-2 text-sm sm:text-base md:text-lg">Web Design Projects</p>
+            </div>
+            <div className="min-w-[100px]">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-medium">
+                170<span className="text-secondary">+</span>
+              </div>
+              <p className="mt-1 sm:mt-2 text-sm sm:text-base md:text-lg">Marketing Projects</p>
+            </div>
+            <div className="min-w-[100px]">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-medium">
+                90<span className="text-secondary">+</span>
+              </div>
+              <p className="mt-1 sm:mt-2 text-sm sm:text-base md:text-lg">Social Media Projects</p>
+            </div>
+          </div>
+        </div>
 
-
+        {/* Other Sections */}
         <Mission />
         <OurValues />
         <Team />
