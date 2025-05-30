@@ -5,7 +5,7 @@ import blogImage2 from '../assets/images/blog2.jpg';
 import blogImage3 from '../assets/images/blog3.jpg';
 import calendarIcon from '../assets/images/calendar-icon.svg';
 import dotIcon from '../assets/images/dot-icon.svg';
-import rightArrow from '../assets/images/arrow3.svg';
+import rightArrow from '../assets/images/blueArrow.svg';
 
 const Blogs = () => {
   const blogPosts = [

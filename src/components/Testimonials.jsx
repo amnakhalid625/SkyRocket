@@ -2,7 +2,7 @@ import servicesPattern from '../assets/images/bg.svg';
 import servicesPattern2 from '../assets/images/backImg.svg';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
+import blueArrow from '../assets/images/blueArrow.svg';
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isFading, setIsFading] = useState(false);
@@ -59,13 +59,13 @@ const Testimonials = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-block bg-secondary text-black px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-8">
+          <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-8">
             OUR TESTIMONIALS
           </div>
-          <h1 className="text-3xl md:text-[48px] lg:text-[44px] font-semibold text-white mb-8 leading-tight max-w-4xl mx-auto">
+          <h1 className="text-3xl md:text-[48px] lg:text-[56px] font-semibold text-white mb-8 leading-tight max-w-2xl mx-auto tracking-tight">
             What Our Clients Say About Working with Skyrocket Business
           </h1>
-          <p className="md:text-[18px] text-white max-w-2xl mx-auto tracking-tightest mb-8">
+          <p className="md:text-[18px] text-white max-w-2xl mx-auto tracking-tight mb-8 font-medium">
             Real words from real businesses. Here's how Skyrocket Business helped them grow, connect, and succeed in the digital space.
           </p>
         </div>
@@ -95,17 +95,21 @@ const Testimonials = () => {
                   loading="lazy"
                 />
                 <div className="flex gap-4">
-                  <button 
-                    onClick={prevTestimonial}
-                    className="w-12 h-12 rounded-full border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white transition-all duration-200 flex items-center justify-center shadow-lg"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
+                 <button                      
+  onClick={prevTestimonial}                     
+  className="w-12 h-12 rounded-full border border-primary bg-white text-primary hover:text-white transition-all duration-200 flex items-center justify-center shadow-lg"                   
+>                     
+  <img 
+    src={blueArrow} 
+    alt="arrow" 
+    className="w-5 h-5 transform rotate-180" 
+  />                   
+</button>
                   <button 
                     onClick={nextTestimonial}
-                    className="w-12 h-12 rounded-full border-2 border-primary bg-white text-primary hover:bg-primary hover:text-white transition-all duration-200 flex items-center justify-center shadow-lg"
+                    className="w-12 h-12 rounded-full border border-primary bg-white text-primary  hover:text-white transition-all duration-200 flex items-center justify-center shadow-lg"
                   >
-                    <ChevronRight className="w-5 h-5" />
+                    <img src={blueArrow} alt="arrow" className="w-5 h-5" />
                   </button>
                 </div>
               </div>
