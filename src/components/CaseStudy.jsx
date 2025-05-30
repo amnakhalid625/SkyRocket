@@ -1,6 +1,5 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import arrow from '../assets/images/staright-arrow.svg';
+import topArrow from '../assets/images/topArrow.svg';
 
 
 const CaseStudies = () => {
@@ -13,21 +12,21 @@ const CaseStudies = () => {
                         <div className="inline-block bg-secondary text-black px-4 py-1 rounded-full text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
                             skyrocket business in Action
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-gray-900 mb-4 sm:mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-gray-900 mb-4 sm:mb-6 leading-tight tracking-tight">
                             Transforming Brands with Detroit Web Design & Marketing Excellence.
                         </h2>
                         <div className="flex flex-col lg:flex-row items-start justify-between lg:items-center gap-4 sm:gap-6">
-                            <p className="text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed">
+                            <p className="text-base sm:text-lg text-secondaryTextColor max-w-2xl leading-relaxed">
                                 Here are some of our standout case studies that showcase our expertise and commitment to excellence
                             </p>
                             {/* Buttons - hidden on mobile and sm (md and below), visible from md up */}
                             <div className="hidden md:flex gap-4 flex-wrap">
-                                <button className="bg-secondary text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-lime-400 transition-all duration-300 ease-in-out flex items-center gap-2 whitespace-nowrap">
+                                <button className="bg-secondary text-textColor px-6 py-3 rounded-full font-semibold hover:bg-lime-400 transition-all duration-300 ease-in-out flex items-center gap-2 whitespace-nowrap">
                                     Get in Touch
                                     <img src={arrow} alt="" />
 
                                 </button>
-                                <button className="border border-primary hover:border-primary text-primary hover:text-primary font-medium py-3 px-6 rounded-full transition-all duration-300 ease-in-out">
+                                <button className="border border-primary hover:border-bluehover text-primary hover:text-bluehover font-medium py-3 px-6 rounded-full transition-all duration-300 ease-in-out">
                                     All Case Studies
                                 </button>
                             </div>
@@ -52,15 +51,15 @@ const CaseStudies = () => {
                         
                         <div className="flex-1 flex flex-col">
                             <div>
-                                <h3 className="text-xl lg:text-2xl font-medium text-gray-900 mb-3 leading-tight transition-colors duration-300 group-hover:text-primary">
+                                <h3 className="text-xl lg:text-2xl font-medium text-textColor mb-3 leading-tight transition-colors duration-300 group-hover:text-primary">
                                     LeHost Hair & Wig Shop: Boosting Online<br/> Presence and Sales
                                 </h3>
                                 <div className="flex justify-between items-start gap-4">
                                     <p className="text-secondaryTextColor  leading-relaxed flex-1 transition-colors duration-300 group-hover:text-gray-800">
                                         We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic increase, 120% boost in social media engagement, and a 30% rise in online sales
                                     </p>
-                                    <div className="bg-secondary group-hover:bg-lime-400 rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
-                                        <ArrowUpRight className="w-6 h-6 text-textColor transition-transform duration-300" />
+                                    <div className="bg-secondary group-hover:bg-hoverColor rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
+                                        <img src={topArrow} alt="topArrow" className="w-6 h-6 text-textColor transition-transform duration-300" />
                                     </div>
                                 </div>
                             </div>
@@ -89,8 +88,8 @@ const CaseStudies = () => {
                                     <p className="text-gray-600 leading-relaxed flex-1 transition-colors duration-300 group-hover:text-gray-800">
                                         We designed Mop and Glow's website and launched a local SEO strategy—leading to a 75% traffic boost and 60% more leads in just two months.
                                     </p>
-                                    <div className="bg-secondary group-hover:bg-lime-400 rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
-                                        <ArrowUpRight className="w-6 h-6 text-gray-900 transition-transform duration-300" />
+                                    <div className="bg-secondary group-hover:bg-hoverColor rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
+                                        <img src={topArrow} alt="topArrow" className="w-6 h-6 text-gray-900 transition-transform duration-300" />
                                     </div>
                                 </div>
                             </div>
