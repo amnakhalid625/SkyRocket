@@ -38,7 +38,7 @@ const Process = () => {
         </div>
 
         {/* Process Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* Step 1 - Discovery & Strategy */}
           <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
             <div className="overflow-hidden rounded-xl bg-gray-50 mb-4 sm:mb-6">

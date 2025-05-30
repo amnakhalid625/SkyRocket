@@ -49,7 +49,7 @@ const Blogs = () => {
                 skyrocket business blog
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 sm:mb-6 leading-tight">
-                The Skyrocket Business<br/> Blog: Insights for your<br/> Digital Growth              
+                The Skyrocket Business<br /> Blog: Insights for your<br /> Digital Growth
               </h2>
               <div className="flex flex-col lg:flex-row items-start justify-between lg:items-end gap-4 sm:gap-6">
                 {/* Buttons - hidden on mobile, sm, and md - only visible from lg up */}
@@ -70,23 +70,23 @@ const Blogs = () => {
 
           <div className="h-4"></div>
 
-          {/* Blog Posts Grid - Updated spacing and zoom effect */}
+          {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogPosts.map((post) => (
-              <div 
-                key={post.id} 
+              <div
+                key={post.id}
                 className="bg-white"
               >
                 <a href={post.link} className="block group text-decoration-none">
-                  {/* Image Container - Zoom effect on hover with responsive heights */}
-                  <div className="w-full overflow-hidden rounded-[24px] mb-3 h-48 sm:h-52 md:h-56 lg:h-auto">
-                    <img 
-                      src={post.image} 
+                  {/* Image Container - Updated height for md and below */}
+                  <div className="w-full overflow-hidden rounded-[24px] mb-3 h-60 sm:h-64 md:h-72 lg:h-auto">
+                    <img
+                      src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-[24px] lg:h-auto"
                     />
                   </div>
-                  
+
                   {/* Category and Date */}
                   <div className="flex items-center text-sm text-gray-500 mb-2">
                     <span className="text-gray-600">{post.category}</span>
@@ -96,7 +96,7 @@ const Blogs = () => {
                       <span>{post.date}</span>
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
