@@ -1,7 +1,6 @@
+import React from 'react';
 import arrowIcon from '../assets/images/staright-arrow.svg';
 import mapImage from '../assets/images/map.webp';
-import navArrow from '../assets/images/NavArrow.svg';
-
 
 const Contact = () => {
   return (
@@ -42,18 +41,16 @@ const Contact = () => {
             {/* Button Group */}
             <div className="button-group relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-end items-center lg:items-end text-center">
               <a 
-                            href="/contact-us" 
-                            className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
-                          >
-                            <span className="transition-transform duration-300 group-hover:translate-x-1">
-                              Contact Us
-                            </span>
-                            <img 
-                              src={navArrow}
-                              alt="navigation arrow" 
-                              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"  
-                            />
-                          </a>
+                href="/contact" 
+                className="bg-lime-400 text-black px-8 py-4 rounded-full font-bold hover:bg-lime-300 transition-all flex items-center justify-center gap-3 whitespace-nowrap shadow-lg"
+              >
+                <span>Get in Touch</span>
+                <img 
+                  src={arrowIcon} 
+                  alt="" 
+                  className="w-5 h-5" 
+                />
+              </a>
               <a 
                 href="/services" 
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-4 px-8 rounded-full transition-all"

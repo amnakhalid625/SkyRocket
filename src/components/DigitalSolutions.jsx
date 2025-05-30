@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
+import { ChevronRight } from 'lucide-react';
 import servicesPattern from '../assets/images/bg.svg';
 import servicesPattern2 from '../assets/images/backImg.svg';
-import openArrow from '../assets/images/openingArrow.svg';
-import tick from '../assets/images/tick.svg';
 
 const ServicesSection = () => {
     const [expandedService, setExpandedService] = useState(null);
@@ -75,7 +74,7 @@ const ServicesSection = () => {
     ];
 
     return (
-        <div className="bg-primary px-4 sm:px-8 md:px-12 lg:px-16 py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden">
+        <div className="bg-primary px-4 sm:px-8 py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden">
             {/* Top Right Decorative Image - Show on all devices */}
             <img
                 src={servicesPattern}
@@ -89,10 +88,10 @@ const ServicesSection = () => {
                     <div className="inline-block bg-secondary text-black px-3 sm:px-4 py-1 sm:py-[5px] mx-auto rounded-full text-[10px] sm:text-[12px] font-semibold uppercase tracking-wider mb-3 sm:mb-4 md:mb-6 lg:mb-8">
                         OUR SERVICES
                     </div>
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight tracking-tight px-2 break-words">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight px-2 break-words">
                         Skyrocket Your Business with All-in-One Digital Solutions
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words tracking-tight">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words">
                         We help businesses grow online with custom detroit web design, smart SEO,
                         engaging social media, and eye-catching branding. Whether you're starting
                         fresh or scaling up, we'll tailor everything to fit your goals — with a clear
@@ -101,7 +100,7 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Services Cards - Responsive spacing with proper width */}
-                <div className="services-mega-wrap space-y-3 sm:space-y-6 px-0 sm:px-2 md:px-4  lg:px-8">
+                <div className="services-mega-wrap space-y-3 sm:space-y-6 px-0">
                     {services.map((service, index) => {
                         const isOpen = expandedService === index;
                         return (
@@ -124,15 +123,13 @@ const ServicesSection = () => {
                                         </h3>
                                     </div>
                                     <div
-                                        className={`services-arrow-wrap rounded-full p-2 sm:p-3 md:p-4 transition-transform duration-300 flex-shrink-0 ${
-                                            isOpen ? 'bg-buttonhover' : 'bg-secondary'
-                                        }`}
+                                        className="services-arrow-wrap bg-secondary rounded-full p-2 sm:p-3 md:p-4 transition-transform duration-300 flex-shrink-0"
                                         style={{
                                             transform: isOpen ? 'rotateZ(90deg)' : 'rotateZ(0deg)',
                                             transformStyle: 'preserve-3d',
                                         }}
                                     >
-                                        <img src={openArrow} className="services-arrow w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-textColor" />
+                                        <ChevronRight className="services-arrow w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-black" />
                                     </div>
                                 </div>
 
@@ -147,7 +144,7 @@ const ServicesSection = () => {
                                 >
                                     {isOpen && (
                                         <div className="px-3 sm:px-4 md:px-6 lg:px-8 pb-3 sm:pb-4 md:pb-6 pt-1 sm:pt-2 md:pt-4 lg:pt-6 bg-secondary text-left">
-                                            <p className="text-textColor text-sm sm:text-base md:text-xs lg:text-xl leading-relaxed mb-3 sm:mb-4 md:mb-6 max-w-5xl break-words">
+                                            <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-3 sm:mb-4 md:mb-6 max-w-5xl break-words">
                                                 {service.description}
                                             </p>
 
@@ -155,8 +152,19 @@ const ServicesSection = () => {
                                             <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-3 sm:mb-4 md:mb-6">
                                                 {service.features.map((feature, i) => (
                                                     <div key={i} className="flex items-center min-w-0">
-                                                       <img src={tick} alt="tick" />
-                                                        <span className="text-textColor font-medium text-sm sm:text-base md:text-lg break-words min-w-0">
+                                                        <svg
+                                                            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 text-primary flex-shrink-0"
+                                                            fill="currentColor"
+                                                            viewBox="0 0 20 20"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path
+                                                                fillRule="evenodd"
+                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                                clipRule="evenodd"
+                                                            />
+                                                        </svg>
+                                                        <span className="text-black font-medium text-sm sm:text-base md:text-lg break-words min-w-0">
                                                             {feature}
                                                         </span>
                                                     </div>
@@ -166,7 +174,7 @@ const ServicesSection = () => {
                                             {/* Learn More Button - Responsive sizing */}
                                             <a
                                                 href={service.link}
-                                                className="inline-flex items-center px-3 sm:px-[1.5rem] py-2 sm:py-3 rounded-full bg-white text-textColor text-sm sm:text-base font-semibold hover:bg-backgroundColor transition-all duration-300"
+                                                className="inline-flex items-center px-4 sm:px-6 py-3 sm:py-4 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300"
                                             >
                                                 <span>Learn More</span>
                                                 <svg
@@ -193,7 +201,7 @@ const ServicesSection = () => {
                 </div>
             </div>
 
-            {/* Bottom Left  Image  */}
+            {/* Bottom Left Decorative Image - Show on all devices */}
             <img
                 src={servicesPattern2}
                 alt=""

@@ -1,83 +1,105 @@
 import React from 'react';
-import logo from '../assets/images/logo.png'
+import { ArrowUpRight } from 'lucide-react';
+import arrow from '../assets/images/staright-arrow.svg';
 
-const About = () => {
-  return (
-    <section className="py-12 md:py-[80px] bg-backgroundColor">
-      <div className="px-4 sm:px-6 md:padding-global">
-        <div className="mx-auto">
-          <div className="text-center">
-            <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1">
-              about skyrocket business
-            </div>
-            <div className="h-4"></div>
-            <div className="max-w-2xl mx-auto">
-              <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight tracking-tight">
-                Your Partner in Detroit<br className="hidden sm:inline" /> Web Design & Marketing Excellence
-              </h2>
-            </div>
-            <div className="h-4"></div>
-            <div className="max-w-2xl mx-auto">
-              <p className="text-base md:text-lg text-secondaryTextColor leading-relaxed mb-8 font-medium">
-                We help Detroit businesses grow online with custom websites, smart SEO, engaging social media, and eye-catching branding. Whether you're starting fresh or scaling up, we'll tailor everything to fit your goals — with a clear focus on results and real growth.
-              </p>
-            </div>
-          </div>
-          
-          {/* Image container with increased height */}
-          <div className="max-w-[80rem] mx-auto relative">
-            <img
-              src="https://cdn.prod.website-files.com/6807e00032c9ff6c11834a8f/6807e00132c9ff6c11834c51_about.webp"
-              alt="Team"
-              className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-[24px] mb-6"
-            />
-            
-            {/* Responsive card positioning */}
-            <div className="hidden md:block bg-white rounded-[24px] p-5 w-[90%] max-w-[550px] shadow-md absolute right-4 bottom-4
-                          sm:[770px]:w-[80%] sm:[770px]:right-6 sm:[770px]:bottom-6
-                          md:[953px]:w-[70%] md:[953px]:right-8 md:[953px]:bottom-8
-                          lg:[1225px]:w-[60%] lg:[1225px]:right-10 lg:[1225px]:bottom-10">
-              <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
-                {/* <img src={logo} className='w-24 h-12' alt="logo" /> */}
-                <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-medium text-textColor mb-2">
-                    350+
-                  </div>
-                  <div className="text-sm md:text-base text-secondaryTextColor font-medium">Web design Projects</div>
+
+const CaseStudies = () => {
+    return (
+        <div className="bg-white text-gray-700 px-4 sm:px-6 py-12 md:py-16">
+            <div className="max-w-[83rem] mx-auto">
+                {/* Header Section */}
+                <div className="flex flex-col lg:flex-row justify-between items-start mb-8 md:mb-16">
+                    <div className="flex-1">
+                        <div className="inline-block bg-secondary text-black px-4 py-1 rounded-full text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
+                            skyrocket business in Action
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-gray-900 mb-4 sm:mb-6 leading-tight">
+                            Transforming Brands with Detroit Web Design & Marketing Excellence.
+                        </h2>
+                        <div className="flex flex-col lg:flex-row items-start justify-between lg:items-center gap-4 sm:gap-6">
+                            <p className="text-base sm:text-lg text-gray-600 max-w-2xl leading-relaxed">
+                                Here are some of our standout case studies that showcase our expertise and commitment to excellence
+                            </p>
+                            {/* Buttons - hidden on mobile and sm (md and below), visible from md up */}
+                            <div className="hidden md:flex gap-4 flex-wrap">
+                                <button className="bg-secondary text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-lime-400 transition-all duration-300 ease-in-out flex items-center gap-2 whitespace-nowrap">
+                                    Get in Touch
+                                    <img src={arrow} alt="" />
+
+                                </button>
+                                <button className="border border-primary hover:border-primary text-primary hover:text-primary font-medium py-3 px-6 rounded-full transition-all duration-300 ease-in-out">
+                                    All Case Studies
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-medium text-textColor mb-2">
-                    170<span className="text-primary">+</span>
-                  </div>
-                  <div className="text-sm md:text-base text-secondaryTextColor font-medium">Marketing Projects</div>
+
+                {/* Case Study Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    {/* LeHost Hair & Wig Shop Card */}
+                    <div className="group bg-white border border-gray-200 rounded-3xl p-6 h-full flex flex-col hover:shadow-lg transition-all duration-500 ease-in-out transform hover:-translate-y-1 cursor-pointer">
+                        <div className="relative mb-6 overflow-hidden rounded-2xl">
+                            <img 
+                                src="https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aadc64351d7745abc4ca_Le%20Host.png"
+                                alt="LeHost Hair & Wig Shop"
+                                className="w-full h-90 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                            />
+                            <div className="absolute top-4 left-4 bg-white backdrop-blur-sm text-textColor px-2 py-1 rounded-full text-sm font-medium transition-all duration-300 ease-in-out group-hover:bg-lime-400 group-hover:text-gray-900">
+                                Web Design & Marketing
+                            </div>
+                        </div>
+                        
+                        <div className="flex-1 flex flex-col">
+                            <div>
+                                <h3 className="text-xl lg:text-2xl font-medium text-gray-900 mb-3 leading-tight transition-colors duration-300 group-hover:text-primary">
+                                    LeHost Hair & Wig Shop: Boosting Online<br/> Presence and Sales
+                                </h3>
+                                <div className="flex justify-between items-start gap-4">
+                                    <p className="text-secondaryTextColor  leading-relaxed flex-1 transition-colors duration-300 group-hover:text-gray-800">
+                                        We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic increase, 120% boost in social media engagement, and a 30% rise in online sales
+                                    </p>
+                                    <div className="bg-secondary group-hover:bg-lime-400 rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
+                                        <ArrowUpRight className="w-6 h-6 text-textColor transition-transform duration-300" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Mop and Glow Cleaning Company Card */}
+                    <div className="group bg-white border border-gray-200 rounded-3xl p-6 h-full flex flex-col hover:shadow-lg transition-all duration-500 ease-in-out transform hover:-translate-y-1 cursor-pointer">
+                        <div className="relative mb-6 overflow-hidden rounded-2xl">
+                            <img 
+                                src="https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/68091316c78417aafba5604b_Untitled.png"
+                                alt="Mop and Glow Cleaning Company"
+                                className="w-full h-90 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                            />
+                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ease-in-out group-hover:bg-lime-400 group-hover:text-gray-900">
+                                Website Design & Digital Marketing
+                            </div>
+                        </div>
+                        
+                        <div className="flex-1 flex flex-col">
+                            <div>
+                                <h3 className="text-xl lg:text-2xl font-medium text-gray-900 mb-3 leading-tight transition-colors duration-300 group-hover:text-primary">
+                                    Mop and Glow Cleaning Company: Building<br/>Trust and Driving Local Leads
+                                </h3>
+                                <div className="flex justify-between items-start gap-4">
+                                    <p className="text-gray-600 leading-relaxed flex-1 transition-colors duration-300 group-hover:text-gray-800">
+                                        We designed Mop and Glow's website and launched a local SEO strategy—leading to a 75% traffic boost and 60% more leads in just two months.
+                                    </p>
+                                    <div className="bg-secondary group-hover:bg-lime-400 rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
+                                        <ArrowUpRight className="w-6 h-6 text-gray-900 transition-transform duration-300" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-medium text-textColor mb-2">
-                    90<span className="text-primary">+</span>
-                  </div>
-                  <div className="text-sm md:text-base text-secondaryTextColor font-medium">Social Media Projects</div>
-                </div>
-              </div>
             </div>
-          </div>
-          
-          <div className="mt-8 flex justify-center">
-            <a
-              href="/about-us"
-              className="button bg-secondary text-textColor px-6 py-3 rounded-full font-semibold inline-flex items-center shadow-md hover:shadow-lg transition-all duration-200"
-            >
-              <span>Learn More</span>
-              <img
-                src="https://cdn.prod.website-files.com/6807e00032c9ff6c11834a8f/6807e00132c9ff6c11834b7a_arrow-right%20(8).svg"
-                alt="Arrow"
-                className="w-4 h-4 ml-2"
-              />
-            </a>
-          </div>
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 
-export default About;
+export default CaseStudies;
