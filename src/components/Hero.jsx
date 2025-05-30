@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="mt-10 flex flex-col md:flex-row items-start justify-between px-4 sm:px-6 md:px-12 lg:px-20 py-8 bg-white w-full max-w-[1450px] mx-auto">
         {/* Left Section */}
         <div className="w-full md:w-[55%] mb-8 md:mb-0">
-          <div className="flex items-center bg-secondary text-black py-2 px-4 rounded-full w-max mb-6">
+          <div className="flex items-center bg-secondary text-black py-2 px-4 rounded-full w-max mb-6 ">
             <img src={rockImage} alt="rocket" className="w-4 h-4 mr-2" />
             <span className="text-xs font-semibold">ALL-IN-ONE WEB DESIGN & MARKETING AGENCY</span>
           </div>
