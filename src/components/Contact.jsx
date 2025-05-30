@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="px-4 sm:px-6">
         <div className="max-w-[83rem] mx-auto">
           <div 
-            className="cta-wrap relative overflow-hidden bg-[#240cf2] text-white rounded-[32px] min-h-[400px] p-6 sm:p-8 lg:p-[5rem] grid lg:grid-cols-[1.25fr_1fr] gap-6 items-center"
+            className="cta-wrap relative overflow-hidden bg-primary text-white rounded-[32px] min-h-[400px] p-6 sm:p-8 lg:p-[5rem] grid lg:grid-cols-[1.25fr_1fr] gap-6 items-center"
           >
             {/* Background Image */}
             <div 
@@ -28,11 +28,11 @@ const Contact = () => {
               <div className="inline-block bg-secondary text-black px-4 py-1 rounded-full text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
                 contact us
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-white">
                 Skyrocket Results with Marketing That Makes Sense!
               </h2>
               <div className="max-w-lg mx-auto lg:mx-0">
-                <p className="text-blue-100 text-lg leading-relaxed mb-8">
+                <p className=" text-lg leading-relaxed mb-8 text-white tracking-tight">
                   Join the hundreds of satisfied clients who have transformed their business with Skyrocket Business. Contact us today to get started!
                 </p>
               </div>
@@ -41,21 +41,23 @@ const Contact = () => {
             {/* Button Group */}
             <div className="button-group relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-end items-center lg:items-end text-center">
               <a 
-                href="/contact" 
-                className="bg-lime-400 text-black px-8 py-4 rounded-full font-bold hover:bg-lime-300 transition-all flex items-center justify-center gap-3 whitespace-nowrap shadow-lg"
+                href="/contact-us" 
+                className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
               >
-                <span>Get in Touch</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  Get in Touch
+                </span>
                 <img 
-                  src={arrowIcon} 
-                  alt="" 
-                  className="w-5 h-5" 
+                  src={arrowIcon}
+                  alt="navigation arrow" 
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"  
                 />
               </a>
-              <a 
-                href="/services" 
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-bold py-4 px-8 rounded-full transition-all"
-              >
-                View Services
+              <a                  
+                href="/services"                  
+                className="border border-white hover:border-bluehover text-white hover:text-white font-medium py-3 px-6 rounded-full transition-all duration-300 ease-in-out"               
+              >                 
+                View Services               
               </a>
             </div>
           </div>
