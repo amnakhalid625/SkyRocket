@@ -89,10 +89,10 @@ const ServicesSection = () => {
                     <div className="inline-block bg-secondary text-black px-3 sm:px-4 py-1 sm:py-[5px] mx-auto rounded-full text-[10px] sm:text-[12px] font-semibold uppercase tracking-wider mb-3 sm:mb-4 md:mb-6 lg:mb-8">
                         OUR SERVICES
                     </div>
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight px-2 break-words">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight tracking-tight px-2 break-words">
                         Skyrocket Your Business with All-in-One Digital Solutions
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words tracking-tight">
                         We help businesses grow online with custom detroit web design, smart SEO,
                         engaging social media, and eye-catching branding. Whether you're starting
                         fresh or scaling up, we'll tailor everything to fit your goals — with a clear
