@@ -40,8 +40,8 @@ const Process = () => {
         {/* Process Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* Step 1 - Discovery & Strategy */}
-          <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
-            <div className="overflow-hidden rounded-xl bg-gray-50 mb-4 sm:mb-12">
+          <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 group">
+            <div className="overflow-hidden rounded-xl bg-backgroundColor mb-4 sm:mb-12">
               <img 
                 src={form1} 
                 alt="Discovery & Strategy" 
@@ -52,7 +52,7 @@ const Process = () => {
               <div className="text-primary font-semibold text-xs sm:text-sm mb-2 uppercase tracking-wider">
                 STEP 1
               </div>
-              <h3 className="text-xl sm:text-2xl font-medium text-gray-900 mb-2 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl font-medium text-gray-900 mb-2 sm:mb-4 group-hover:text-primary transition-colors duration-200">
                 Discovery & Strategy
               </h3>
               <p className="text-sm sm:text-base text-secondaryTextColor leading-relaxed">
@@ -62,8 +62,8 @@ const Process = () => {
           </div>
 
           {/* Step 2 - Execution & Optimization */}
-          <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300">
-            <div className="overflow-hidden rounded-xl bg-gray-50 mb-4 sm:mb-12">
+          <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 group">
+            <div className="overflow-hidden rounded-xl bg-backgroundColor mb-4 sm:mb-12">
               <img 
                 src={form2} 
                 alt="Execution & Optimization" 
@@ -74,7 +74,7 @@ const Process = () => {
               <div className="text-primary font-semibold text-xs sm:text-sm mb-2 uppercase tracking-wider">
                 STEP 2
               </div>
-              <h3 className="text-xl sm:text-2xl font-medium text-textColor mb-2 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl font-medium text-textColor mb-2 sm:mb-4 group-hover:text-primary transition-colors duration-200">
                 Execution & Optimization
               </h3>
               <p className="text-sm sm:text-base text-secondaryTextColor leading-relaxed">
@@ -84,8 +84,8 @@ const Process = () => {
           </div>
 
           {/* Step 3 - Analysis & Growth */}
-          <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 ">
-            <div className="overflow-hidden rounded-xl bg-gray-50 mb-4 sm:mb-12">
+          <div className="border border-gray-200 rounded-3xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 group">
+            <div className="overflow-hidden rounded-xl bg-backgroundColor mb-4 sm:mb-12">
               <img 
                 src={form3} 
                 alt="Analysis & Growth" 
@@ -96,7 +96,7 @@ const Process = () => {
               <div className="text-primary font-semibold text-xs sm:text-sm mb-2 uppercase tracking-wider">
                 STEP 3
               </div>
-              <h3 className="text-xl sm:text-2xl font-medium text-textColor mb-2 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl font-medium text-textColor mb-2 sm:mb-4 group-hover:text-primary transition-colors duration-200">
                 Analysis & Growth
               </h3>
               <p className="text-sm sm:text-base text-secondaryTextColor leading-tight">

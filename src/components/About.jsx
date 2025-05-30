@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/images/logo.png'
 
 const About = () => {
   return (
@@ -6,12 +7,12 @@ const About = () => {
       <div className="px-4 sm:px-6 md:padding-global">
         <div className="mx-auto">
           <div className="text-center">
-            <div className="inline-block bg-secondary text-black px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1">
+            <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1">
               about skyrocket business
             </div>
             <div className="h-4"></div>
             <div className="max-w-2xl mx-auto">
-              <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight tracking-tight">
                 Your Partner in Detroit<br className="hidden sm:inline" /> Web Design & Marketing Excellence
               </h2>
             </div>
@@ -32,11 +33,12 @@ const About = () => {
             />
             
             {/* Responsive card positioning */}
-            <div className="hidden md:block bg-white rounded-[24px] p-5 w-[90%] max-w-[500px] shadow-md absolute right-4 bottom-4
+            <div className="hidden md:block bg-white rounded-[24px] p-5 w-[90%] max-w-[550px] shadow-md absolute right-4 bottom-4
                           sm:[770px]:w-[80%] sm:[770px]:right-6 sm:[770px]:bottom-6
                           md:[953px]:w-[70%] md:[953px]:right-8 md:[953px]:bottom-8
                           lg:[1225px]:w-[60%] lg:[1225px]:right-10 lg:[1225px]:bottom-10">
               <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-8">
+                {/* <img src={logo} className='w-24 h-12' alt="logo" /> */}
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-medium text-textColor mb-2">
                     350+
@@ -44,7 +46,7 @@ const About = () => {
                   <div className="text-sm md:text-base text-secondaryTextColor font-medium">Web design Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-textColor mb-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-medium text-textColor mb-2">
                     170<span className="text-primary">+</span>
                   </div>
                   <div className="text-sm md:text-base text-secondaryTextColor font-medium">Marketing Projects</div>
