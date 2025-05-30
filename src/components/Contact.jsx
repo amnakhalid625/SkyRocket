@@ -1,4 +1,3 @@
-import React from 'react';
 import arrowIcon from '../assets/images/staright-arrow.svg';
 import mapImage from '../assets/images/map.webp';
 
