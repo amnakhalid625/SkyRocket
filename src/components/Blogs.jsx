@@ -45,22 +45,22 @@ const Blogs = () => {
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start mb-8 md:mb-16">
             <div className="flex-1">
-              <div className="inline-block bg-secondary text-black px-4 py-1 rounded-[24px] text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
+              <div className="inline-block bg-secondary text-textColor px-4 py-1 rounded-[24px] text-xs sm:text-[12px] font-semibold uppercase tracking-wider mb-4 sm:mb-6">
                 skyrocket business blog
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 sm:mb-6 leading-tight tracking-tight">
                 The Skyrocket Business<br /> Blog: Insights for your<br /> Digital Growth
               </h2>
               <div className="flex flex-col lg:flex-row items-start justify-between lg:items-end gap-4 sm:gap-6">
                 {/* Buttons - hidden on mobile, sm, and md - only visible from lg up */}
                 <div className="hidden lg:flex gap-4 flex-wrap ml-auto mt-[-60px]">
-                  <button className="bg-secondary text-textColor px-6 py-3 rounded-[24px] font-semibold hover:bg-gray-800 transition-colors duration-200 flex items-center gap-2 whitespace-nowrap">
+                  <button className="bg-secondary text-textColor px-6 py-3 rounded-[24px] font-semibold hover:bg-hoverColor transition-colors duration-200 flex items-center gap-2 whitespace-nowrap">
                     Get in Touch
                     <span className="text-lg">
                       <img src={arrow} alt="arrow" className="w-4 h-4" />
                     </span>
                   </button>
-                  <button className="border border-primary hover:border-blue-600 text-primary hover:text-blue-600 font-medium py-3 px-6 rounded-full transition duration-200">
+                  <button className="border border-primary hover:border-bluehover text-primary hover:text-bluehover font-medium py-3 px-6 rounded-full transition duration-200">
                     View All Blogs
                   </button>
                 </div>
@@ -89,24 +89,24 @@ const Blogs = () => {
 
                   {/* Category and Date */}
                   <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <span className="text-gray-600">{post.category}</span>
-                    <img src={dotIcon} alt="dot" className="mx-2 w-1 h-1" />
+                    <span className="text-secodaryTextColor font-medium">{post.category}</span>
+                    <img src={dotIcon} alt="dot" className="mx-2 w-[5px] h-[5px]" />
                     <div className="flex items-center">
-                      <img src={calendarIcon} alt="Date" className="w-4 h-4 mr-1" />
-                      <span>{post.date}</span>
+                      <img src={calendarIcon} alt="Date" className="w-6 h-6 mr-2" />
+                      <span className='text-secondaryTextColor font-medium'>{post.date}</span>
                     </div>
                   </div>
 
                   {/* Content */}
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
+                    <h3 className="text-xl lg:text-[23px] text-textColor font-medium mb-2 leading-tight">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-2 mb-3">
+                    <p className="text-sm lg:text-base font-medium text-secondaryTextColor leading-relaxed line-clamp-2 mb-3">
                       {post.excerpt}
                     </p>
                     <div className="mt-2">
-                      <span className="text-blue-600 text-sm font-medium flex items-center gap-2">
+                      <span className="text-primary text-sm lg:text-base font-medium flex items-center gap-2">
                         <span>Read more</span>
                         <img src={rightArrow} alt="arrow" className="w-4 h-4" />
                       </span>
