@@ -4,7 +4,7 @@ import footerLogo from '../assets/images/footerlogo.png';
 import facebookIcon from '../assets/images/facebookicon.svg';
 import instagramIcon from '../assets/images/instagramIcon.svg';
 import twitterIcon from '../assets/images/twitterIcon.svg';
-import linkedinIcon from '../assets/images/linkedinIcon.svg';
+import linkedinIcon from '../assets/images/linkedInIcon.svg';
 
 const Footer = () => {
   return (
