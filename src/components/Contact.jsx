@@ -6,9 +6,10 @@ const Contact = ({
   secondButtonText = 'View Services',
   secondButtonHref = '/services',
   secondButtonClassName = 'border border-white hover:border-bluehover text-white hover:text-white font-medium py-3 px-6 rounded-full transition-all duration-300 ease-in-out',
+headingText = 'Skyrocket Results with Marketing That Makes Sense!',
 }) => {
   return (
-    <div className="section-cta py-20 bg-gray-100">
+    <div className="section-cta py-20 ">
       <div className="px-4 sm:px-6">
         <div className="max-w-[83rem] mx-auto">
           <div
@@ -33,7 +34,7 @@ const Contact = ({
                 contact us
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium mb-4 sm:mb-6 leading-tight tracking-tight text-white">
-                Skyrocket Results with Marketing That Makes Sense!
+              {headingText}
               </h2>
               <div className="max-w-lg mx-auto lg:mx-0">
                 <p className=" text-lg leading-relaxed mb-8 text-white tracking-tight">

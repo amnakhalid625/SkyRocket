@@ -3,11 +3,10 @@ import navArrow from '../assets/images/NavArrow.svg';
 
 const WebCard = () => {
   return (
-    <div className="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8"> {/* Added horizontal padding for smaller screens */}
+    <div className="max-w-[83rem] mx-auto px-4 sm:px-6 lg:px-8"> 
       <div
-        className="bg-[#f5f8fa] rounded-[32px] p-5 sm:p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-center
-                   group" // Changed md:grid-cols-2 to lg:grid-cols-2 for better mobile behavior
-      >
+        className="bg-backgroundColor rounded-[32px] p-5 sm:p-6 md:p-8 grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 items-center
+                   group"  >
         {/* Image */}
         <div className="overflow-hidden rounded-3xl h-[20rem] sm:h-[25rem] md:h-[30rem] lg:h-[36rem] order-1 lg:order-none"> {/* Added responsive heights and order control */}
           <img
