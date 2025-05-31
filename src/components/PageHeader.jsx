@@ -1,6 +1,6 @@
 import navArrow from '../assets/images/NavArrow.svg';
-import servicesPattern from '../assets/images/servicesPattern.svg';
-import servicesPattern2 from '../assets/images/servicesPattern2.svg';
+import servicesPattern from '../assets/images/bg.svg';
+import servicesPattern2 from '../assets/images/backImg.svg';
 
 const PageHeader = () => {
   return (
