@@ -5,6 +5,7 @@ import starsImg from '../assets/images/stars.svg';
 import navArrow from '../assets/images/NavArrow.svg';
 import msgIcon from '../assets/images/msgIcon.svg';
 import WhyUs from '../components/WhyUs';
+import Faqs from '../components/Faqs';
 
 
 const PricingDetails = () => {
@@ -163,6 +164,7 @@ const PricingDetails = () => {
     </div>
 
     <WhyUs />
+    <Faqs />
 
     </>
   );
