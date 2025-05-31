@@ -11,7 +11,7 @@ const ServicesDetail = () => {
     <>
       <SecondPageHeader />
       <ServicesCard />
-      <Contact />
+      <Contact secondButtonText='Case Studies' />
       <Footer />
      
     </>
