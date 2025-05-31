@@ -133,7 +133,7 @@ Meet the minds behind our success — a team of passionate experts whose unique 
         </div>
 
        {/* CTA Button */}
-<div className="text-center mt-6">
+<div className="text-center mt-3">
   <a
     href="/get-in-touch"
     className="group inline-flex items-center gap-2 bg-secondary hover:bg-hoverColor text-textColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium"
