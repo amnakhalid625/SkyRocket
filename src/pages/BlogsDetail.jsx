@@ -2,14 +2,14 @@ import React from 'react';
 import navArrow from '../assets/images/NavArrow.svg';
 import BlogCards from '../components/BlogCard';
 
-const Blogs = () => {
+const BlogsDetail = () => {
   return (
     <>
       <section className="relative overflow-hidden bg-white">
         <div className="px-10 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-20">
           <div className="max-w-7xl mx-auto">
             <div className="text-center opacity-100 mb-16">
-              <div className="inline-block bg-[#c6f806] text-[#0a0d14] px-4 py-[5px] rounded-full text-[12px] font-semibold uppercase tracking-wider mb-4 transform transition-all duration-300 hover:scale-105">
+              <div className="inline-block bg-secondary text-textColor px-4 py-[5px] rounded-full text-[12px] font-semibold uppercase tracking-wider mb-4 transform transition-all duration-300 hover:scale-105">
                 skyrocket business blog
               </div>
               
@@ -28,7 +28,7 @@ const Blogs = () => {
               <div className="flex flex-wrap justify-center items-center gap-4">
                 <a
                   href="/contact-us"
-                  className="group flex items-center space-x-2 bg-[#240cf2] hover:bg-[#1a0bcd] text-white px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium min-w-[160px] justify-center"
+                  className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-tetxtColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium min-w-[160px] justify-center"
                 >
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     Get in Touch
@@ -42,7 +42,7 @@ const Blogs = () => {
                 
                 <a
                   href="/services"
-                  className="border border-[#240cf2] hover:border-[#1a0bcd] text-[#240cf2] hover:text-[#1a0bcd] hover:bg-[#f4f7fb] font-medium py-3 px-6 rounded-full transition-all duration-300 min-w-[160px] text-center"
+                  className="border border-primary hover:border-[#1a0bcd] text-primary hover:text-[#1a0bcd] hover:bg-[#f4f7fb] font-medium py-3 px-6 rounded-full transition-all duration-300 min-w-[160px] text-center"
                 >
                   View Services
                 </a>
@@ -60,4 +60,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default BlogsDetail;
