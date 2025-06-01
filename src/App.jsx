@@ -5,6 +5,7 @@ import AboutUsDetails from "./pages/AboutUsDetails";
 import ServicesDetail from "./pages/ServicesDetail";
 import PricingDetails from "./pages/PricingDetails";
 import CaseStudiesDetail from "./pages/CaseStudiesDetail";
+import Blogs from "./pages/Blogs";
 // import Contact from "./pages/Contact";
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
         <Route path="/services" element={<ServicesDetail />} />
         <Route path="/pricing" element={<PricingDetails />} />
         <Route path="/case-studies" element={<CaseStudiesDetail />} />
+        <Route path="/blogs" element={<Blogs />} />
+
 
 
 

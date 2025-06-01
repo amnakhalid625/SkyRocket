@@ -6,6 +6,29 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const CaseStudiesDetail = () => {
+
+  const newCaseStudies = [
+  {
+    id: 1,
+    image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680b99bc9727d39f6c1d5f0f_sqa.png",
+    alt: "Custom Project",
+    tag: "Web Design & Marketing",
+    title: "Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store",
+    description: "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions."
+  },
+  
+    {
+    id: 2,
+    image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680ba033e3595cbe50808f71_Untitled.png",
+    alt: "Custom Project",
+    tag: "Web Design & SEO",
+    title: "Lisburn Web Design: Crafting a Strong Online Presence for Local Businesses",
+    description: "Skyrocket Business built Lisburn Web Design’s website from scratch, optimized for local SEO and lead generation, resulting in a 60% increase in traffic and a 40% boost in client inquiries."
+  }
+  
+];
+
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -40,7 +63,7 @@ const CaseStudiesDetail = () => {
           
           <div className="grid gap-12 md:gap-16">
             <CaseStudyCards />
-            <CaseStudyCards />
+           <CaseStudyCards caseStudies={newCaseStudies} />
           </div>
         </div>
       </section>
