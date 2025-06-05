@@ -10,21 +10,20 @@ const BlogCard = ({
   isLarge = false
 }) => {
   return (
-    <div className="opacity-100">
+    <div className="opacity-100 h-full"> {/* Added h-full here */}
       <a
         href={link}
         className="group block text-[#525866] no-underline h-full transition-all duration-300 hover:scale-[1.02]"
       >
-        <div className="overflow-hidden rounded-[24px] mb-4 relative">
+        <div className="overflow-hidden rounded-[24px] mb-4 relative h-[350px]"> {/* Increased height to 350px */}
           <img
             src={imageUrl}
             loading="eager"
             alt={title}
-            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
             style={{
               transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-              transformStyle: 'preserve-3d',
-              height: '300px'
+              transformStyle: 'preserve-3d'
             }}
           />
         </div>

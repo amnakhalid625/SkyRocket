@@ -6,6 +6,8 @@ import ServicesDetail from "./pages/ServicesDetail";
 import PricingDetails from "./pages/PricingDetails";
 import CaseStudiesDetail from "./pages/CaseStudiesDetail";
 import BlogsDetail from "./pages/BlogsDetail";
+import Articles from "./components/Articles";
+import ContactDetail from "./pages/ContactDetail";
 // import Contact from "./pages/Contact";
 
 function App() {
@@ -21,11 +23,7 @@ function App() {
         <Route path="/pricing" element={<PricingDetails />} />
         <Route path="/case-studies" element={<CaseStudiesDetail />} />
         <Route path="/blogs" element={<BlogsDetail />} />
-
-
-
-
-        {/* <Route path="/contact" element={<Contact />} /> */}
+         <Route path="/contact-us" element={<ContactDetail/>} />
       </Routes>
     </Router>
   );

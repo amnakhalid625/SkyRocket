@@ -1,42 +1,9 @@
 import React from 'react';
 import arrow from '../assets/images/staright-arrow.svg';
-import blogImage1 from '../assets/images/blog1.jpg';
-import blogImage2 from '../assets/images/blog2.jpg';
-import blogImage3 from '../assets/images/blog3.jpg';
-import calendarIcon from '../assets/images/calendar-icon.svg';
-import dotIcon from '../assets/images/dot-icon.svg';
-import rightArrow from '../assets/images/arrow3.svg';
+import Articles from './Articles';
 
 const Blogs = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Understanding User Experience (UX) and Its Impact on Conversion Rates",
-      category: "Website Design",
-      date: "May 14, 2025",
-      excerpt: "Learn how user experience (UX) design influences conversion rates and why it's critical for your Detroit business website. Improve UX, boost trust, and increase sales.",
-      image: blogImage1,
-      link: "/blog/understanding-user-experience-ux-and-its-impact-on-conversion-rates"
-    },
-    {
-      id: 2,
-      title: "The Importance of Mobile-First Design for Local Businesses in 2025",
-      category: "Website Design",
-      date: "May 13, 2025",
-      excerpt: "Discover why mobile-first web design is crucial for local businesses in 2025. Learn how it boosts SEO, enhances user experience, and drives real-world results—especially for Detroit companies.",
-      image: blogImage2,
-      link: "/blog/the-importance-of-mobile-first-design-for-local-businesses-in-2025"
-    },
-    {
-      id: 3,
-      title: "Why Choose a Nearby Web Design Business in Detroit?",
-      category: "Website Design",
-      date: "May 12, 2025",
-      excerpt: "Discover 10 powerful reasons to choose a Detroit-based web design company. From local insight to faster support, learn how Skyrocket Business can help grow your online presence.",
-      image: blogImage3,
-      link: "/blog/why-choose-a-nearby-web-design-business-in-detroit"
-    }
-  ];
+
 
   return (
     <section className="py-20 bg-white">
@@ -71,51 +38,7 @@ const Blogs = () => {
           <div className="h-4"></div>
 
           {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {blogPosts.map((post) => (
-              <div
-                key={post.id}
-                className="bg-white"
-              >
-                <a href={post.link} className="block group text-decoration-none">
-                  {/* Image Container - Updated height for md and below */}
-                  <div className="w-full overflow-hidden rounded-[24px] mb-3 h-60 sm:h-64 md:h-72 lg:h-auto">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-[24px] lg:h-auto"
-                    />
-                  </div>
-
-                  {/* Category and Date */}
-                  <div className="flex items-center text-sm text-gray-500 mb-2">
-                    <span className="text-gray-600">{post.category}</span>
-                    <img src={dotIcon} alt="dot" className="mx-2 w-1 h-1" />
-                    <div className="flex items-center">
-                      <img src={calendarIcon} alt="Date" className="w-4 h-4 mr-1" />
-                      <span>{post.date}</span>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 leading-tight">
-                      {post.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed line-clamp-2 mb-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="mt-2">
-                      <span className="text-blue-600 text-sm font-medium flex items-center gap-2">
-                        <span>Read more</span>
-                        <img src={rightArrow} alt="arrow" className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
+         <Articles />
         </div>
       </div>
     </section>
