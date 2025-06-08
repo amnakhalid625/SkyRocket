@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom'; 
 import servicesPattern from '../assets/images/bg.svg';
 import servicesPattern2 from '../assets/images/backImg.svg';
+import Arrow from '../assets/images/NavArrow.svg';
+import tickImage from '../assets/images/tick.svg';
 
 const ServicesSection = () => {
     const [expandedService, setExpandedService] = useState(null);
@@ -73,141 +77,193 @@ const ServicesSection = () => {
         },
     ];
 
+    // Create a motion-enhanced Link component
+    const MotionLink = motion(Link);
+
     return (
-        <div className="bg-primary px-4 sm:px-8 py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden">
+        <motion.div
+            className="bg-primary px-4 sm:px-8 py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+        >
             {/* Top Right Decorative Image - Show on all devices */}
-            <img
+            <motion.img
                 src={servicesPattern}
                 alt="servicesImg"
                 className="absolute top-0 right-0 z-0 block"
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
             />
 
             {/* Content Wrapper - Responsive max-widths with more width */}
             <div className="relative z-10 max-w-4xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[83rem] mx-auto">
-                <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                    <div className="inline-block bg-secondary text-black px-3 sm:px-4 py-1 sm:py-[5px] mx-auto rounded-full text-[10px] sm:text-[12px] font-semibold uppercase tracking-wider mb-3 sm:mb-4 md:mb-6 lg:mb-8">
+                <motion.div
+                    className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                    <motion.div
+                        className="inline-block bg-secondary text-textColor px-3 sm:px-4 py-1 sm:py-[5px] mx-auto rounded-full text-[10px] sm:text-[12px] font-semibold uppercase tracking-wider mb-3 sm:mb-4 md:mb-6 lg:mb-8"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                    >
                         OUR SERVICES
-                    </div>
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight px-2 break-words">
+                    </motion.div>
+                    <motion.h1
+                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight px-2 break-words"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
                         Skyrocket Your Business with All-in-One Digital Solutions
-                    </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words">
+                    </motion.h1>
+                    <motion.p
+                        className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
                         We help businesses grow online with custom detroit web design, smart SEO,
                         engaging social media, and eye-catching branding. Whether you're starting
                         fresh or scaling up, we'll tailor everything to fit your goals — with a clear
                         focus on results and real growth.
-                    </p>
-                </div>
+                    </motion.p>
+                </motion.div>
 
                 {/* Services Cards - Responsive spacing with proper width */}
                 <div className="services-mega-wrap space-y-3 sm:space-y-6 px-0">
                     {services.map((service, index) => {
                         const isOpen = expandedService === index;
                         return (
-                            <div
+                            <motion.div
                                 key={service.id}
                                 className={`services-wrap rounded-2xl sm:rounded-3xl transition-all duration-300 transform hover:scale-[1.01] shadow-lg hover:shadow-xl overflow-hidden ${isOpen ? 'bg-secondary' : 'bg-white'
                                     }`}
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                                whileHover={{ scale: 1.01 }}
+                                whileTap={{ scale: 0.99 }}
                             >
-                                <div
+                                <motion.div
                                     className="services-heading-wrap flex justify-between items-center p-3 sm:p-8 md:p-6 lg:p-8 xl:p-10 cursor-pointer"
                                     onClick={() => toggleService(index)}
                                 >
                                     <div className="services-heading-left flex items-center flex-1 min-w-0">
                                         {/* Service Number - Hidden on mobile and sm */}
-                                        <div className="services-number hidden md:block text-sm lg:text-lg font-medium text-accent w-6 lg:w-8 mr-3 lg:mr-4 flex-shrink-0">
+                                        <motion.div
+                                            className="services-number hidden md:block text-sm lg:text-lg font-medium text-accent w-6 lg:w-8 mr-3 lg:mr-4 flex-shrink-0"
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+                                        >
                                             {String(service.id).padStart(2, '0')}
-                                        </div>
-                                        <h3 className="heading-style-h3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-textColor pr-2 break-words min-w-0 flex-1">
+                                        </motion.div>
+                                        <motion.h3
+                                            className="heading-style-h3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-textColor pr-2 break-words min-w-0 flex-1"
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
+                                        >
                                             {service.title}
-                                        </h3>
+                                        </motion.h3>
                                     </div>
-                                    <div
-                                        className="services-arrow-wrap bg-secondary rounded-full p-2 sm:p-3 md:p-4 transition-transform duration-300 flex-shrink-0"
-                                        style={{
-                                            transform: isOpen ? 'rotateZ(90deg)' : 'rotateZ(0deg)',
-                                            transformStyle: 'preserve-3d',
+                                    <motion.div
+                                        className={`services-arrow-wrap rounded-full p-2 sm:p-3 md:p-4 transition-all duration-300 flex-shrink-0 ${isOpen ? 'bg-hoverColor' : 'bg-secondary'
+                                            }`}
+                                        animate={{
+                                            rotate: isOpen ? 90 : 0,
                                         }}
+                                        transition={{ duration: 0.3 }}
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
                                     >
-                                        <ChevronRight className="services-arrow w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-black" />
-                                    </div>
-                                </div>
+                                        <ChevronRight className={`services-arrow w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 ${isOpen ? 'text-textColor' : 'text-textColor'
+                                            }`} />
+                                    </motion.div>
+                                </motion.div>
 
                                 {/* Expanded Content */}
-                                <div
-                                    className="transition-all duration-500"
-                                    style={{
-                                        maxHeight: isOpen ? '1000px' : '0px',
-                                        opacity: isOpen ? 1 : 0,
-                                        transform: isOpen ? 'translateY(0)' : 'translateY(1rem)',
-                                    }}
-                                >
+                                <AnimatePresence>
                                     {isOpen && (
-                                        <div className="px-3 sm:px-4 md:px-6 lg:px-8 pb-3 sm:pb-4 md:pb-6 pt-1 sm:pt-2 md:pt-4 lg:pt-6 bg-secondary text-left">
-                                            <p className="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-3 sm:mb-4 md:mb-6 max-w-5xl break-words">
+                                        <motion.div
+                                            className="px-3 sm:px-4 md:px-6 lg:px-8 pb-3 sm:pb-4 md:pb-6 pt-1 sm:pt-2 md:pt-4 lg:pt-6 bg-secondary text-left font-semibold"
+                                            initial={{ height: 0, opacity: 0, y: -20 }}
+                                            animate={{ height: 'auto', opacity: 1, y: 0 }}
+                                            exit={{ height: 0, opacity: 0, y: -20 }}
+                                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                                        >
+                                            <motion.p
+                                                className="text-textColor text-base leading-relaxed mb-3 sm:mb-4 md:mb-6 max-w-4xl break-words"
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.4, delay: 0.1 }}
+                                            >
                                                 {service.description}
-                                            </p>
+                                            </motion.p>
 
                                             {/* Features - Stack on mobile, row on larger screens */}
-                                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-3 sm:mb-4 md:mb-6">
+                                            <motion.div
+                                                className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-3 sm:mb-4 md:mb-6"
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.4, delay: 0.2 }}
+                                            >
                                                 {service.features.map((feature, i) => (
-                                                    <div key={i} className="flex items-center min-w-0">
-                                                        <svg
-                                                            className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 text-primary flex-shrink-0"
-                                                            fill="currentColor"
-                                                            viewBox="0 0 20 20"
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                        >
-                                                            <path
-                                                                fillRule="evenodd"
-                                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                                clipRule="evenodd"
-                                                            />
-                                                        </svg>
-                                                        <span className="text-black font-medium text-sm sm:text-base md:text-lg break-words min-w-0">
+                                                    <motion.div
+                                                        key={i}
+                                                        className="flex items-center min-w-0"
+                                                        initial={{ opacity: 0, x: -10 }}
+                                                        animate={{ opacity: 1, x: 0 }}
+                                                        transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
+                                                    >
+                                                        <img src={tickImage} alt="tickIcon" className="mr-2" />
+                                                        <span className="text-textColor font-medium text-sm sm:text-base md:text-lg break-words min-w-0">
                                                             {feature}
                                                         </span>
-                                                    </div>
+                                                    </motion.div>
                                                 ))}
-                                            </div>
+                                            </motion.div>
 
                                             {/* Learn More Button - Responsive sizing */}
-                                            <a
-                                                href={service.link}
-                                                className="inline-flex items-center px-4 sm:px-6 py-3 sm:py-4 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300"
+                                            <MotionLink
+                                                to={service.link}
+                                                className="inline-flex items-center px-4 sm:px-6 py-3 sm:py-3 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all duration-300"
+                                                onClick={() => {
+                                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                }}
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.4, delay: 0.4 }}
+                                                whileHover={{ scale: 1.05 }}
+                                                whileTap={{ scale: 0.95 }}
                                             >
                                                 <span>Learn More</span>
-                                                <svg
-                                                    className="w-3 h-3 sm:w-4 sm:h-4 ml-2 flex-shrink-0"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth="2"
-                                                        d="M9 5l7 7-7 7"
-                                                    />
-                                                </svg>
-                                            </a>
-                                        </div>
+                                                <img src={Arrow} alt="arrow" className="ml-2" />
+                                            </MotionLink>
+                                        </motion.div>
                                     )}
-                                </div>
-                            </div>
+                                </AnimatePresence>
+                            </motion.div>
                         );
                     })}
                 </div>
             </div>
 
             {/* Bottom Left Decorative Image - Show on all devices */}
-            <img
+            <motion.img
                 src={servicesPattern2}
                 alt=""
                 className="absolute bottom-0 left-0 z-0 block"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
             />
-        </div>
+        </motion.div>
     );
 };
 

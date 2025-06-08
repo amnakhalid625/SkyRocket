@@ -1,4 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import dotImage from '../assets/images/dot-icon.svg';
+import calendarImage from '../assets/images/calendar-icon.svg';
+import blogCardImg from '../assets/images/blogCard1.avif';
+import blogCardImg2 from '../assets/images/blog1.jpg';
+import { Link } from 'react-router-dom';
 
 const BlogCard = ({
   imageUrl,
@@ -10,56 +16,54 @@ const BlogCard = ({
   isLarge = false
 }) => {
   return (
-    <div className="opacity-100 h-full"> {/* Added h-full here */}
-      <a
-        href={link}
-        className="group block text-[#525866] no-underline h-full transition-all duration-300 hover:scale-[1.02]"
+    <motion.div
+      className="opacity-100 h-full"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true }}
+    >
+      <Link
+        to={link}
+        className="group block text-secondaryTextColor no-underline hover:no-underline h-full transition-all duration-300 hover:scale-[1.02]"
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
       >
-        <div className="overflow-hidden rounded-[24px] mb-4 relative h-[350px]"> {/* Increased height to 350px */}
-          <img
+        <div className="overflow-hidden rounded-[24px] mb-4 relative h-[350px]">
+          <motion.img
             src={imageUrl}
             loading="eager"
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-            style={{
-              transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-              transformStyle: 'preserve-3d'
-            }}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            initial={{ scale: 1 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
         </div>
-        
-        <div className="flex items-center gap-2 mb-3 text-sm text-[#525866]">
+
+        <div className="flex items-center gap-2 mb-3 text-base text-secondaryTextColor ">
           <div className="font-medium">{category}</div>
-          <img
-            src="https://cdn.prod.website-files.com/6807e00032c9ff6c11834a8f/6807e00132c9ff6c11834ba6_Ellipse%201%20(2).svg"
-            alt=""
-            className="w-1 h-1"
-          />
+          <img src={dotImage} alt="dotImage" className="w-1 h-1" />
           <div className="flex items-center gap-1">
-            <img
-              src="https://cdn.prod.website-files.com/6807e00032c9ff6c11834a8f/6807e00132c9ff6c11834b7c_Calendar%20(4).svg"
-              alt="Date"
-              className="w-3.5 h-3.5"
-            />
-            <div>{date}</div>
+            <img src={calendarImage} alt="Date" className="w-6 h-6 font-bold" />
+            <div className="font-medium">{date}</div>
           </div>
         </div>
-        
+
         <div className="flex-1">
-          <h2 className="text-textColor text-xl md:text-4xl font-medium mb-3 leading-tight group-hover:text-[#240cf2] transition-colors duration-300">
+          <h2 className="text-textColor text-xl md:text-[40px] font-medium mb-3 leading-tight group-hover:text-[#240cf2] transition-colors duration-300">
             {title}
           </h2>
-          
+
           {description && (
-            <div>
-              <p className="text-secondaryTextColor text-base leading-relaxed line-clamp-2">
-                {description}
-              </p>
-            </div>
+            <p className="text-secondaryTextColor font-medium text-lg leading-relaxed line-clamp-2">
+              {description}
+            </p>
           )}
         </div>
-      </a>
-    </div>
+      </Link>
+    </motion.div>
   );
 };
 
@@ -69,7 +73,7 @@ const BlogCards = () => {
       {/* First column - Takes 3/5 width on large screens */}
       <div className="lg:col-span-3 opacity-100">
         <BlogCard
-          imageUrl="https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/681f81d700aa5aab28194664_SEO.avif"
+          imageUrl={blogCardImg}
           category="Digital Marketing"
           date="May 10, 2025"
           title="The Role of Search Engine Optimisation in Web Design: Why It Matters in 2025"
@@ -78,11 +82,11 @@ const BlogCards = () => {
           isLarge={true}
         />
       </div>
-      
+
       {/* Second column - Takes 2/5 width on large screens */}
       <div className="lg:col-span-2 opacity-100">
         <BlogCard
-          imageUrl="https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/682379ed2476cb295f1d5da3_User%20Experience%20(UX).jpg"
+          imageUrl={blogCardImg2}
           category="Website Design"
           date="May 14, 2025"
           title="Understanding User Experience (UX) and Its Impact on Conversion Rates"

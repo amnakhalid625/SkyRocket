@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import member1 from '../assets/images/member1.webp';
 import member2 from '../assets/images/member2.webp';
@@ -62,70 +63,73 @@ const Team = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1">
-            Our Team
+            Meet Our Team
           </div>
           <div className="max-w-4xl mx-auto mb-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-textColor leading-tight tracking-tight mt-3">
+            <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight mt-3">
               The Minds Behind Skyrocket
             </h2>
           </div>
           <div className="max-w-2xl mx-auto">
-            <p className="text-lg text-secondaryTextColor leading-relaxed">
+            <p className="text-lg text-secondaryTextColor leading-wide tracking-tight font-medium">
               Meet the minds behind our success — a team of passionate experts whose unique skills help drive real results for our clients.
             </p>
           </div>
         </div>
 
         {/* Team Grid */}
-      {/* Team Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-  {teamMembers.map((member, index) => (
-    <a
-      key={member.id}
-      href={member.link}
-      className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col text-center no-underline group cursor-pointer transform transition-all duration-300 hover:-translate-y-1"
-      style={{
-        color: '#525866',
-        animationDelay: `${index * 0.1}s`
-      }}
-      onMouseEnter={() => setHoveredMember(member.id)}
-      onMouseLeave={() => setHoveredMember(null)}
-    >
-      {/* Image Container */}
-      <div className="relative mb-6 overflow-hidden text-textColor">
-        <img
-          src={member.image}
-          alt={member.name}
-          className="w-full h-[18rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] object-cover rounded-[24px] transition-all duration-500 group-hover:scale-105"
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {teamMembers.map((member, index) => (
+            <a
+              key={member.id}
+              href={member.link}
+              className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col text-center no-underline group cursor-pointer transform transition-all duration-300 hover:-translate-y-1"
+              onMouseEnter={() => setHoveredMember(member.id)}
+              onMouseLeave={() => setHoveredMember(null)}
+              style={{
+                color: '#525866',
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              {/* Image Container */}
+              <div className="relative mb-6 overflow-hidden text-textColor rounded-[24px]">
+                <motion.img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-[18rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] object-cover rounded-[24px]"
+                  initial={{ filter: 'blur(0px)', scale: 1 }}
+                  animate={{
+                    filter: hoveredMember === member.id ? 'blur(2px)' : 'blur(0px)',
+                    scale: hoveredMember === member.id ? 1.05 : 1
+                  }}
+                  transition={{ duration: 0.4 }}
+                />
 
-        {/* Overlay */}
-        <div
-          className="absolute inset-0 bg-textColor bg-opacity-20 flex items-center justify-center transition-opacity duration-500 rounded-[24px]"
-          style={{
-            opacity: hoveredMember === member.id ? 1 : 0
-          }}
-        >
-          <div className="bg-white text-textColor px-6 py-3 rounded-full flex items-center gap-2 font-semibold transform transition-transform duration-300 hover:scale-105">
-            <span>See Profile</span>
-            <ArrowRight size={16} />
-          </div>
+                {/* Overlay */}
+                <motion.div
+                  className="absolute inset-0 flex items-center justify-center bg-textColor bg-opacity-10 transition-opacity duration-500 rounded-[24px]"
+                  animate={{ opacity: hoveredMember === member.id ? 1 : 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <div className="bg-white text-textColor px-6 py-3 rounded-full flex items-center gap-2 font-semibold transform transition-transform duration-300 hover:scale-105">
+                    <span>See Profile</span>
+                    <ArrowRight size={16} />
+                  </div>
+                </motion.div>
+              </div>
+
+              {/* Content */}
+              <div className="text-center">
+                <h3 className="text-xl font-semibold mb-2" style={{ color: '#525866' }}>
+                  {member.name}
+                </h3>
+                <div className="text-base" style={{ color: '#525866' }}>
+                  {member.position}
+                </div>
+              </div>
+            </a>
+          ))}
         </div>
-      </div>
-
-      {/* Content */}
-      <div className="text-center">
-        <h3 className="text-xl font-semibold mb-2" style={{ color: '#525866' }}>
-          {member.name}
-        </h3>
-        <div className="text-base" style={{ color: '#525866' }}>
-          {member.position}
-        </div>
-      </div>
-    </a>
-  ))}
-</div>
-
 
         {/* CTA Button */}
         <div className="text-center mt-3">
@@ -143,7 +147,6 @@ const Team = () => {
             />
           </a>
         </div>
-
       </div>
     </section>
   );

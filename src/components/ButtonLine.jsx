@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogCategoryFilter = () => {
   const categories = [
-    { title: "All", href: "/blog", current: true },
-    { title: "Website Design", href: "/blog-category/website-design" },
-    { title: "Digital Marketing", href: "/blog-category/digital-marketing" },
-    { title: "Social Media", href: "/blog-category/social-media" },
-    { title: "Content Marketing", href: "/blog-category/content-marketing" }
+    { title: "All", to: "/blog", current: true },
+    { title: "Website Design", to: "/blog-category/website-design" },
+    { title: "Digital Marketing", to: "/blog-category/digital-marketing" },
+    { title: "Social Media", to: "/blog-category/social-media" },
+    { title: "Content Marketing", to: "/blog-category/content-marketing" }
   ];
 
   return (
@@ -17,11 +18,11 @@ const BlogCategoryFilter = () => {
       
       <div className="blog-categories-mega-wrap flex flex-wrap ">
         {categories.map((category, index) => (
-          <a
+          <Link
             key={index}
             title={category.title}
-            href={category.href}
-            className={`blog-category-pill inline-block px-5 py-3 rounded-xl text-lg font-medium transition-colors ${
+            to={category.to}
+            className={`blog-category-pill inline-block px-5 py-3 rounded-xl text-base font-medium transition-colors tracking-tight ${
               category.current 
                 ? 'bg-primary text-white' 
                 : ' text-textColor hover:text-secondaryTextColor'
@@ -29,7 +30,7 @@ const BlogCategoryFilter = () => {
             aria-current={category.current ? "page" : undefined}
           >
             <div>{category.title}</div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

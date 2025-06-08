@@ -1,0 +1,152 @@
+import React from 'react';
+import ProjectOverview from '../components/ProjectOverview';
+import project1 from '../assets/images/project1.png';
+
+import CaseStudyCards from '../components/CaseStudyCards';
+import project4 from '../assets/images/project4.png';
+import project5 from '../assets/images/webCard.png';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+
+const ProjectDetail = ({ 
+  heroImage,
+  heroImageSrcSet,
+  title,
+  description,
+  client,
+  website,
+  services,
+  timeline,
+  altText = "Project Image"
+}) => {
+  const caseStudies = [
+    {
+      id: 1,
+      image: project4,
+      alt: 'LeHost Hair & Wig Shop',
+      tag: 'Web Design & SEO',
+      title: 'Lisburn Web Design: Crafting a Strong Online Presence for Local Businesses',
+      description:
+        "Skyrocket Business built Lisburn Web Design's website from scratch, optimized for local SEO and lead generation, resulting in a 60% increase in traffic and a 40% boost in client inquiries.",
+      link: '/case-study/lehost-hair-wig-shop-boosting-online-presence-and-sales',
+    },
+    {
+      id: 2,
+      image: project5,
+      alt: 'Mop and Glow Cleaning Company',
+      tag: 'Website Design &Marketing',
+      title: 'Sequins and Slate Interior Design Company!',
+      description:
+        "Skyrocket Business redesigned Sequins and Slate's website and implemented SEO strategies, resulting in a 50% increase in traffic and a 30% rise in client inquiries.",
+      link: '/case-study/mop-and-glow-cleaning-company-building-trust-and-driving-local-leads',
+    },
+  ];
+
+  return (
+    <>
+      <div className="w-full max-w-[83rem] mx-auto px-8 py-8 mt-4">
+        {/* Hero Image */}
+        <div className="mb-12">
+          <img 
+            src={heroImage}
+            loading="eager" 
+            alt={altText}
+            sizes="100vw"
+            srcSet={heroImageSrcSet}
+            className="w-full h-[500px] object-cover rounded-3xl"
+          />
+        </div>
+
+        {/* Hero Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.44fr_1fr] gap-2 mb-12 items-end">
+          <div>
+            <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight mb-4">
+              {title}
+            </h1>
+          </div>
+          <div>
+            <p className="text-lg leading-relaxed text-secondaryTextColor font-medium">
+              {description}
+            </p>
+          </div>
+        </div>
+
+        {/* Border */}
+        <div className="h-px bg-[#eaeaea] my-12"></div>
+
+        {/* Meta Info */}
+        <div className="flex flex-wrap gap-12">
+          <div className="flex-1 min-w-[150px]">
+            <div className="font-medium text-base text-secondaryTextColor mb-2">Client</div>
+            <p className="font-light text-textColor text-lg">{client}</p>
+          </div>
+          
+          <div className="flex-1 min-w-[150px]">
+            <div className="font-medium text-base text-secondaryTextColor mb-2">Website</div>
+            {website ? (
+              <a 
+                href={website}
+                className="font-light underline text-textColor text-base hover:underline"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {website}
+              </a>
+            ) : (
+              <p className="font-medium text-primary">N/A</p>
+            )}
+          </div>
+          
+          <div className="flex-1 min-w-[150px]">
+            <div className="font-medium text-base text-secondaryTextColor mb-2">Services</div>
+            <p className="font-light text-textColor text-lg">{services}</p>
+          </div>
+          
+          <div className="flex-1 min-w-[150px]">
+            <div className="font-medium text-base text-secondaryTextColor mb-2">Project Timeline</div>
+            <p className="font-light text-textColor text-lg">{timeline}</p>
+          </div>
+        </div>
+
+        {/* Include ProjectOverview component */}
+        <ProjectOverview />
+        
+        {/* Pass case studies data to CaseStudyCards component */}
+        <CaseStudyCards caseStudies={caseStudies} />
+
+        {/* Responsive Styles */}
+        <style jsx>{`
+          @media (max-width: 768px) {
+            .grid.grid-cols-\\[1\\.44fr_1fr\\] {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}</style>
+      </div>
+
+      {/* Contact component moved outside the main container */}
+      <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
+
+      <Footer />
+    </>
+  );
+};
+
+const WigShopDetail = () => {
+  const projectData = {
+    heroImage: project1,
+    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-800.jpg 800w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-1600.jpg 1600w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-2000.jpg 2000w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host.jpg 2560w",
+    title: "LeHost Hair & Wig Shop: Boosting Online Presence and Sales",
+    description: "We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic increase, 120% boost in social media engagement, and a 30% rise in online sales",
+    client: "LeHost",
+    website: "https://lehosthairandwigs.com/",
+    services: "Web Design & Marketing",
+    timeline: "2024",
+    altText: "LeHost Hair & Wig Shop: Boosting Online Presence and Sales"
+  };
+
+  return <ProjectDetail {...projectData} />;
+};
+
+export default WigShopDetail;
+export { ProjectDetail };

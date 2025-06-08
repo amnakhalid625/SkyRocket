@@ -8,6 +8,14 @@ import CaseStudiesDetail from "./pages/CaseStudiesDetail";
 import BlogsDetail from "./pages/BlogsDetail";
 import Articles from "./components/Articles";
 import ContactDetail from "./pages/ContactDetail";
+import WebDevelopmentLearnMore from "./pages/WebDevelopmentLearnMore";
+import SocialMediaLearnMore from "./pages/SocialMediaLearnMore";
+import ContentCreationLearnMore from "./pages/ContentCreationLearnMore";
+import SeachOptimizationLearnMore from "./pages/SearchOptimizationLearnMore";
+import PayClickLearnMore from "./pages/PayClickLearnMore";
+import EmailMarketingLearnMore from "./pages/EmailMarketingLearnMore";
+import WigShopDetail from "./pages/WigShopDetail";
+import HomeCleanerProjectDetail from "./pages/HomeCleanerProjectDetail";
 // import Contact from "./pages/Contact";
 
 function App() {
@@ -24,6 +32,19 @@ function App() {
         <Route path="/case-studies" element={<CaseStudiesDetail />} />
         <Route path="/blogs" element={<BlogsDetail />} />
          <Route path="/contact-us" element={<ContactDetail/>} />
+         <Route path="/services/detroit-website-design-and-development" element={<WebDevelopmentLearnMore />} />
+         <Route path="/services/social-media-management" element={<SocialMediaLearnMore />} />
+         <Route path="/services/content-creation-marketing" element={<ContentCreationLearnMore/>} />
+         <Route path="/services/search-engine-optimization" element={<SeachOptimizationLearnMore/>} />
+         <Route path="/services/pay-per-click-advertising" element={<PayClickLearnMore/>} />
+         <Route path="/services/email-marketing" element={<EmailMarketingLearnMore/>} />
+         <Route path="/case-study/lehost-hair-wig-shop-boosting-online-presence-and-sales" element={<WigShopDetail />} />
+         <Route path="/case-study/mop-and-glow-cleaning-company-building-trust-and-driving-local-leads" element={<HomeCleanerProjectDetail />} />
+
+
+
+
+
       </Routes>
     </Router>
   );

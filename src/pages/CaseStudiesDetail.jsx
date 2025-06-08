@@ -4,26 +4,35 @@ import WebCard from '../components/WebCard';
 import CaseStudyCards from '../components/CaseStudyCards';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import projectThree from '../assets/images/project3.png';
+import projectFour from '../assets/images/project4.png';
+
+
 
 const CaseStudiesDetail = () => {
 
   const newCaseStudies = [
   {
     id: 1,
-    image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680b99bc9727d39f6c1d5f0f_sqa.png",
+    image: projectThree,
     alt: "Custom Project",
     tag: "Web Design & Marketing",
     title: "Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store",
-    description: "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions."
+    description: "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions.",
+     link: '/case-study/nutrivita-shop-boosting-e-commerce-sales-with-a-streamlined-online-store',
+  
   },
   
     {
     id: 2,
-    image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680ba033e3595cbe50808f71_Untitled.png",
+    image: projectFour,
     alt: "Custom Project",
     tag: "Web Design & SEO",
     title: "Lisburn Web Design: Crafting a Strong Online Presence for Local Businesses",
-    description: "Skyrocket Business built Lisburn Web Design’s website from scratch, optimized for local SEO and lead generation, resulting in a 60% increase in traffic and a 40% boost in client inquiries."
+    description: "Skyrocket Business built Lisburn Web Design’s website from scratch, optimized for local SEO and lead generation, resulting in a 60% increase in traffic and a 40% boost in client inquiries.",
+      link: '/case-study/lisburn-web-design-crafting-a-strong-online-presence-for-local-businesses',
+
+ 
   }
   
 ];
@@ -36,18 +45,18 @@ const CaseStudiesDetail = () => {
         <div className="px-4 sm:px-6 md:padding-global py-12 sm:py-16 md:py-20 lg:py-24 xl:py-20">
           <div className="mx-auto max-w-7xl">
             <div className="text-center">
-              <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1 transform transition-all duration-300 hover:scale-105">
+              <div className="inline-block bg-secondary text-textColor px-4 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1 transform transition-all duration-300 ">
                 Skyrocket case studies
               </div>
               <div className="h-4" />
-              <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight tracking-tight transition-all duration-300 hover:text-opacity-90">
+              <div className="max-w-5xl mx-auto">
+                <h2 className="text-4xl md:text-5xl  font-medium text-textColor mb-4 leading-tight tracking-tight transition-all duration-300 hover:text-opacity-90">
                   Skyrocket Your Business with Proven Success Stories
                 </h2>
               </div>
               <div className="h-4" />
               <div className="max-w-2xl mx-auto">
-                <p className="text-base md:text-lg text-secondaryTextColor leading-relaxed mb-8 font-medium transition-all duration-300 hover:text-opacity-90">
+                <p className="text-base md:text-lg text-secondaryTextColor leading-relaxed font-medium transition-all duration-300 hover:text-opacity-90">
                   At Skyrocket Business, we tackle real-world challenges and deliver results that matter. Our case studies show how we've helped businesses grow through tailored strategies, stunning websites, and effective marketing. We focus on the digital side, so you can focus on what you do best.
                 </p>
               </div>

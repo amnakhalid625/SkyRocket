@@ -15,7 +15,9 @@ export default {
         secondaryTextColor: '#525866',
         backgroundColor: '#F4F7FB',
         buttonhover:'#B9E024',
-        bluehover:'#2563EB'
+        bluehover:'#2563EB',
+        whitehover:'#ffffffbf',
+        darkhover:'#0A0D14'
       },
       fontFamily: {
         // Primary font stack - Inter first, then system sans-serif fallback
@@ -26,6 +28,7 @@ export default {
         
         'serif': ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       },
+     
       top: {
         '9': '18rem',   
         '72': '18rem',    

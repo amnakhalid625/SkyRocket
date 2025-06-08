@@ -1,18 +1,13 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import navArrow from '../assets/images/NavArrow.svg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Prevent scrolling when menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -22,19 +17,28 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navLinks = [
+    { name: 'About', to: '/about-us' },
+    { name: 'Services', to: '/services' },
+    { name: 'Pricing', to: '/pricing' },
+    { name: 'Case Studies', to: '/case-studies' },
+    { name: 'Blog', to: '/blogs' },
+    { name: 'Contact', to: '/contact-us' },
+  ];
+
   return (
     <>
       <nav className="flex items-center justify-between px-6 py-4 max-w-[83rem] mx-auto font-medium">
-        {/* Logo and Hamburger Button Container (Mobile) */}
+        {/* Logo and Hamburger Button (Mobile) */}
         <div className="flex lg:hidden items-center justify-between w-full">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img 
               src={logo}
               alt="SkyRocket Logo" 
               className="h-10 transition-opacity hover:opacity-80 duration-200"  
             />
-          </div>
-          
+          </Link>
+
           <button 
             className="focus:outline-none z-50"
             onClick={toggleMenu}
@@ -53,34 +57,34 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Desktop Layout (lg and up) */}
+        {/* Desktop Layout */}
         <div className="hidden lg:flex items-center justify-between w-full">
-          {/* Logo Section */}
-          <div className="flex items-center space-x-2">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
             <img 
               src={logo}
               alt="SkyRocket Logo" 
               className="h-12 transition-opacity hover:opacity-80 duration-200"  
             />
-          </div>
+          </Link>
 
-          {/* Desktop Navigation Links */}
+          {/* Navigation Links */}
           <div className="flex space-x-6 text-textColor font-medium">
-            {['About', 'Services', 'Pricing', 'Case Studies', 'Blog', 'Contact'].map((item) => (
-              <a 
-                key={item} 
-                href="#" 
+            {navLinks.map((item) => (
+              <Link 
+                key={item.name} 
+                to={item.to} 
                 className="hover:text-accent transition-colors duration-200 ease-in-out"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </div>
 
-          {/* Desktop Contact Button */}
+          {/* Contact Button */}
           <div className="flex">
-            <a 
-              href="/contact-us" 
+            <Link 
+              to="/contact-us" 
               className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
             >
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -91,30 +95,24 @@ const Navbar = () => {
                 alt="navigation arrow" 
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"  
               />
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay and Content */}
+      {/* Mobile Menu */}
       <div className={`lg:hidden fixed inset-0 z-40 transition-all duration-300 ease-in-out ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'}`}>
-        {/* Overlay that covers the entire page */}
         <div 
-          className="absolute inset-0 bg-black bg-opacity-50"
+          className="absolute inset-0 bg-textColor bg-opacity-50"
           onClick={toggleMenu}
         />
         
-        {/* Menu Content */}
-        <div 
-          className={`absolute top-0 left-0 w-full h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}
-        >
-          {/* Menu Header with Logo and Close Button */}
+        <div className={`absolute top-0 left-0 w-full h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+          {/* Header */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-            <img 
-              src={logo}
-              alt="SkyRocket Logo" 
-              className="h-10"  
-            />
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <img src={logo} alt="SkyRocket Logo" className="h-10" />
+            </Link>
             <button 
               className="focus:outline-none"
               onClick={toggleMenu}
@@ -128,15 +126,15 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <div className="px-6 py-8 space-y-6">
-            {['About', 'Services', 'Pricing', 'Case Studies', 'Blog', 'Contact'].map((item) => (
-              <a 
-                key={item} 
-                href="#" 
-                className="block py-4 text-2xl text-textColor hover:text-accent transition-colors duration-200"
+            {navLinks.map((item) => (
+              <Link 
+                key={item.name} 
+                to={item.to} 
                 onClick={() => setIsMenuOpen(false)}
+                className="block py-4 text-2xl text-textColor hover:text-accent transition-colors duration-200"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </div>
         </div>

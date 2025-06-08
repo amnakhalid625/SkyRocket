@@ -1,5 +1,6 @@
 import React from 'react';
 import navArrow from '../assets/images/NavArrow.svg';
+import { Link } from 'react-router-dom';
 
 const BlogHeader = () => {
     const stats = [
@@ -16,7 +17,7 @@ const BlogHeader = () => {
                 </div>
                 <div className="h-4" />
                 <div className="max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight tracking-tight">
+                    <h2 className="text-4xl md:text-5xl lg:text-[48px] font-medium text-textColor mb-4 leading-tight tracking-tight">
                         Skyrocket Your Business with Tailored Solutions
                     </h2>
                 </div>
@@ -30,8 +31,8 @@ const BlogHeader = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
-                <a
-                    href="/get-in-touch"
+                <Link
+                    to="/contact-us"
                     className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out font-medium min-w-[180px] justify-center"
                 >
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -42,15 +43,16 @@ const BlogHeader = () => {
                         alt="navigation arrow"
                         className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                     />
-                </a>
+                </Link>
 
-                <button className="border border-primary hover:border-primary text-primary hover:text-bluehover font-medium py-3 px-6 rounded-full transition duration-200 min-w-[180px]">
+    <Link to="/case-studies">            <button className="border border-primary hover:border-primary text-primary hover:text-bluehover font-medium py-3 px-6 rounded-full transition duration-200 min-w-[180px]">
 See Case Studies
                 </button>
+                </Link>
             </div>
 
             {/* Stats Section */}
-            <div className="flex flex-wrap justify-center items-start gap-12 mt-8 text-center">
+            <div className="flex flex-wrap justify-center items-start gap-12 mt-8 text-center font-medium">
                 {stats.map((stat, index) => (
                     <div
                         key={index}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import navArrow from '../assets/images/NavArrow.svg';
 import BlogCards from '../components/BlogCard';
 import Articles from '../components/Articles';
@@ -57,38 +58,45 @@ const BlogsDetail = () => {
                 skyrocket business blog
               </div>
 
-              <div className="max-w-5xl mx-auto mb-4">
-                <h1 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-[#0a0d14] leading-tight tracking-tight transition-all duration-300 hover:text-opacity-90">
+              <div className="max-w-6xl mx-auto mb-4">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#0a0d14] leading-wider tracking-tight transition-all duration-300 hover:text-opacity-90">
                   Stay Ahead with Expert Web Design, Marketing Insights & Strategies for Detroit Businesses
                 </h1>
               </div>
 
-              <div className="max-w-4xl mx-auto mb-8">
-                <p className="text-base md:text-lg text-[#525866] leading-relaxed font-normal transition-all duration-300 hover:text-opacity-90">
-                  Welcome to the Skyrocket Business Blog, where we share the latest web design, marketing trends, tips, and strategies tailored for businesses in Detroit. From SEO and social media management to content creation and web development, our blog provides valuable insights to help your business grow and succeed online.
+              <div className="max-w-3xl mx-auto mb-8">
+                <p className="text-base font-medium md:text-lg text-secondaryTextColor leading-relaxed  transition-all duration-300 hover:text-opacity-90">
+                  Welcome to the Skyrocket Business Blog, where we share the latest web design, marketing trends, tips, and strategies tailored for businesses in Detroit. From SEO and social media management to content creation and web development, our blog provides valuable insights to help your business grow and succeed online.Stay informed, get inspired, and elevate your digital presence with our expert advice.
                 </p>
               </div>
 
               <div className="flex flex-wrap justify-center items-center gap-4">
-                <a
-                  href="/contact-us"
+                <Link
+                  to="/contact-us"
                   className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-tetxtColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium min-w-[160px] justify-center"
-                >
+                onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+               >
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
                     Get in Touch
                   </span>
                   <img
                     src={navArrow}
                     alt="navigation arrow"
-                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 filter brightness-0 invert"
+                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                   />
-                </a>
-                <a
-                  href="/services"
-                  className="border border-primary hover:border-[#1a0bcd] text-primary hover:text-[#1a0bcd] hover:bg-[#f4f7fb] font-medium py-3 px-6 rounded-full transition-all duration-300 min-w-[160px] text-center"
-                >
+
+                </Link>
+                <Link
+                  to="/services"
+                  className="border border-primary hover:border-bluehover text-primary hover:text-bluehover  font-medium py-3 px-6 rounded-full transition-all duration-300 min-w-[160px] text-center"
+                      onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              >
                   View Services
-                </a>
+                </Link>
               </div>
             </div>
 
