@@ -35,10 +35,10 @@ const WebDevelopmentLearnMore = () => {
         customStyles={{
           titleWidth: 'lg:max-w-xl'
         }}
-        showHeroImage={true}     // Image show
-        showFeatures={true}      // Features show  
-        showBadge={true}         // Badge show (yellow background)
-        showBadgeIcon={false}    // ⭐ Rocket icon hide kar diya!
+        showHeroImage={true}  
+        showFeatures={true}    
+        showBadge={true}        
+        showBadgeIcon={false}   
       />
 
 

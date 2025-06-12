@@ -1,6 +1,6 @@
 import React from 'react';
-import pattern1 from '../assets/images/smallPattern.svg';      // green arrow (bottom-left)
-import pattern2 from '../assets/images/smallPattern2.svg';   // purple arrow (top-right)
+import pattern1 from '../assets/images/smallPattern.svg';      
+import pattern2 from '../assets/images/smallPattern2.svg';   
 
 const defaultData = {
   resultsData: [
@@ -20,11 +20,11 @@ const defaultData = {
       },
       {
         title: "Weak Social Media Engagement",
-        description: "They weren't seeing much interaction on their social media channels."
+        description: "They weren’t seeing much interaction on their social media channels, making it difficult to grow their audience."
       },
       {
         title: "Limited Brand Visibility",
-        description: "They needed a more effective way to increase brand awareness."
+        description: " They needed a more effective way to increase brand awareness and attract new customers."
       }
     ]
   },

@@ -8,6 +8,7 @@ import member4 from '../assets/images/member4.webp';
 import member5 from '../assets/images/member5.webp';
 import member6 from '../assets/images/member6.webp';
 import navArrow from '../assets/images/NavArrow.svg';
+import { Link } from 'react-router-dom';
 
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState(null);
@@ -80,11 +81,10 @@ const Team = () => {
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teamMembers.map((member, index) => (
-            <a
+            <Link
               key={member.id}
-              href={member.link}
-              className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col text-center no-underline group cursor-pointer transform transition-all duration-300 hover:-translate-y-1"
-              onMouseEnter={() => setHoveredMember(member.id)}
+              to={`/team/${member.name.toLowerCase().replace(/\s+/g, '-')}`}
+className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col text-center no-underline group cursor-pointer transform transition-all duration-300 hover:-translate-y-1"              onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
               style={{
                 color: '#525866',
@@ -127,7 +127,7 @@ const Team = () => {
                   {member.position}
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

@@ -4,7 +4,7 @@ import HomeCleanerImg from '../assets/images/homeCleaner.png';
 
 import CaseStudyCards from '../components/CaseStudyCards';
 import project1 from '../assets/images/project3.png';
-import project2 from '../assets/images/webCard.png';
+import project2 from '../assets/images/project1.png';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -35,37 +35,36 @@ const ProjectDetail = ({
       image: project2,
       alt: 'Mop and Glow Cleaning Company',
       tag: 'Website Design & Marketing',
-      title: 'Sequins and Slate Interior Design Company!',
+      title: 'LeHost Hair & Wig Shop: Boosting Online Presence and Sales',
       description:
-        "Skyrocket Business redesigned Sequins and Slate's website and implemented SEO strategies, resulting in a 50% increase in traffic and a 30% rise in client inquiries.",
-      link: '/case-study/sequins-and-slate-interior-design-company',
+        "We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic increase, 120% boost in social media engagement, and a 30% rise in online sales.",
+      link: '/case-study/lehost-hair-wig-shop-boosting-online-presence-and-sales',
     },
   ];
 
 
 const overviewdefaultData = {
   resultsData: [
-    { value: "75%", label: "increase in Website Traffic" },
-    { value: "60%", label: "More Quote Requests" },
-    { value: "45%", label: "Reduction in Unsubscribe Rates" },
-    { value: "120%", label: "Increase in Social Media Engagement" }
+    { value: "100%", label: "Increase in Click-Through Rates" },
+    { value: "40%", label: "More Leads" },
+    { value: "55%", label: "More Leads" },
+    { value: "45%", label: "Increase in Return on Ad Spend" }
   ],
-  description: "Mop and Glow, a local cleaning company, needed a strong digital presence to build trust and attract new clients. Catalysty began by designing a fresh, mobile-friendly website, then launched targeted local marketing to generate leads and grow their business.",
+  description: "‍Lisburn Web Design needed a professional, modern website to showcase their web development services and attract more local clients. Skyrocket Business created their website from scratch, providing a seamless, user-friendly experience that highlights their skills and offerings while driving local business leads.",
   challenges: {
     title: "The Challenge",
-    description: "LeHost Hair & Wig Shop faced several challenges that were holding them back:",
     items: [
       {
-        title: "Outdated Website",
-        description: "Their old site didn’t reflect their professionalism or reliability."
+        title: "‍No Existing Online Presence",
+        description: "Lisburn Web Design had no website to effectively showcase their services."
       },
       {
-        title: "Low Inquiries",
-        description: "They weren’t receiving enough quote requests or calls."
+        title: "Limited Brand Visibility",
+        description: "As a local service provider, they were struggling to gain visibility in a competitive market."
       },
       {
-        title: "Poor Local Visibility",
-        description:"They struggled to appear in local search results."
+        title: "No Lead Generation Tools",
+        description:"Without a functional website, they lacked the tools to convert visitors into potential clients."
       }
     ]
   },
@@ -74,29 +73,29 @@ const overviewdefaultData = {
     description: "Skyrocket Business took a step-by-step approach to solve these challenges:",
     items: [
       {
-        title: "Website Design: ",
-        description: "We built a clean, modern, and easy-to-navigate website that clearly explained their services and made it simple for users to request a quote."
+        title: "Custom Website Creation",
+        description: "We built a fully custom, professional, and visually engaging website from the ground up that reflects their expertise and services."
       },
       {
-        title: "Local SEO Optimization:",
-        description: "Improved their Google visibility with on-page SEO tailored to local search intent."
+        title: "SEO Optimization",
+        description: "Implemented local SEO strategies to help them rank higher in Lisburn and nearby areas, boosting visibility."
       },
       {
-        title: "Trust-Building Content:",
-        description: " Created pages highlighting their services, team, and testimonials to boost credibility."
+        title: "Lead Generation Features",
+        description:"We incorporated easy-to-use contact forms and strong calls-to-action to convert visitors into clients."
       },
       {
-        title: "Lead Capture Tools: ",
-        description: "Added forms and click-to-call buttons to drive conversions."
+        title: "Mobile Optimization",
+        description:"Ensured the website is responsive and provides a seamless experience on all devices."
       }
     ]
   },
   results: {
     title: "Results",
     items: [
-      { metric: "Website Traffic", growth: "75%", label: "Website Traffic grew by 50%, with more qualified local visitors." },
-      { metric: "Social Media Engagement", growth: "60%", label: " helping them scale faster." },
-      { metric: "Stronger brand presence", growth: "45%", label: "leading to increased client trust and repeat business." }
+      {  label: "60% increase in website traffic, with a significant rise in local search visibility." },
+      { label: " 40% more leads coming through the website, resulting in new business opportunities." },
+      {  label: "Stronger brand identity, improving their reputation and attracting more clients from Lisburn and surrounding areas." }
     ]
   }
 };
@@ -118,7 +117,7 @@ const overviewdefaultData = {
         </div>
 
         {/* Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.40fr_1fr] gap-2 mb-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.60fr_1fr] gap-2 mb-12 items-end">
           <div>
             <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight  mb-4">
               {title}
@@ -192,21 +191,21 @@ const overviewdefaultData = {
   );
 };
 
-const HomeCleanerProjectDetail = () => {
+const LisburnDetail = () => {
   const projectData = {
     heroImage: HomeCleanerImg,
-    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6807e00132c9ff6c11834c4d_konstant%2520(1)-p-2000.png 800w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6807e00132c9ff6c11834c4d_konstant%2520(1)-p-2000.png 2560w",
-    title: "Mop and Glow Cleaning Company: Building Trust and Driving Local Leads",
-    description: "We designed Mop and Glow’s website and launched a local SEO strategy—leading to a 75% traffic boost and 60% more leads in just two months.",
-    client: "Mop and Glow Cleaning Company",
-    website: " ",
-    services: "Website Design & Digital Marketing",
+    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680ba357e7e37e1f963d3df9_Untitled_LE_upscale_balanced_x4%20(2)-p-1600.jpg 2560w",
+    title: "Lisburn Web Design: Crafting a Strong Online Presence for Local Businesses",
+    description: "Skyrocket Business built Lisburn Web Design’s website from scratch, optimized for local SEO and lead generation, resulting in a 60% increase in traffic and a 40% boost in client inquiries.",
+    client: "Kevin",
+    website: "http://lisburnwebdesign.uk",
+    services: "Web Design & SEO",
     timeline: "2025",
-    altText: "Mop and Glow Cleaning Company"
+    altText: "Lisburn Web Design: Crafting a Strong Online Presence for Local Businesses"
   };
 
   return <ProjectDetail {...projectData} />;
 };
 
-export default HomeCleanerProjectDetail;
+export default LisburnDetail;
 export { ProjectDetail };

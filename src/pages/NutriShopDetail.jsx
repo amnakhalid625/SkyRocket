@@ -1,10 +1,10 @@
 import React from 'react';
 import ProjectOverview from '../components/ProjectOverview';
-import HomeCleanerImg from '../assets/images/homeCleaner.png';
+import nutriImg from '../assets/images/project3.png';
 
 import CaseStudyCards from '../components/CaseStudyCards';
-import project1 from '../assets/images/project3.png';
-import project2 from '../assets/images/webCard.png';
+import project1 from '../assets/images/project1.png';
+import project2 from '../assets/images/project4.png';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -25,78 +25,77 @@ const ProjectDetail = ({
       image: project1,
       alt: 'LeHost Hair & Wig Shop',
       tag: 'Web Design & Digital Marketing',
-      title: 'Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store',
+      title: 'LeHost Hair & Wig Shop: Boosting Online Presence and Sales',
       description:
-        "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions.",
-      link: '/case-study/nutrivita-shop-boosting-e-commerce-sales-with-a-streamlined-online-store',
+        "We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic increase, 120% boost in social media engagement, and a 30% rise in online sales",
+      link: '/case-study/lehost-hair-wig-shop-boosting-online-presence-and-sales',
     },
     {
       id: 2,
       image: project2,
       alt: 'Mop and Glow Cleaning Company',
       tag: 'Website Design & Marketing',
-      title: 'Sequins and Slate Interior Design Company!',
+      title: 'Lisburn Web Design: Crafting a Strong Online Presence for Local Businesses',
       description:
-        "Skyrocket Business redesigned Sequins and Slate's website and implemented SEO strategies, resulting in a 50% increase in traffic and a 30% rise in client inquiries.",
-      link: '/case-study/sequins-and-slate-interior-design-company',
+        "Skyrocket Business built Lisburn Web Design’s website from scratch, optimized for local SEO and lead generation, resulting in a 60% increase in traffic and a 40% boost in client inquiries.",
+      link: '/case-study/lisburn-web-design-crafting-a-strong-online-presence-for-local-businesses',
     },
   ];
 
 
 const overviewdefaultData = {
   resultsData: [
-    { value: "75%", label: "increase in Website Traffic" },
-    { value: "60%", label: "More Quote Requests" },
-    { value: "45%", label: "Reduction in Unsubscribe Rates" },
-    { value: "120%", label: "Increase in Social Media Engagement" }
+    { value: "90%", label: "Increase in Organic Search Traffic" },
+    { value: "50%", label: "Improvement in Conversion Rates" },
+    { value: "40%", label: "Growth in Leads Capturing" },
+    { value: "35%", label: "Social Media Engagement" }
   ],
-  description: "Mop and Glow, a local cleaning company, needed a strong digital presence to build trust and attract new clients. Catalysty began by designing a fresh, mobile-friendly website, then launched targeted local marketing to generate leads and grow their business.",
+  title: "Overview",
+  description: "Nutrivita Shop, an e-commerce business selling health supplements, wanted to improve its online store for a better shopping experience and increased conversions. Skyrocket Business redesigned their website to enhance user experience, optimize for mobile, and implement marketing strategies that would drive more sales.",
   challenges: {
     title: "The Challenge",
-    description: "LeHost Hair & Wig Shop faced several challenges that were holding them back:",
     items: [
       {
-        title: "Outdated Website",
-        description: "Their old site didn’t reflect their professionalism or reliability."
+        title: "Clunky Website Design",
+        description: "Their old website was difficult to navigate and not mobile-friendly, which led to a poor user experience."
       },
       {
-        title: "Low Inquiries",
-        description: "They weren’t receiving enough quote requests or calls."
+        title: "Low Conversion Rates",
+        description: "Despite having quality products, they weren’t converting visitors into customers effectively."
       },
       {
-        title: "Poor Local Visibility",
-        description:"They struggled to appear in local search results."
+        title: "Lack of Product Visibility",
+        description:"Their product pages were not optimized for search engines, leading to low organic traffic."
       }
     ]
   },
   solutions: {
     title: "The Solution",
-    description: "Skyrocket Business took a step-by-step approach to solve these challenges:",
     items: [
       {
-        title: "Website Design: ",
-        description: "We built a clean, modern, and easy-to-navigate website that clearly explained their services and made it simple for users to request a quote."
+        title: "E-commerce Website Redesign",
+        description: "We redesigned their site to provide an intuitive, clean, and mobile-friendly shopping experience."
       },
       {
-        title: "Local SEO Optimization:",
-        description: "Improved their Google visibility with on-page SEO tailored to local search intent."
+        title: "Search Engine Optimization (SEO)",
+        description: "We optimized product pages with the right keywords, boosting organic traffic and visibility."
       },
       {
-        title: "Trust-Building Content:",
-        description: " Created pages highlighting their services, team, and testimonials to boost credibility."
+        title: "Improved Checkout Process",
+        description: "Streamlined the checkout process, making it easier for customers to complete their purchases."
       },
       {
-        title: "Lead Capture Tools: ",
-        description: "Added forms and click-to-call buttons to drive conversions."
+        title: "Conversion Rate Optimization",
+        description: "Integrated trust signals like customer reviews, product ratings, and secure payment options to enhance credibility."
       }
     ]
   },
   results: {
     title: "Results",
     items: [
-      { metric: "Website Traffic", growth: "75%", label: "Website Traffic grew by 50%, with more qualified local visitors." },
-      { metric: "Social Media Engagement", growth: "60%", label: " helping them scale faster." },
-      { metric: "Stronger brand presence", growth: "45%", label: "leading to increased client trust and repeat business." }
+      { metric: "Website Traffic", growth: "90%", label: "Website Traffic grew by 50%, with more qualified local visitors." },
+      { metric: "Social Media Engagement", growth: "50%", label: " increase in conversion rates" },
+      {label: "Improved user engagement and reduced bounce rates, making the website more effective in capturing leads" }
     ]
   }
 };
@@ -118,7 +117,7 @@ const overviewdefaultData = {
         </div>
 
         {/* Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.40fr_1fr] gap-2 mb-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.20fr_1fr] gap-2 mb-12 items-end">
           <div>
             <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight  mb-4">
               {title}
@@ -141,7 +140,7 @@ const overviewdefaultData = {
             <p className="font-light text-textColor text-lg">{client}</p>
           </div>
           
-          <div className="flex-1 min-w-[150px] ">
+          <div className="flex-1 min-w-[250px] ">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Website</div>
             {website ? (
               <a 
@@ -192,21 +191,21 @@ const overviewdefaultData = {
   );
 };
 
-const HomeCleanerProjectDetail = () => {
+const NutriShopDetail = () => {
   const projectData = {
-    heroImage: HomeCleanerImg,
-    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6807e00132c9ff6c11834c4d_konstant%2520(1)-p-2000.png 800w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6807e00132c9ff6c11834c4d_konstant%2520(1)-p-2000.png 2560w",
-    title: "Mop and Glow Cleaning Company: Building Trust and Driving Local Leads",
-    description: "We designed Mop and Glow’s website and launched a local SEO strategy—leading to a 75% traffic boost and 60% more leads in just two months.",
-    client: "Mop and Glow Cleaning Company",
-    website: " ",
-    services: "Website Design & Digital Marketing",
-    timeline: "2025",
-    altText: "Mop and Glow Cleaning Company"
+    heroImage: nutriImg,
+    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680b9a43a812f097ad32e387_sqa_LE_upscale_balanced_x4-p-1600.jpg 800w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680b9a43a812f097ad32e387_sqa_LE_upscale_balanced_x4-p-1600.jpg  2560w",
+    title: "Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store",
+    description: "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions.",
+    client: "Nutrivita",
+    website: "https://www.nutrivitashop.com/",
+    services: "Web Design & Digital Marketing",
+    timeline: "2024",
+    altText: "Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store"
   };
 
   return <ProjectDetail {...projectData} />;
 };
 
-export default HomeCleanerProjectDetail;
+export default NutriShopDetail;
 export { ProjectDetail };

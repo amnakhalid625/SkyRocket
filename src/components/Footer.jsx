@@ -46,7 +46,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="relative bg-primary text-white overflow-hidden">
+    <div className="relative bg-primary text-white overflow-hidden py-4">
       {/* Decorative Background */}
       <motion.div 
         className="absolute top-0 right-0 w-96 h-96 sm:w-64 sm:h-20 md:w-60 md:h-60 lg:w-96 lg:h-28 xl:w-[30rem] xl:h-24 2xl:w-[35rem] 2xl:h-28 z-0"
@@ -70,7 +70,7 @@ const Footer = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-x-6 xl:gap-x-8 justify-items-start">
           
           {/* Company Info */}
           <motion.div variants={itemVariants}>
@@ -246,7 +246,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Recent Posts */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="w-full max-w-[200px] lg:ml-8 xl:ml-12">
             <h3 className="text-xl font-semibold text-white mb-5">Recent Posts</h3>
             <div className="space-y-3 text-lg">
               <MotionLink
@@ -297,7 +297,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Contact */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="w-full max-w-[200px]">
             <h3 className="text-xl font-semibold text-white mb-5">Contact</h3>
             <div className="space-y-3 text-lg">
               <MotionLink

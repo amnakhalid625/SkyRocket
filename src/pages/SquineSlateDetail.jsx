@@ -1,11 +1,10 @@
+import React from 'react';
 import ProjectOverview from '../components/ProjectOverview';
-import project1 from '../assets/images/project1.png';
-
-
+import HomeCleanerImg from '../assets/images/homeCleaner.png';
 
 import CaseStudyCards from '../components/CaseStudyCards';
-import project3 from '../assets/images/project3.png';
-import project5 from '../assets/images/project2.png';
+import project1 from '../assets/images/project1.png';
+import project2 from '../assets/images/project2.png';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -23,17 +22,17 @@ const ProjectDetail = ({
   const caseStudies = [
     {
       id: 1,
-      image: project3,
+      image: project1,
       alt: 'LeHost Hair & Wig Shop',
-      tag: 'Web Design & Digital Marketing',
+      tag: 'Web Design & Marketing',
       title: 'Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store',
       description:
         "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions.",
-      link: '/case-study/nutrivita-shop-boosting-e-commerce-sales-with-a-streamlined-online-store',
+      link: '/case-study/lehost-hair-wig-shop-boosting-online-presence-and-sales',
     },
     {
       id: 2,
-      image: project5,
+      image: project2,
       alt: 'Mop and Glow Cleaning Company',
       tag: 'Website Design & Digital Marketing',
       title: 'Mop and Glow Cleaning Company: Building Trust and Driving Local Leads',
@@ -42,6 +41,64 @@ const ProjectDetail = ({
       link: '/case-study/mop-and-glow-cleaning-company-building-trust-and-driving-local-leads',
     },
   ];
+
+
+const overviewdefaultData = {
+  resultsData: [
+    { value: "150%", label: "Website traffic increase" },
+    { value: "30%", label: "More inquries" },
+    { value: "45%", label: "Enhanced Reputation" },
+    { value: "65%", label: "Increase in Sales Conversion" }
+  ],
+  description: "‍Sequins and Slate, an interior design company, wanted a website that reflected their design expertise and attracted high-value clients. Skyrocket Business redesigned their site, improved its functionality, and launched targeted marketing to increase client inquiries and grow their business.",
+  challenges: {
+    title: "The Challenge",
+    items: [
+      {
+        title: "Outdated Website",
+        description: "Their previous website didn’t showcase their design skills or convey professionalism."
+      },
+      {
+        title: "Low Inquiries",
+        description: "They were struggling to convert site visitors into potential clients."
+      },
+      {
+        title: "Poor Local Visibility",
+        description:"Their brand was not visible in online searches or social media."
+      }
+    ]
+  },
+  solutions: {
+    title: "The Solution",
+    items: [
+      {
+        title: "Website Design",
+        description: " We created a visually stunning, easy-to-navigate website that highlighted their portfolio and services."
+      },
+      {
+        title: "Local SEO",
+        description: "We optimized the site to improve their local search rankings and attract high-value clients."
+      },
+      {
+        title: "Lead Capture Features",
+        description: "Integrated lead forms and call-to-action buttons to encourage visitors to inquire about their services."
+      },
+      {
+        title: "Social Media Integration",
+        description: "Linked their website with social media accounts for enhanced brand visibility."
+      }
+    ]
+  },
+  results: {
+    title: "Results",
+    items: [
+      {  label: "50% increase in website traffic, bringing more qualified leads." },
+      {  label: "30% more client inquiries, resulting in new business opportunities." },
+      { label: "Enhanced brand reputation with a more professional, appealing website." }
+    ]
+  }
+};
+
 
   return (
     <>
@@ -59,9 +116,9 @@ const ProjectDetail = ({
         </div>
 
         {/* Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.44fr_1fr] gap-2 mb-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.40fr_1fr] gap-2 mb-12 items-end">
           <div>
-            <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight mb-4">
+            <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight  mb-4">
               {title}
             </h1>
           </div>
@@ -77,12 +134,12 @@ const ProjectDetail = ({
 
         {/* Meta Info */}
         <div className="flex flex-wrap gap-12">
-          <div className="flex-1 min-w-[150px]">
-            <div className="font-medium text-base text-secondaryTextColor mb-2">Client</div>
+          <div className="flex-auto min-w-[150px] ">
+            <div className="font-medium text-base text-secondaryTextColor mb-2 ">Client</div>
             <p className="font-light text-textColor text-lg">{client}</p>
           </div>
           
-          <div className="flex-1 min-w-[150px]">
+          <div className="flex-1 min-w-[150px] ">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Website</div>
             {website ? (
               <a 
@@ -98,7 +155,7 @@ const ProjectDetail = ({
             )}
           </div>
           
-          <div className="flex-1 min-w-[150px]">
+          <div className="flex-1 min-w-[450px] ">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Services</div>
             <p className="font-light text-textColor text-lg">{services}</p>
           </div>
@@ -110,7 +167,7 @@ const ProjectDetail = ({
         </div>
 
         {/* Include ProjectOverview component */}
-        <ProjectOverview />
+        <ProjectOverview  data={overviewdefaultData} />
         
         {/* Pass case studies data to CaseStudyCards component */}
         <CaseStudyCards caseStudies={caseStudies} />
@@ -133,21 +190,21 @@ const ProjectDetail = ({
   );
 };
 
-const WigShopDetail = () => {
+const SquineSlateDetail = () => {
   const projectData = {
-    heroImage: project1,
-    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-800.jpg 800w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-1080.jpg 1080w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-1600.jpg 1600w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host-p-2000.jpg 2000w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6808aed9ea10004b5c661fbd_Le%20Host.jpg 2560w",
-    title: "LeHost Hair & Wig Shop: Boosting Online Presence and Sales",
-    description: "We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic increase, 120% boost in social media engagement, and a 30% rise in online sales",
-    client: "LeHost",
-    website: "https://lehosthairandwigs.com/",
-    services: "Web Design & Marketing",
-    timeline: "2024",
-    altText: "LeHost Hair & Wig Shop: Boosting Online Presence and Sales"
+    heroImage: HomeCleanerImg,
+    heroImageSrcSet: "500w, https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680b8a666f2b41eaf7323597_sqa_LE_upscale_balanced_x4-p-1600.jpg 2560w",
+    title: "Sequins and Slate Interior Design Company!",
+    description: "Skyrocket Business redesigned Sequins and Slate's website and implemented SEO strategies, resulting in a 50% increase in traffic and a 30% rise in client inquiries.",
+    client: "Sequins and Slate",
+    website: "http://sequinsandslate.com",
+    services: "Web Development",
+    timeline: "2025",
+    altText: "Sequins and Slate Interior Design Company"
   };
 
   return <ProjectDetail {...projectData} />;
 };
 
-export default WigShopDetail;
+export default SquineSlateDetail;
 export { ProjectDetail };
