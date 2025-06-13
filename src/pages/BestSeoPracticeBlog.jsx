@@ -5,27 +5,27 @@ import Articles from '../components/Articles';
 import dotIcon from '../assets/images/dot-icon.svg';
 import calendarIcon from '../assets/images/calendar-icon.svg';
 import mem1 from '../assets/images/member1.webp';
-import featureImg from '../assets/images/seoTwo.jpg';
+import featureImg from '../assets/images/seoThree.jpg';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-import seoImg from '../assets/images/blog3.jpg';
-import seoImgTwo from '../assets/images/blogCard1.avif';
-import seoImgThree from '../assets/images/rightWebDesingImg.jpg';
+import seoImg from '../assets/images/blogCard1.avif';
+import seoImgTwo from '../assets/images/webTrend.jpg';
+import seoImgThree from '../assets/images/seo.png';
 import groupImg from '../assets/images/topSeoImg.jpeg';
 
-const TopSeoStrategyBlog = ({
+const BestSeoPracticeBlog = ({
   // Header section props
-  category = "Digital Marketing",
-  title = "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
-  subtitle = "Master local SEO in Detroit and drive more traffic to your business. Skyrocket your online visibility with expert SEO strategies tailored for Detroit companies.",
+  category = "Website Design",
+  title = "How a Stunning Website Design Can Boost Your Detroit Business",
+  subtitle = "Discover how a stunning website design can boost your Detroit business. Get a high-converting, user-friendly website that drives results with Skyrocket Business.",
 
   // Author and date props
   author = {
     name: "Sara Jessica",
     image: mem1
   },
-  publishDate = "Apr 28, 2025",
+  publishDate = "Apr 29, 2025",
 
   // Featured image
   featuredImage = featureImg,
@@ -34,138 +34,122 @@ const TopSeoStrategyBlog = ({
     {
       type: "section",
       paragraphs: [
-        "<strong>SEO is more than just rankings.</strong> It's about being found by the right people — the ones who are looking for exactly what you offer. In Detroit's bustling business environment, <LINK to=\"/services/\">local SEO</LINK> is the secret weapon for standing out and attracting real customers. With the right SEO strategy, your business will rise above the noise and show up exactly when your potential customers need you. It's time to make your business <strong>unforgettable. </strong>",
+        "Your website is more than just an online presence. It's your digital storefront, your <strong>24/7 salesperson</strong>, and a key driver in converting visitors into loyal customers. For Detroit businesses, <strong>a beautifully designed website</strong> isn’t just a nice-to-have — it’s a must-have. But it’s not enough for your website to just look good. It needs to <strong>work hard</strong> to convert visitors into loyal customers for you.",
+        "In this post, we’ll show you how the right <LINK to=\"/services/\">website design</LINK> can <LINK to=\"/services/\">skyrocket your detroit business</LINK> by improving user experience, boosting trust, and increasing conversions."
       ]
     },
     {
       type: "section",
-      heading: "Why Local SEO is Essential for Detroit Businesses",
+      heading: "Why Website Design Matters for Detroit Businesses",
       paragraphs: [
-        "In Detroit, competition is fierce. Whether you're in the heart of downtown or one of the surrounding neighborhoods, there's no shortage of businesses fighting for attention. <LINK to=\"/services/\">local SEO</LINK> that when people search for services like yours in Detroit, you're the one they find. It's about getting your business in front of the people who matter most: the ones who are already looking for you — your future customers.",
-        "SEO isn't just about ranking higher; it's about creating real connections with your local audience and turning searches into sales. When you nail your <LINK to=\"/services/\">local SEO strategy</LINK>, your business will be more visible, more trusted, and more likely to convert visitors into loyal customers.",
+        "In a bustling city like Detroit, standing out online can be a challenge. Whether you’re running a local coffee shop, a construction company, or a digital agency, a stunning website design ensures that your business isn’t lost in the shuffle. <strong>Your website is often the first interaction potential customers have with your business</strong>, so it needs to create a lasting impression",
+
+
+        "<strong>A well-designed website</strong> is more than just attractive. It has the power to:",
+      ],
+       listItems: [
+        "<strong>Attract more visitors:</strong>A visually appealing site captures attention and encourages users to stick around.",
+        "<strong>Build trust:</strong>A professional, clean design reassures visitors that your business is credible and reliable.",
+        "<strong>Increase conversions:</strong>Great design guides users to take action, whether it's making a purchase, filling out a form, or scheduling a consultation.",
+      ],
+  subText: [
+        "When you have a <strong>stunning website design</strong>, it’s easier to turn casual visitors into <strong>loyal customers.</strong>"
       ]
+
     },
     {
       type: "section",
-      heading: "1. Google My Business: Your Digital Foundation",
+      heading: "1. First Impressions Matter: Keep It Clean and Professional",
       paragraphs: [
-        "Your <strong>Google My Business </strong> listing is your digital storefront. It's often the first impression potential customers will have of your business, and it's where they go to find critical information like your hours, location, and contact details. A <strong>well-optimized GMB profile </strong> builds trust and boosts your visibility in search results.",
-        "We help you:"
+        "The first few seconds on your website matter. <strong>First impressions are lasting impressions.</strong> If your website looks outdated or is hard to navigate, users will quickly bounce, and your chances of conversion will plummet.",
+        "A clean, <LINK to=\"/services/detroit-website-design-and-development\">professional website design</LINK> shows your audience that you’re serious about your business. It sets the tone for what they can expect from your products and services:",
+        "At Skyrocket Business, we design websites that:"
       ],
       listItems: [
-        "Optimize your profile with accurate, complete information.",
-        "Upload high-quality photos of your business to make you stand out.",
-        "Collect and manage customer reviews to build social proof.",
+        "<strong>Look modern and professional</strong> to build credibility.",
+        "<strong>Are easy to navigate</strong> so users don’t get frustrated.",
+        "<strong>Highlight your brand’s personality,</strong> making it memorable.",
       ],
       subText: [
-        "Your GMB profile is your first step to SEO success, and we'll make sure it works as hard as you do"
+        "With a well-designed website, <strong>Detroit customers will feel confident</strong> doing business with you."
       ]
     },
     {
       type: "section",
-      heading: "2. Target Detroit-Specific Keywords",
+      heading: "2. Mobile-Friendly Design: Meet Customers Where They Are",
       paragraphs: [
-        "<strong>Keywords are the heart of SEO</strong>, and when you're in Detroit, they need to be hyper-targeted to your local audience. It's not just about using broad terms like 'SEO services' — it's about using keywords like <strong>'SEO services in Detroit'</strong> or <strong>'Detroit web design experts' </strong> that resonate with the locals.",
-        "We focus on:"
+        "Did you know that over <strong>60% of searches</strong> now come from mobile devices? That means your website needs to be <strong>mobile-responsive</strong> to cater to today’s on-the-go consumer. When people in Detroit search for a product or service, they often do it from their phones — whether they’re in <strong>Midtown, Greektown</strong>, or anywhere in between.",
+        "A mobile-friendly website means:"
       ],
       listItems: [
-        "Using <strong>Detroit-specific keywords</strong> in your website content, blogs, and meta tags.",
-        "Crafting content that speaks directly to your audience's needs.",
-        "Ensuring that your business ranks for the most relevant local searches.",
+      "<strong>Responsive design</strong> that adapts to any screen size.",
+        "<strong>Fast loading times,</strong>because mobile users won’t wait for a slow website.",
+        "<strong>Click-to-call functionality</strong>for users on mobile devices who want to reach you easily.",
       ],
       subText: [
-        "When your business is found by the right people, you can drive more targeted traffic that's likely to convert into customers."
+        "We ensure your website is <strong>fully optimized for mobile</strong> to capture more customers, no matter where they are."
       ],
       showImage: true
     },
     {
       type: "section",
-      heading: "3. Local Directories and Listings: Boost Your Visibility",
+      heading: "3. User Experience (UX) Design: Guide Visitors to Take Action",
       paragraphs: [
-        "Getting listed on local directories and online listings is a smart way to enhance your local SEO. These platforms help Google verify your business and improve your rankings. Plus, they make it easy for Detroiters to find and connect with you.",
-        "We'll ensure your business is listed on top Detroit directories like:"
+        "A beautiful website design means nothing if users can’t find what they’re looking for. <strong>UX design</strong> focuses on creating a seamless experience that guides visitors toward taking action. Whether it’s <strong>making a purchase, signing up for a newsletter, or contacting your team</strong>, a great UX design helps make the process easy and intuitive..",
+        "Key UX elements we focus on:"
       ],
       listItems: [
-        "Yelp",
-        "Google Business",
-        "Detroit's Chamber of Commerce website",
+        "<strong>Clear navigation:</strong> Make it easy for users to find the information they need.",
+        "<strong>Call-to-action buttons:</strong>  Guide visitors toward the next step, whether it’s purchasing, booking, or reaching out.",
+        "<strong>Fast loading speed:</strong>  No one has the patience for a slow website, especially on mobile.",
       ],
       subText: [
-        "Accurate and consistent listings across these platforms send a powerful signal to search engines and improve your SEO rankings."
+        "<strong>Your website should lead users naturally </strong> to the actions you want them to take, turning visitors into customers effortlessly."
       ]
     },
     {
       type: "section",
-      heading: "4. Content That Speaks to Detroiters",
+      heading: "4. Conversion Optimization: Turn Visitors Into Loyal Customers",
       paragraphs: [
-        "Content is more than just words — it's <strong>your brand's story.</strong> And in Detroit, that story needs to resonate with local audiences. Whether it's blog posts, case studies, or social media updates, <strong>content helps build trust</strong> and <strong>connects with your audience</strong> on a deeper level.",
-        "We create:"
+        "A <strong>stunning design </strong> alone won’t increase your revenue — you need to focus on conversion optimization. This is the process of tweaking your website to encourage more visitors to take the desired actions, whether that’s purchasing a product, filling out a form, or contacting you.",
+        "<strong>With conversion rate optimization (CRO)</strong> strategies like:"
       ],
       listItems: [
-        "<strong>Blog posts and articles</strong> that reflect Detroit's unique culture and challenges.",
-        "<strong>Customer stories </strong> that speak directly to your local audience.",
-        "<strong>Engaging content</strong> that positions you as the expert in your field.",
+        "<strong>Clear and compelling CTAs (Call-To-Actions).</strong> ",
+        "<strong>A/B testing </strong> to see what resonates most with your visitors.",
+        "<strong>Social proof</strong>  (testimonials, reviews) to build trust.",
       ],
       subText: [
-        "By consistently publishing content that is relevant to Detroiters, you'll not only improve your SEO but also create lasting relationships with your customers."
+        "At Skyrocket Business, we know how to design websites that convert visitors into customers. With the right approach, we help you <strong>increase your sales </strong> and grow your business."
       ]
     },
     {
       type: "section",
-      heading: "5. Mobile Optimization: Meet Your Detroit Customers Where They Are",
+      heading: "5. SEO-Friendly Design: Rank Higher and Reach More Customers",
       paragraphs: [
-        "With over <strong>60% of searches</strong> coming from mobile devices, it's more important than ever to ensure your website is <strong>mobile-friendly.</strong> Whether your customers are searching from the city's bustling downtown or the surrounding suburbs, your website needs to look and perform flawlessly on any device",
-        "We'll ensure your website is:"
+        "A stunning website is great, but if no one can find it, it’s not doing its job. <strong>Search Engine Optimization (SEO)</strong> ensures that your site ranks higher in search results, driving organic traffic to your site. <strong>The right website design</strong> lays the foundation for SEO success by:",
       ],
       listItems: [
-        "<Strong>Responsive:</Strong> Looks great on any screen, from phones to tablets.",
-        "<Strong>Fast-loading:</Strong> No one wants to wait for a slow website.",
-        "<Strong>Easy to navigate:</Strong> Make it simple for Detroiters to find what they need.",
+        "<Strong>Optimizing your site structure </Strong> so search engines can crawl and index your pages easily.",
+        "<Strong>Improving page speed </Strong>  for better SEO rankings.",
+        "<Strong>Optimizing images</Strong> and content for relevant keywords.",
       ],
       subText: [
-        "A mobile-friendly website improves both your <LINK to=\"/services/\">local SEO ranking</LINK> and user experience, making it easier for customers to convert."
-      ]
-    },
-    {
-      type: "section",
-      heading: "6. Building Local Backlinks: Establishing Authority",
-      paragraphs: [
-        "Backlinks are like votes of confidence from other websites. When authoritative local sites link to yours, it signals to Google that you're a trustworthy, credible business. For Detroit-based businesses, local backlinks from respected sites can have a huge impact on SEO performance.",
-        "We help you:"
-      ],
-      listItems: [
-        "<strong>Partner with local businesses</strong> for mutual backlinks.",
-        "<strong>Sponsor Detroit events</strong> to gain backlinks from reputable local sources.",
-        "<strong>Get featured in Detroit blogs and publications</strong> to boost your authority.",
-      ],
-      subText: [
-        "These backlinks don't just boost your SEO — they build your reputation in Detroit and help you become a trusted resource in your industry."
-      ]
-    },
-    {
-      type: "section",
-      heading: "7. Continuous Monitoring and Adjustments: Stay Ahead of the Game",
-      paragraphs: [
-        "SEO isn't a 'set it and forget it' strategy — it's an ongoing process. <LINK to=\"/about-us\">Skyrocket Business</LINK>, we constantly monitor your website's performance and make adjustments as needed to keep you ahead of the competition. From keyword tracking to conversion analysis, we keep a close eye on what's working and fine-tune what's not.",
-        "We provide:"
-      ],
-      listItems: [
-        "<strong>Monthly reports</strong> to track your SEO progress.",
-        "<strong>Constant optimizations </strong> to keep your site in top form.",
-        "<strong>Adjustments to your strategy</strong> as trends and algorithms evolve.",
-      ],
-      subText: [
-        "With continuous monitoring and adjustments, we ensure that your business remains visible, competitive, and successful."
+        "At Skyrocket Business, we integrate <strong>SEO best practices</strong> into the design of your website, making sure your business is found by the right people, including Detroit locals who are searching for your products or services."
       ]
     },
   ],
 
   // Footer/CTA section
   conclusion = {
-    heading: "Let's Skyrocket Your Detroit Business Together",
+    heading: "Skyrocket Your Business Today",
     paragraphs: [
-      "At Skyrocket Business, we specialize in helping Detroit businesses grow through powerful, local SEO strategies that connect you with your ideal customers. From GMB optimization to local backlinks and content creation, we have the tools and expertise to make your business stand out in search results.",
-      "And we do it all at a real, affordable price that's perfect for small businesses in Detroit. Let's work together to boost your local visibility and help your business thrive.",
+      "Your website should be a powerful sales tool that works for you 24/7. Whether you’re looking to increase sales, book more calls, or build stronger relationships with your customers, a beautifully designed, high-converting website is essential.",
+
+
+      "At <LINK to=\"/contact-us/\">Skyrocket Business</LINK> , we specialize in creating websites that not only look great but also deliver real results. Our team combines stunning design with SEO optimization and conversion strategies to ensure your website performs at its best.",
+
+      "Let’s take your Detroit business to the next level. Contact <LINK to=\"/contact-us/\">Skyrocket Business today</LINK>  for a website that works as hard as you do — all for a low cost that makes sense for your budget."
     ],
   },
 
@@ -176,30 +160,30 @@ const TopSeoStrategyBlog = ({
   const defaultBlogPosts = [
     {
       id: 1,
-      title: "Why Choose a Nearby Web Design Business in Detroit?",
-      category: "Website Design",
-      date: "Apr 29, 2025",
-      excerpt: "Discover 10 powerful reasons to choose a Detroit-based web design company. From local insight to faster support, learn how Skyrocket Business can help grow your online presence.",
-      image: seoImg,
-      link: "/blog/why-choose-a-nearby-web-design-business-in-detroit"
-    },
-    {
-      id: 2,
       title: "The Role of Search Engine Optimisation in Web Design: Why It Matters in 2025",
       category: "Digital Marketing",
       date: "May 10, 2025",
-      excerpt: "Discover why mobile-first web design is crucial for local businesses in 2025. Learn how it boosts SEO, enhances user experience, and drives real-world results—especially for Detroit companies.",
-      image: seoImgTwo,
+      excerpt: "Discover 10 powerful reasons to choose a Detroit-based web design company. From local insight to faster support, learn how Skyrocket Business can help grow your online presence.",
+      image: seoImg,
       link: "/blog/the-role-of-search-engine-optimisation-in-web-design-why-it-matters-in-2025"
     },
     {
-      id: 3,
-      title: "How to Choose the Right Web Design Agency in Detroit",
+      id: 2,
+      title: "Top Web Design Trends in 2025: What Every Business Needs to Know",
       category: "Website Design",
+      date: "Feb 5, 2025",
+      excerpt: "Stay ahead in 2025 with the top web design trends. Discover AI integration, 3D elements, multilingual designs & more to boost engagement & business growth.",
+      image: seoImgTwo,
+      link: "/blog/top-web-design-trends-in-2025-what-every-business-needs-to-know"
+    },
+    {
+      id: 3,
+      title: "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
+      category: "Digital Marketing",
       date: "May 2, 2025",
-      excerpt: "Learn actionable tips to enhance your social media strategy.",
+      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services. ",
       image: seoImgThree,
-      link: "/blog/why-every-detroit-business-needs-a-mobile-friendly-website-in-2025"
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
     }
   ];
 
@@ -412,4 +396,4 @@ const TopSeoStrategyBlog = ({
   );
 };
 
-export default TopSeoStrategyBlog;
+export default BestSeoPracticeBlog;

@@ -23,6 +23,8 @@ import MobileDesignPost from "./pages/MobileDesignPost";
 import WebDesignPost from "./pages/WebDesignPost";
 import TeamMemberProfile from "./components/TeamMemberProfile";
 import TopSeoStrategyBlog from "./pages/TopSeoStrategyBlog";
+import BestSeoPracticeBlog from "./pages/BestSeoPracticeBlog";
+import SeoStrategy from "./pages/SeoStrategy";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
         <Route path="/blog/the-importance-of-mobile-first-design-for-local-businesses-in-2025" element={<MobileDesignPost />} />
         <Route path="/blog/why-choose-a-nearby-web-design-business-in-detroit" element={<WebDesignPost />} />
         <Route path="/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility" element={<TopSeoStrategyBlog />} />
+        <Route path="/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2" element={<SeoStrategy />} />
+        <Route path="/team" element={<TeamMemberProfile />} />
         <Route path="/team/:memberName" element={<TeamMemberProfile />} />
 
 
