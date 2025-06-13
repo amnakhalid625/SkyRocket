@@ -214,18 +214,37 @@ const MobileDesignPost = ({
 
   // Helper function to render processed content with Link components
   const renderProcessedContent = (text) => {
-    const parts = text.split(/(<LINKCOMPONENT to="[^"]*">.*?<\/LINKCOMPONENT>)/g);
+    const parts = text.split(/(<LINKCOMPONENT to="[^"]*">.*?<\/LINKCOMPONENT>|<a [^>]*>.*?<\/a>)/g);
     
     return parts.map((part, index) => {
       const linkMatch = part.match(/<LINKCOMPONENT to="([^"]*)">(.*?)<\/LINKCOMPONENT>/);
+      const anchorMatch = part.match(/<a ([^>]*)>(.*?)<\/a>/);
+      
       if (linkMatch) {
         const [, to, content] = linkMatch;
         return (
           <Link 
             key={index} 
             to={to} 
-            className="text-primary hover:underline font-medium"
+            className="text-primary underline hover:underline font-medium"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        );
+      } else if (anchorMatch) {
+        const [, attrs, content] = anchorMatch;
+        // Extract href from attributes
+        const hrefMatch = attrs.match(/href="([^"]*)"/);
+        const targetMatch = attrs.match(/target="([^"]*)"/);
+        const href = hrefMatch ? hrefMatch[1] : '#';
+        const target = targetMatch ? targetMatch[1] : '_self';
+        
+        return (
+          <a
+            key={index}
+            href={href}
+            target={target}
+            className="text-primary underline hover:underline font-medium"
             dangerouslySetInnerHTML={{ __html: content }}
           />
         );
@@ -238,7 +257,7 @@ const MobileDesignPost = ({
     return content.map((section, index) => (
       <div key={index} className="mb-12">
         {section.heading && (
-          <h3 className="text-2xl md:text-3xl font-medium text-textColor mb-6 tracking-tight">
+          <h3 className="text-2xl md:text-[40px] font-light text-textColor mb-6 tracking-tight leading-tight ">
             <strong>{section.heading}</strong>
           </h3>
         )}
@@ -315,7 +334,7 @@ const MobileDesignPost = ({
 
           {/* Conclusion Section */}
           <div className="mt-12">
-            <h3 className="text-2xl md:text-3xl font-medium text-textColor mb-6">
+            <h3 className="text-2xl md:text-[40px] font-light text-textColor mb-6">
               <strong>{conclusion.heading}</strong>
             </h3>
             {conclusion.paragraphs.map((paragraph, index) => (

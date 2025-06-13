@@ -203,7 +203,7 @@ const WebDesignPost = ({
           <Link 
             key={index} 
             to={to} 
-            className="text-primary hover:underline font-medium"
+            className="text-primary underline hover:underline font-medium"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             dangerouslySetInnerHTML={{ __html: content }}
           />
@@ -217,7 +217,7 @@ const WebDesignPost = ({
     return content.map((section, index) => (
       <div key={index} className="mb-12">
         {section.heading && (
-          <h3 className="text-2xl md:text-3xl font-medium text-textColor mb-6 tracking-tight">
+          <h3 className="text-2xl font-light text-textColor mb-6 tracking-tight ">
             <strong>{section.heading}</strong>
           </h3>
         )}
@@ -294,7 +294,7 @@ const WebDesignPost = ({
 
           {/* Conclusion Section */}
           <div className="mt-12">
-            <h3 className="text-2xl md:text-3xl font-medium text-textColor mb-6">
+            <h3 className="text-2xl md:text-4xl font-light text-textColor mb-6">
               <strong>{conclusion.heading}</strong>
             </h3>
             {conclusion.paragraphs.map((paragraph, index) => (

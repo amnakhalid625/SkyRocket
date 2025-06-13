@@ -8,6 +8,9 @@ import mem1 from '../assets/images/member1.webp';
 import featureImg from '../assets/images/blog1.jpg';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import seoImg from '../assets/images/seo.png';
+import seoImgTwo from '../assets/images/seoThree.jpg';
+import seoImgThree from '../assets/images/blog5.jpg';
 
 const UXPost = ({
 // Header section props
@@ -166,6 +169,38 @@ const UXPost = ({
   // Related articles section
   showRelatedArticles = true}) => {
 
+
+ const defaultBlogPosts = [
+    {
+      id: 1,
+      title: "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
+      category: "Digital Marketing",
+      date: "Apr 29, 2025",
+      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services. ",
+      image: seoImg,
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
+    },
+    {
+      id: 2,
+      title: "How a Stunning Website Design Can Boost Your Detroit Business",
+      category: "Website Design",
+      date: "May 10, 2025",
+      excerpt: "Discover how a stunning website design can boost your Detroit business. Get a high-converting, user-friendly website that drives results with Skyrocket Business. ",
+      image: seoImgTwo,
+      link: "/blog/seo-best-practices-optimizing-for-search-engines-in-2024"
+    },
+    {
+      id: 3,
+      title: "5 Common Web Design Mistakes and How to Avoid Them in 2025",
+      category: "Website Design",
+      date: "April 30, 2025",
+      excerpt: "Discover the secrets to crafting original content that converts your audience into loyal customers and supporters.",
+      image: seoImgThree,
+      link: "/blog/5-common-web-design-mistakes-and-how-to-avoid-them-in-2025"
+    }
+  ];
+
+
   // Helper function to replace LINK tags with actual Link components
   const processContent = (text) => {
     return text.replace(
@@ -186,7 +221,7 @@ const UXPost = ({
           <Link 
             key={index} 
             to={to} 
-            className="text-primary hover:underline font-medium"
+            className="text-primary underline hover:underline font-medium"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             dangerouslySetInnerHTML={{ __html: content }}
           />
@@ -199,7 +234,7 @@ const UXPost = ({
   const renderContent = () => {
     return content.map((section, index) => (
       <div key={index} className="mb-12">
-        <h3 className="text-2xl md:text-3xl font-medium text-textColor mb-6 tracking-tight">
+        <h3 className="text-2xl md:text-3xl font-medium  text-textColor mb-6 tracking-tight">
           <strong>{section.heading}</strong>
         </h3>
 
@@ -224,7 +259,7 @@ const UXPost = ({
 
         {section.subsections && section.subsections.map((subsection, sIndex) => (
           <div key={sIndex} className="mt-8">
-            <h4 className="text-xl font-medium text-textColor mb-4">
+            <h4 className="text-xl font-medium text-textColor  mb-4">
               <strong>{subsection.heading}</strong>
             </h4>
             <p className="mb-6 text-secondaryTextColor text-lg font-medium leading-relaxed">
@@ -256,7 +291,7 @@ const UXPost = ({
         <div className="inline-block px-4 py-1 bg-secondary rounded-full text-sm font-medium text-textColor mb-4">
           {category}
         </div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-textColor mb-6 max-w-6xl mx-auto mt-5 leading-wider tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-textColor mb-6 max-w-5xl mx-auto mt-5 leading-wider tracking-tight">
           {title}
         </h1>
         <p className="text-lg text-secondaryTextColor font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -298,7 +333,7 @@ const UXPost = ({
 
         {/* Conclusion Section */}
         <div className="mt-12">
-          <h3 className="text-2xl md:text-3xl font-medium text-textColor mb-6">
+          <h3 className="text-2xl md:text-3xl font-medium  text-textColor mb-6">
             <strong>{conclusion.heading}</strong>
           </h3>
           {conclusion.paragraphs.map((paragraph, index) => (
@@ -312,7 +347,7 @@ const UXPost = ({
               <Link 
                 to={conclusion.cta.url} 
                 
-                className="text-primary hover:underline font-bold"
+                className="text-primary underline hover:underline font-bold"
 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 {conclusion.cta.text}
@@ -329,7 +364,7 @@ onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             Related Articles
           </h2>
           <div className="">
-            <Articles />
+            <Articles   blogPosts={defaultBlogPosts} />
           </div>
         </div>
       )}
