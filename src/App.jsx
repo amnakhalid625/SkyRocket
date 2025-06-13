@@ -22,6 +22,7 @@ import UXPost from "./pages/UXPost";
 import MobileDesignPost from "./pages/MobileDesignPost";
 import WebDesignPost from "./pages/WebDesignPost";
 import TeamMemberProfile from "./components/TeamMemberProfile";
+import TopSeoStrategyBlog from "./pages/TopSeoStrategyBlog";
 
 function App() {
   return (
@@ -51,7 +52,8 @@ function App() {
         <Route path="/blog/understanding-user-experience-ux-and-its-impact-on-conversion-rates" element={<UXPost />} />
         <Route path="/blog/the-importance-of-mobile-first-design-for-local-businesses-in-2025" element={<MobileDesignPost />} />
         <Route path="/blog/why-choose-a-nearby-web-design-business-in-detroit" element={<WebDesignPost />} />
-              <Route path="/team/:memberName" element={<TeamMemberProfile />} />
+        <Route path="/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility" element={<TopSeoStrategyBlog />} />
+        <Route path="/team/:memberName" element={<TeamMemberProfile />} />
 
 
 
