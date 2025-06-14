@@ -9,9 +9,9 @@ import featureImg from '../assets/images/seo.png';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-import seoImg from '../assets/images/blogCard1.avif';
-import seoImgTwo from '../assets/images/webTrend.jpg';
-import seoImgThree from '../assets/images/seo.png';
+import seoImg from '../assets/images/blog2.jpg';
+import seoImgTwo from '../assets/images/rightWebDesingImg.jpg';
+import seoImgThree from '../assets/images/blogCard1.avif';
 import groupImg from '../assets/images/topSeoImg.jpeg';
 
 const SeoStrategy = ({
@@ -34,8 +34,8 @@ const SeoStrategy = ({
     {
       type: "section",
       paragraphs: [
-        "SEO isn’t just about climbing the search rankings — it’s about putting your business in front of the right people at the right time. If you want your Detroit business to stand out, <strong>local SEO</strong> is the key. It’s about ensuring your website gets found by potential customers in your neighborhood, and <strong>Skyrocket Business</strong> is here to make that happen.",
-        "In this post, we’ll walk you through the best local SEO strategies that can help you get noticed by your target audience in Detroit. From optimizing your Google My Business profile to crafting content that resonates with your community, these strategies are designed to get results."
+        "SEO isn't just about climbing the search rankings — it's about putting your business in front of the right people at the right time. If you want your Detroit business to stand out, <strong>local SEO</strong> is the key. It's about ensuring your website gets found by potential customers in your neighborhood, and <strong>Skyrocket Business</strong> is here to make that happen.",
+        "In this post, we'll walk you through the best local SEO strategies that can help you get noticed by your target audience in Detroit. From optimizing your Google My Business profile to crafting content that resonates with your community, these strategies are designed to get results."
       ]
     },
     {
@@ -43,114 +43,84 @@ const SeoStrategy = ({
       heading: "What is Local SEO?",
       paragraphs: [
         "<LINK to=\"/services/search-engine-optimization\">Local SEO</LINK> is the secret to getting your business seen in local searches. When people in Detroit search for services or products that you offer, you want to make sure your business is the first one they find. Local SEO involves targeting your online presence to rank higher in searches that are geographically relevant.",
-
-
-        "For example, when someone in Detroit searches for “best pizza in Detroit” or “top electricians near me,” local SEO ensures your business pops up in their results. It’s all about reaching the people who are actively looking for your services, right in your area.:",
-      ],
- 
-
+        "For example, when someone in Detroit searches for 'best pizza in Detroit' or 'top electricians near me,' local SEO ensures your business pops up in their results. It's all about reaching the people who are actively looking for your services, right in your area."
+      ]
     },
     {
       type: "section",
       heading: "Why Local SEO is Essential for Detroit Businesses",
       paragraphs: [
-        "In Detroit, a bustling city full of competition, getting noticed can be tough. But with local SEO, you’re not just another business in the crowd — you’re the one your potential customers will find. Here’s why local SEO is a must for your Detroit business:",
-       
+        "In Detroit, a bustling city full of competition, getting noticed can be tough. But with local SEO, you're not just another business in the crowd — you're the one your potential customers will find. Here's why local SEO is a must for your Detroit business:",
       ],
       listItems: [
-        "<strong>Be Where Your Customers Are: </strong> When your business shows up in local search results, you’re making sure you’re found by the people who matter the most — those in your neighborhood who are looking for services just like yours.",
-
-        "<strong>Trust Is Built Locally:</strong>  Customers are more likely to trust a business that they can easily find online, especially when they see positive reviews and relevant, location-specific information. <strong>Local SEO helps build that trust.</strong>",
-
-
-           "<strong>Targeted Traffic, Higher Conversions:</strong>  Local SEO brings <strong>highly qualified traffic</strong> to your site. These are potential customers who are ready to take action — whether it’s booking an appointment, calling your business, or making a purchase.",
-
-              "<strong>Mobile Optimization Matters:</strong>  More people than ever are searching on mobile devices, especially for local businesses. With <strong>local SEO,</strong> you can ensure your website is optimized for mobile searches, driving even more customers to your business",
-
-
-                 "<strong>Boost Your Google My Business Profile:</strong>   Google My Business is one of the most powerful tools for <LINK to=\"/services/search-engine-optimization\">Local SEO</LINK>. By optimizing your profile, you ensure your business appears in local search results and on Google Maps, making it easier for customers to find you.",
-      ],
-      subText: [
-        "With a well-designed website, <strong>Detroit customers will feel confident</strong> doing business with you."
-      ]
-    },
-    {
-      type: "section",
-      heading: "2. Mobile-Friendly Design: Meet Customers Where They Are",
-      paragraphs: [
-        "Did you know that over <strong>60% of searches</strong> now come from mobile devices? That means your website needs to be <strong>mobile-responsive</strong> to cater to today’s on-the-go consumer. When people in Detroit search for a product or service, they often do it from their phones — whether they’re in <strong>Midtown, Greektown</strong>, or anywhere in between.",
-        "A mobile-friendly website means:"
-      ],
-      listItems: [
-      "<strong>Responsive design</strong> that adapts to any screen size.",
-        "<strong>Fast loading times,</strong>because mobile users won’t wait for a slow website.",
-        "<strong>Click-to-call functionality</strong>for users on mobile devices who want to reach you easily.",
-      ],
-      subText: [
-        "We ensure your website is <strong>fully optimized for mobile</strong> to capture more customers, no matter where they are."
+        "<strong>Be Where Your Customers Are: </strong> When your business shows up in local search results, you're making sure you're found by the people who matter the most — those in your neighborhood who are looking for services just like yours.",
+        "<strong>Trust Is Built Locally:</strong> Customers are more likely to trust a business that they can easily find online, especially when they see positive reviews and relevant, location-specific information. <strong>Local SEO helps build that trust.</strong>",
+        "<strong>Targeted Traffic, Higher Conversions:</strong> Local SEO brings <strong>highly qualified traffic</strong> to your site. These are potential customers who are ready to take action — whether it's booking an appointment, calling your business, or making a purchase.",
+        "<strong>Mobile Optimization Matters:</strong> More people than ever are searching on mobile devices, especially for local businesses. With <strong>local SEO,</strong> you can ensure your website is optimized for mobile searches, driving even more customers to your business",
+        "<strong>Boost Your Google My Business Profile:</strong> Google My Business is one of the most powerful tools for <LINK to=\"/services/search-engine-optimization\">Local SEO</LINK>. By optimizing your profile, you ensure your business appears in local search results and on Google Maps, making it easier for customers to find you.",
       ],
       showImage: true
     },
     {
       type: "section",
-      heading: "3. User Experience (UX) Design: Guide Visitors to Take Action",
-      paragraphs: [
-        "A beautiful website design means nothing if users can’t find what they’re looking for. <strong>UX design</strong> focuses on creating a seamless experience that guides visitors toward taking action. Whether it’s <strong>making a purchase, signing up for a newsletter, or contacting your team</strong>, a great UX design helps make the process easy and intuitive..",
-        "Key UX elements we focus on:"
+      heading: "Powerful Local SEO Strategies for Detroit Businesses",
+      subheadingOne: "1. Optimize Your Google My Business Profile",
+      paragraphsOne: [
+        "Google My Business is your digital storefront. It's what shows up when someone searches for your business on Google or Google Maps. To get the most out of it:"
       ],
-      listItems: [
-        "<strong>Clear navigation:</strong> Make it easy for users to find the information they need.",
-        "<strong>Call-to-action buttons:</strong>  Guide visitors toward the next step, whether it’s purchasing, booking, or reaching out.",
-        "<strong>Fast loading speed:</strong>  No one has the patience for a slow website, especially on mobile.",
+      listItemsOne: [
+        "Claim your business if you haven't already.",
+        "Fill out your business details completely — name, address, phone number, website, hours, and services.",
+        "Upload high-quality photos and videos that showcase your business.",
+        "Encourage satisfied customers to leave reviews — these act as social proof, boosting your credibility and rankings."
       ],
-      subText: [
-        "<strong>Your website should lead users naturally </strong> to the actions you want them to take, turning visitors into customers effortlessly."
+      subheadingTwo: "2. Use Local Keywords to Optimize Your Content",
+      paragraphsTwo: [
+        "Your website should be optimized for local keywords that help you rank higher in Detroit-specific searches. Think about what potential customers might search for when looking for businesses like yours. Some examples might include:"
+      ],
+      listItemsTwo: [
+        "Best pizza in Detroit",
+        "Top HVAC service Detroit",
+        "[Your business type] in Detroit"
+      ],
+      subTextTwo: "Incorporating these local keywords into your content, including title tags, meta descriptions, and headings, signals to Google that you're relevant to Detroit customers.",
+      
+      subheadingThree: "3. Maintain NAP Consistency (Name, Address, Phone Number)",
+      paragraphsThree: [
+        "Google and other search engines rely on NAP consistency across the web to verify the legitimacy of your business. Make sure your business name, address, and phone number are consistent across all online platforms, including your website, Google My Business, Yelp, and other local directories."
+      ],
+
+      subheadingFour: "4. Create Local Content That Connects",
+      paragraphsFour: [
+        "Building local content is essential to showing search engines (and your audience) that you are active in your community. Create blog posts, videos, and guides that highlight local events, collaborations, or even Detroit-specific topics. This not only boosts your SEO but also establishes you as a trusted local business."
+      ],
+
+      subheadingFive: "5. Build Local Citations and Backlinks",
+      paragraphsFive: [
+        "Local citations are mentions of your business name, address, and phone number on other websites. These help search engines verify your business's legitimacy and can boost your local rankings. Additionally, backlinks from local blogs, businesses, or media outlets further strengthen your online presence and authority."
+      ],
+
+      subheadingSix: "6. Make Your Website Mobile-Friendly",
+      paragraphsSix: [
+        "The majority of local searches are done on mobile devices. Google prioritizes mobile-friendly websites, so if your site isn't optimized for smartphones, it's time to make a change. A mobile-optimized website ensures that users have a seamless experience when searching for your business, whether they're browsing from their phones or tablets."
       ]
     },
     {
       type: "section",
-      heading: "4. Conversion Optimization: Turn Visitors Into Loyal Customers",
+      heading: "How Skyrocket Business Can Help You Improve Your Local SEO",
       paragraphs: [
-        "A <strong>stunning design </strong> alone won’t increase your revenue — you need to focus on conversion optimization. This is the process of tweaking your website to encourage more visitors to take the desired actions, whether that’s purchasing a product, filling out a form, or contacting you.",
-        "<strong>With conversion rate optimization (CRO)</strong> strategies like:"
-      ],
-      listItems: [
-        "<strong>Clear and compelling CTAs (Call-To-Actions).</strong> ",
-        "<strong>A/B testing </strong> to see what resonates most with your visitors.",
-        "<strong>Social proof</strong>  (testimonials, reviews) to build trust.",
-      ],
-      subText: [
-        "At Skyrocket Business, we know how to design websites that convert visitors into customers. With the right approach, we help you <strong>increase your sales </strong> and grow your business."
+        "At <strong>Skyrocket Business</strong>, we know that local SEO is key to growing your Detroit business. Our team of SEO experts can help you optimize your website, Google My Business profile, and other online assets to make sure your business is found by the right customers. From keyword optimization to local content creation and backlink building, we offer <strong>affordable SEO services</strong> that deliver real, measurable results.",
+        "Our tailored local SEO strategies are designed to boost your visibility in Detroit, ensuring that when people in your area search for services you offer, they find you. Whether you're a small business or a larger company, <strong>Skyrocket Business</strong> has the expertise to help you succeed."
       ]
-    },
-    {
-      type: "section",
-      heading: "5. SEO-Friendly Design: Rank Higher and Reach More Customers",
-      paragraphs: [
-        "A stunning website is great, but if no one can find it, it’s not doing its job. <strong>Search Engine Optimization (SEO)</strong> ensures that your site ranks higher in search results, driving organic traffic to your site. <strong>The right website design</strong> lays the foundation for SEO success by:",
-      ],
-      listItems: [
-        "<Strong>Optimizing your site structure </Strong> so search engines can crawl and index your pages easily.",
-        "<Strong>Improving page speed </Strong>  for better SEO rankings.",
-        "<Strong>Optimizing images</Strong> and content for relevant keywords.",
-      ],
-      subText: [
-        "At Skyrocket Business, we integrate <strong>SEO best practices</strong> into the design of your website, making sure your business is found by the right people, including Detroit locals who are searching for your products or services."
-      ]
-    },
+    }
   ],
 
   // Footer/CTA section
   conclusion = {
-    heading: "Skyrocket Your Business Today",
+    heading: "Ready to Dominate Local SEO in Detroit?",
     paragraphs: [
-      "Your website should be a powerful sales tool that works for you 24/7. Whether you’re looking to increase sales, book more calls, or build stronger relationships with your customers, a beautifully designed, high-converting website is essential.",
-
-
-      "At <LINK to=\"/contact-us/\">Skyrocket Business</LINK> , we specialize in creating websites that not only look great but also deliver real results. Our team combines stunning design with SEO optimization and conversion strategies to ensure your website performs at its best.",
-
-      "Let’s take your Detroit business to the next level. Contact <LINK to=\"/contact-us/\">Skyrocket Business today</LINK>  for a website that works as hard as you do — all for a low cost that makes sense for your budget."
-    ],
+      "If you're ready to take your Detroit business to new heights, <LINK to=\"/about-us\">Skyrocket Business</LINK> is here to help you get started with expert local SEO strategies. <LINK to=\"/contact-us\">Contact us today</LINK> to learn how we can help you boost your local rankings and attract more customers in Detroit!"
+    ]
   },
 
   // Related articles section
@@ -160,30 +130,30 @@ const SeoStrategy = ({
   const defaultBlogPosts = [
     {
       id: 1,
-      title: "The Role of Search Engine Optimisation in Web Design: Why It Matters in 2025",
-      category: "Digital Marketing",
-      date: "May 10, 2025",
-      excerpt: "Discover 10 powerful reasons to choose a Detroit-based web design company. From local insight to faster support, learn how Skyrocket Business can help grow your online presence.",
+      title: "The Importance of Mobile-First Design for Local Businesses in 2025",
+      category: "Website Design",
+      date: "May 13, 2025",
+      excerpt: "Discover why mobile-first web design is crucial for local businesses in 2025. Learn how it boosts SEO, enhances user experience, and drives real-world results—especially for Detroit companies.",
       image: seoImg,
-      link: "/blog/the-role-of-search-engine-optimisation-in-web-design-why-it-matters-in-2025"
+      link: "/blog/the-importance-of-mobile-first-design-for-local-businesses-in-2025"
     },
     {
       id: 2,
-      title: "Top Web Design Trends in 2025: What Every Business Needs to Know",
+      title: "How to Choose the Right Web Design Agency in Detroit",
       category: "Website Design",
-      date: "Feb 5, 2025",
-      excerpt: "Stay ahead in 2025 with the top web design trends. Discover AI integration, 3D elements, multilingual designs & more to boost engagement & business growth.",
+      date: "May 2, 2025",
+      excerpt: "Learn actionable tips to enhance your social media strategy.",
       image: seoImgTwo,
-      link: "/blog/top-web-design-trends-in-2025-what-every-business-needs-to-know"
+      link: "/blog/how-to-choose-the-right-web-design-agency-in-detroit"
     },
     {
       id: 3,
-      title: "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
+      title: "The Role of Search Engine Optimisation in Web Design: Why It Matters in 2025",
       category: "Digital Marketing",
-      date: "May 2, 2025",
-      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services. ",
+      date: "May 10, 2025",
+      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services.",
       image: seoImgThree,
-      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
+      link: "/blog/the-role-of-search-engine-optimisation-in-web-design-why-it-matters-in-2025"
     }
   ];
 
@@ -216,7 +186,6 @@ const SeoStrategy = ({
         );
       } else if (anchorMatch) {
         const [, attrs, content] = anchorMatch;
-        // Extract href from attributes
         const hrefMatch = attrs.match(/href="([^"]*)"/);
         const targetMatch = attrs.match(/target="([^"]*)"/);
         const href = hrefMatch ? hrefMatch[1] : '#';
@@ -252,19 +221,116 @@ const SeoStrategy = ({
           </h3>
         )}
 
+        {/* Section One */}
+        {section.subheadingOne && (
+          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
+            {section.subheadingOne}
+          </h4>
+        )}
+        {section.paragraphsOne && section.paragraphsOne.map((paragraph, pIndex) => (
+          <p key={`one-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+            {renderProcessedContent(processContent(paragraph))}
+          </p>
+        ))}
+        {section.listItemsOne && (
+          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
+            {section.listItemsOne.map((item, lIndex) => (
+              <li key={`one-li-${lIndex}`} className="leading-relaxed">
+                {renderProcessedContent(processContent(item))}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Section Two */}
+        {section.subheadingTwo && (
+          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
+            {section.subheadingTwo}
+          </h4>
+        )}
+        {section.paragraphsTwo && section.paragraphsTwo.map((paragraph, pIndex) => (
+          <p key={`two-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+            {renderProcessedContent(processContent(paragraph))}
+          </p>
+        ))}
+        {section.listItemsTwo && (
+          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
+            {section.listItemsTwo.map((item, lIndex) => (
+              <li key={`two-li-${lIndex}`} className="leading-relaxed">
+                {renderProcessedContent(processContent(item))}
+              </li>
+            ))}
+          </ul>
+        )}
+        {section.subTextTwo && (
+          <p className="text-secondaryTextColor font-medium text-lg mb-6">
+            {renderProcessedContent(processContent(section.subTextTwo))}
+          </p>
+        )}
+
+        {/* Section Three */}
+        {section.subheadingThree && (
+          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
+            {section.subheadingThree}
+          </h4>
+        )}
+        {section.paragraphsThree && section.paragraphsThree.map((paragraph, pIndex) => (
+          <p key={`three-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+            {renderProcessedContent(processContent(paragraph))}
+          </p>
+        ))}
+
+        {/* Section Four */}
+        {section.subheadingFour && (
+          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
+            {section.subheadingFour}
+          </h4>
+        )}
+        {section.paragraphsFour && section.paragraphsFour.map((paragraph, pIndex) => (
+          <p key={`four-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+            {renderProcessedContent(processContent(paragraph))}
+          </p>
+        ))}
+
+        {/* Section Five */}
+        {section.subheadingFive && (
+          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
+            {section.subheadingFive}
+          </h4>
+        )}
+        {section.paragraphsFive && section.paragraphsFive.map((paragraph, pIndex) => (
+          <p key={`five-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+            {renderProcessedContent(processContent(paragraph))}
+          </p>
+        ))}
+
+        {/* Section Six */}
+        {section.subheadingSix && (
+          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
+            {section.subheadingSix}
+          </h4>
+        )}
+        {section.paragraphsSix && section.paragraphsSix.map((paragraph, pIndex) => (
+          <p key={`six-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+            {renderProcessedContent(processContent(paragraph))}
+          </p>
+        ))}
+
+        {/* Regular paragraphs */}
         {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
           <p 
-            key={pIndex} 
+            key={`p-${pIndex}`} 
             className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed"
           >
             {renderProcessedContent(processContent(paragraph))}
           </p>
         ))}
 
+        {/* Regular list items */}
         {section.listItems && (
           <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
             {section.listItems.map((item, lIndex) => (
-              <li key={lIndex} className="leading-relaxed">
+              <li key={`li-${lIndex}`} className="leading-relaxed">
                 {renderProcessedContent(processContent(item))}
               </li>
             ))}
@@ -281,12 +347,6 @@ const SeoStrategy = ({
             />
           </div>
         )}
-
-        {section.subText && section.subText.map((text, sIndex) => (
-          <p key={sIndex} className="text-secondaryTextColor italic font-medium text-lg mb-6">
-            {renderProcessedContent(processContent(text))}
-          </p>
-        ))}
       </motion.div>
     ));
   };
@@ -364,7 +424,7 @@ const SeoStrategy = ({
               <strong>{conclusion.heading}</strong>
             </h3>
             {conclusion.paragraphs.map((paragraph, index) => (
-              <p key={index} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
+              <p key={`conclusion-${index}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
                 {renderProcessedContent(processContent(paragraph))}
               </p>
             ))}
