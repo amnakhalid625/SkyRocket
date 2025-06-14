@@ -9,21 +9,20 @@ import featureImg from '../assets/images/blog5.jpg';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-import seoImg from '../assets/images/blogCard1.avif';
-import seoImgTwo from '../assets/images/blog1.jpg';
-import seoImgThree from '../assets/images/seo.png';
-import reviewImg from '../assets/images/reviews.jpg';
-import marketingImg from '../assets/images/marketing.jpg';
-import communicationImg from '../assets/images/communication.jpg';
+import seoImg from '../assets/images/seo.png';
+import seoImgTwo from '../assets/images/seoThree.jpg';
+import seoImgThree from '../assets/images/seoTwo.jpg';
 import goalImg from '../assets/images/personClean.jpg';
 import personClean from '../assets/images/personClean2.jpg';
 import addToCart from '../assets/images/addToCard.jpg';
+import clutteredImg from '../assets/images/clutteredImg.jpg';
+import CTAImg from '../assets/images/CTA.jpg';
 
 const CommonWebDesignMistakesBlog = ({
   // Header section props
   category = "Website Design",
   title = "5 Common Web Design Mistakes and How to Avoid Them in 2025",
-  subtitle = "Discover the secrets to crafting original content that converts your audience into loyal customers and supporters.",
+  subtitle = "Discover the most frequent web design pitfalls and learn how to create a high-performing website that converts visitors into customers.",
 
   // Author and date props
   author = {
@@ -39,33 +38,30 @@ const CommonWebDesignMistakesBlog = ({
     {
       type: "section",
       paragraphs: [
-        "In today’s digital-first world, your business's website often serves as the first point of contact for potential customers. A well-designed website can grab attention, engage visitors, and turn them into loyal customers. On the flip side, a poorly designed website can drive visitors away in just a few seconds. This is especially true for businesses based in Detroit, where local competition and online presence play a significant role in attracting new clients.",
-        "Whether you’re a new business owner or rebranding your existing website, avoiding these common web design mistakes is essential for your success. Let’s dive into the top 5 web design mistakes and how you can avoid them to ensure your site is both functional and user-friendly. At <LINK to=\"/about-us\">Skyrocket Business</LINK>, we specialize in helping businesses create sleek, effective websites that avoid these common pitfalls and deliver outstanding results.",
+        "In today's digital-first world, your business's website often serves as the first point of contact for potential customers. A well-designed website can grab attention, engage visitors, and turn them into loyal customers. On the flip side, a poorly designed website can drive visitors away in just a few seconds. This is especially true for businesses based in Detroit, where local competition and online presence play a significant role in attracting new clients.",
+        "Whether you're a new business owner or rebranding your existing website, avoiding these common web design mistakes is essential for your success. Let's dive into the top 5 web design mistakes and how you can avoid them to ensure your site is both functional and user-friendly. At <LINK to='/about-us'>Skyrocket Business</LINK>, we specialize in helping businesses create sleek, effective websites that avoid these common pitfalls and deliver outstanding results."
       ]
     },
-    
     {
       type: "section",
       heading: "1. Slow Loading Times",
       image: goalImg,
       paragraphs: [
-        " <strong>The Problem:</strong> In today’s fast-paced digital world, users expect websites to load instantly. According to research, 53% of mobile users abandon a site if it takes longer than 3 seconds to load. Slow load times can frustrate visitors and negatively impact your SEO rankings, making it even harder for people to find you.",
+        "<strong>The Problem:</strong> In today's fast-paced digital world, users expect websites to load instantly. According to research, 53% of mobile users abandon a site if it takes longer than 3 seconds to load. Slow load times can frustrate visitors and negatively impact your SEO rankings, making it even harder for people to find you.",
         "Common Culprits for Slow Load Times:"
       ],
       listItems: [
         "Large images",
         "Unoptimized code",
-        "Do you need a store, a booking system, or a blog?",
         "Excessive scripts",
-        "Slow server response times",
+        "Slow server response times"
       ],
-      paragraph:"<strong>The Solution:</strong>",
-      listItems: [
-          "<strong>Optimize Images:</strong> Use tools like Tiny PNG or Image Optim to compress images without compromising quality. Choose formats like WebP for better compression.",
-          "<strong>Lazy Loading: </strong> This allows images and other media to load as users scroll, rather than all at once, improving page speed.",
-          "<strong>Minify Your Code:</strong>  Clean up your HTML, CSS, and JavaScript using tools like Uglify JS to reduce file sizes and improve performance.",
-          "<strong>Reliable Hosting Provider:</strong> Choose a hosting provider with fast server response times and support for CDN (Content Delivery Networks) to speed up delivery across regions.",
-
+      subText: "<strong>The Solution:</strong>",
+      solutionList: [
+        "<strong>Optimize Images:</strong> Use tools like Tiny PNG or Image Optim to compress images without compromising quality. Choose formats like WebP for better compression.",
+        "<strong>Lazy Loading:</strong> This allows images and other media to load as users scroll, rather than all at once, improving page speed.",
+        "<strong>Minify Your Code:</strong> Clean up your HTML, CSS, and JavaScript using tools like Uglify JS to reduce file sizes and improve performance.",
+        "<strong>Reliable Hosting Provider:</strong> Choose a hosting provider with fast server response times and support for CDN (Content Delivery Networks) to speed up delivery across regions."
       ]
     },
     {
@@ -73,9 +69,21 @@ const CommonWebDesignMistakesBlog = ({
       heading: "2. Poor Navigation",
       image: personClean,
       paragraphs: [
-        "There are plenty of agencies across the UK. But a Detroit-based one knows the local market—your customers, what they like, and how they search online.",
-        "A local team can also bring ideas that work well in your area, whether you're in retail, hospitality, services, or another sector. They'll be familiar with trends in your community and create designs that feel relatable.",
-        "<strong>Tip:</strong> Check their website for local case studies and past clients in Detroit. It shows they've helped businesses like yours before"
+        "<strong>The Problem:</strong> Confusing navigation is one of the top reasons visitors leave a website. If users can't find what they're looking for within a few clicks, they'll likely abandon your site for a competitor's.",
+        "Signs of Poor Navigation:"
+      ],
+      listItems: [
+        "Hidden or unclear menu items",
+        "Too many navigation options",
+        "Inconsistent placement of navigation elements",
+        "Lack of breadcrumbs or search functionality"
+      ],
+      subText: "<strong>The Solution:</strong>",
+      solutionList: [
+        "<strong>Simplify Your Menu:</strong> Limit primary navigation to 5-7 key items. Use dropdowns sparingly.",
+        "<strong>Follow Standard Conventions:</strong> Keep navigation in expected locations (top of page or hamburger menu on mobile).",
+        "<strong>Breadcrumb Navigation:</strong> Help users understand their location within your site hierarchy.",
+        "<strong>Search Functionality:</strong> Include a visible search bar for users who know exactly what they want."
       ]
     },
     {
@@ -83,141 +91,68 @@ const CommonWebDesignMistakesBlog = ({
       heading: "3. Lack of Mobile Responsiveness",
       image: addToCart,
       paragraphs: [
-        "<strong>The Problem:</strong>Visitors should be able to find what they’re looking for with ease. If your website's navigation is confusing, cluttered, or broken, users will leave before exploring your offerings.",
-        "Common Navigation Issues:"
+        "<strong>The Problem:</strong> With mobile traffic accounting for over 60% of internet users, having a website that doesn't perform well on mobile is a serious issue. Text that's hard to read, buttons too small to tap, and layouts that don't adapt to smaller screens can frustrate mobile users.",
       ],
-      listItems: [
-        "Overly complicated menus",
-        "Non-intuitive links and labels",
-        "Fast loading times",
-        "User-friendly navigation",
-        "Lack of clear direction on where to go next"
-      ],
-      subText: "If they've worked with local companies or in your industry, that's a big plus."
     
-   ,
-    "The Solution:",
-      listItems: [
-
-"<strong>Simplify Your Menu:</strong> Keep the menu concise, with clear and descriptive labels. Stick to a simple structure that is easy to follow.",
-          "<strong>Consistent Layouts: </strong> Ensure your primary navigation is in the same location on every page. This creates a uniform experience for your visitors.",
-          "<strong>Search Functionality: </strong> Especially for content-heavy or e-commerce sites, make the search bar easy to find and use.",
-          "<strong>Breadcrumbs Navigation:</strong> This allows users to easily track their location within the website and navigate back to previous pages.",
-
-
+      subText: "<strong>The Solution:</strong>",
+      solutionList: [
+        "<strong>Responsive Design:</strong> Use frameworks like Bootstrap or CSS Grid to ensure your website adapts to different screen sizes automatically.",
+        "<strong>Test Across Devices:</strong> Don't just rely on desktop versions of your site; test on actual mobile devices using browser developer tools or services like BrowserStack.",
+        "<strong>Mobile-First Design:</strong> Start designing with mobile users in mind, and then scale up to tablet and desktop versions.",
+        "<strong>Optimize Touch Interactions:</strong> Replace hover actions with tap-friendly buttons and ensure all interactive elements are properly sized."
       ]
     },
     {
       type: "section",
-      heading: "4. Read Reviews",
+      heading: "4. Overloaded or Cluttered Design",
+      image: clutteredImg,
       paragraphs: [
-        "Google, Facebook, and sites like Clutch have reviews that can give you the real story. Take some time to read them.",
-        "<strong>Pay attention to:</strong>"
+        "<strong>The Problem:</strong> When your website is cluttered with too much visual content—such as excessive fonts, animations, and graphics—it can overwhelm your visitors. Instead of guiding the user's eye, a cluttered layout detracts from the core message and distracts from your call to action.",
+        "Signs of a Cluttered Design:"
       ],
       listItems: [
-        "Was the agency easy to work with?",
-        "Did they finish the project on time?",
-        "Were clients happy with the results?",
-        "Would clients recommend them to others?"
+        "Too many colors and fonts",
+        "Insufficient white space",
+        "Overuse of animations and pop-ups",
+        "Unclear visual hierarchy"
       ],
-      subText: "Good reviews from other Detroit businesses show that the agency is trusted locally."
-    },
-    {
-      type: "section",
-      heading: "5. Understand Their Process",
-      paragraphs: [
-        "Every agency works differently. A clear, step-by-step process means they know what they're doing and will keep your project on track.",
-        "Look for a team that offers:"
-      ],
-      listItems: [
-        "A discovery or planning session",
-        "Sitemap and wireframe creation",
-        "Design that fits your brand",
-        "Full development (frontend + backend)",
-        "Testing across devices",
-        "Post-launch support and updates"
-      ],
-      subText: "Ask for a timeline so you know when things will happen and when your site will go live."
-    },
-    {
-      type: "section",
-      heading: "6. Ask About SEO and Marketing",
-      image: marketingImg,
-      paragraphs: [
-        "Even the best website won't help if no one sees it.",
-        "A strong agency should offer:"
-      ],
-      listItems: [
-        "Local SEO to help you show up in Detroit searches",
-        "Content creation and writing",
-        "Social media or ad campaigns",
-        "Tracking and reporting"
-      ],
-      subText: "This means your site won't just look good—it will perform too. Good SEO helps people find you online, especially those nearby."
-    },
-    {
-      type: "section",
-      heading: "7. Talk About Budget",
-      paragraphs: [
-        "Price matters—but don't just go with the cheapest option. Cheap sites often come with issues like bad design, slow updates, or hidden fees later.",
-        "<strong>What to ask:</strong>"
-      ],
-      listItems: [
-        "What's included in the price?",
-        "Is hosting or support part of the package?",
-        "How many changes or revisions are allowed?",
-        "Are there extra charges for updates?"
-      ],
-      subText: "A good agency will give you a clear quote with no surprises. It's better to invest once in something solid than to fix problems later."
-    },
-    {
-      type: "section",
-      heading: "8. Make Sure They Communicate Well",
-      image: communicationImg,
-      paragraphs: [
-        "You want a team that listens, answers quickly, and keeps you in the loop. Working with a Detroit-based team means you might be able to meet in person or catch up easily.",
-        "Look for:"
-      ],
-      listItems: [
-        "A dedicated contact person",
-        "Quick replies by phone or email",
-        "Support after your site goes live",
-        "Clear updates and timelines"
-      ],
-      subText: "Strong communication makes everything smoother and more enjoyable."
-    },
-    {
-      type: "section",
-      heading: "9. Meet the People (If You Can)",
-      paragraphs: [
-        "One of the best parts of working with a local agency? You can meet the actual people designing your site.",
-        "Getting to know your team builds trust, and they'll understand your goals better. You may even have mutual local connections—that always helps!",
-        "It also gives you peace of mind knowing who's behind the scenes."
+      subText: "<strong>The Solution:</strong>",
+      solutionList: [
+        "<strong>Simplify Your Design:</strong> Use no more than 2-3 primary colors and 1-2 fonts. Stick to a minimalistic design that enhances readability.",
+        "<strong>White Space:</strong> Allow your content to breathe by incorporating empty spaces that guide the user's focus to key areas.",
+        "<strong>Visual Hierarchy:</strong> Create a clear visual structure using size, contrast, and spacing to help users navigate your site naturally.",
+        "<strong>Grid System:</strong> A grid-based layout provides a clean, professional, and organized structure that enhances readability."
       ]
     },
     {
       type: "section",
-      heading: "Final Thoughts",
+      heading: "5. Unclear Calls-to-Action (CTAs)",
+      image: CTAImg,
       paragraphs: [
-        "Choosing the right <LINK to=\"/services/detroit-website-design-and-development\">web design agency in Detroit</LINK> isn't just about flashy designs or cheap prices. It's about finding a team that understands your business, your goals, and your local market.",
-        "With the right partner, your website becomes more than a brochure—it becomes a tool that drives growth, builds trust, and helps your business stand out.",
-        "Focus on agencies with:"
+        "<strong>The Problem:</strong> A website without clear CTAs can confuse visitors about what action to take next. Whether it's subscribing to your newsletter, making a purchase, or getting in touch, without a clear direction, visitors are less likely to convert.",
+        "Common CTA Mistakes:"
       ],
       listItems: [
-        "Local knowledge",
-        "Great portfolios",
-        "Clear communication",
-        "A full range of digital services"
+        "Vague or weak language (e.g., 'Click Here')",
+        "Poor visibility or placement",
+        "Too many competing CTAs",
+        "Lack of contrast with surrounding elements"
       ],
-      subText: "Take your time, ask questions, and choose a partner who really gets your vision."
+      subText: "<strong>The Solution:</strong>",
+      solutionList: [
+        "<strong>Clear, Actionable Language:</strong> Use direct and compelling CTA text like 'Get Your Free Quote' or 'Start Your Free Trial'.",
+        "<strong>Visually Prominent CTAs:</strong> Make sure your CTAs stand out by using bold fonts and contrasting colors.",
+        "<strong>Strategic Placement:</strong> Position CTAs where users naturally look (above the fold, at the end of sections, etc.).",
+        "<strong>A/B Testing:</strong> Regularly test different CTA variations to determine which wording, color, and placement yields the highest conversion rate."
+      ]
     },
     {
       type: "section",
-      heading: "How Skyrocket Business Can Help",
+      heading: "Conclusion",
       paragraphs: [
-        "At <LINK to=\"/contact-us\">Skyrocket Business</LINK>, we don't just build websites—we craft digital experiences that help businesses grow. While based in Detroit, we proudly work with clients across the UK, including Detroit.",
-        "We understand the power of local connections, clean design, and smart strategy. Whether you need a fresh website, better SEO, or ongoing support, we've got your back.",
-        "Need help getting your Detroit business online or taking it to the next level? Reach out to Skyrocket Business today. Let's build something amazing together."
+        "In today's competitive online environment, your website is often the first point of contact with potential customers. Avoiding common web design mistakes like slow load times, poor navigation, lack of mobile responsiveness, cluttered designs, and unclear CTAs can significantly improve user experience and drive better results for your business.",
+        "By focusing on simplicity, speed, and ease of navigation, while continuously testing and optimizing your site, you create a user-friendly platform that not only attracts visitors but also encourages them to take action. Whether you're a local Detroit business or a global player, ensuring a smooth, streamlined website experience can make all the difference in keeping visitors engaged and converting them into customers.",
+        "At <LINK to='/contact-us'>Skyrocket Business</LINK>, we specialize in creating websites that avoid these common pitfalls, ensuring your online presence is not only visually appealing but also functional, fast, and user-friendly. If you're ready to elevate your website and avoid these mistakes, contact us today!"
       ]
     }
   ],
@@ -229,35 +164,36 @@ const CommonWebDesignMistakesBlog = ({
   const defaultBlogPosts = [
     {
       id: 1,
-      title: "The Role of Search Engine Optimisation in Web Design: Why It Matters in 2025",
+      title: "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
       category: "Digital Marketing",
-      date: "May 10, 2025",
-      excerpt: "In this blog post, we explore the role of search engine optimisation (SEO) in web design and why it matters in 2025.",
+      date: "April 29, 2025",
+      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services.",
       image: seoImg,
-      link: "/blog/the-role-of-search-engine-optimisation-in-web-design-why-it-matters-in-2025"
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
     },
     {
       id: 2,
-      title: "Understanding User Experience (UX) and Its Impact on Conversion Rates",
+      title: "How a Stunning Website Design Can Boost Your Detroit Business",
       category: "Website Design",
-      date: "May 14, 2025",
-      excerpt: "Learn actionable tips to enhance your social media strategy.",
+      date: "April 29 2025",
+      excerpt: "Discover how a stunning website design can boost your Detroit business. Get a high-converting, user-friendly website that drives results with Skyrocket Business.",
       image: seoImgTwo,
-      link: "/blog/understanding-user-experience-ux-and-its-impact-on-conversion-rates"
+      link: "/blog/seo-best-practices-optimizing-for-search-engines-in-2024"
     },
     {
       id: 3,
       title: "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
       category: "Digital Marketing",
-      date: "April 29, 2025",
-      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services. ",
+      date: "April 28, 2025",
+      excerpt: "Master local SEO in Detroit and drive more traffic to your business. Skyrocket your online visibility with expert SEO strategies tailored for Detroit companies.",
       image: seoImgThree,
-      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility"
     }
   ];
 
   // Helper function to replace LINK tags with actual Link components
   const processContent = (text) => {
+    if (!text) return '';
     return text.replace(
       /<LINK to="([^"]*)">(.*?)<\/LINK>/g, 
       (match, to, content) => `<LINKCOMPONENT to="${to}">${content}</LINKCOMPONENT>`
@@ -266,6 +202,7 @@ const CommonWebDesignMistakesBlog = ({
 
   // Helper function to render processed content with Link components
   const renderProcessedContent = (text) => {
+    if (!text) return null;
     const parts = text.split(/(<LINKCOMPONENT to="[^"]*">.*?<\/LINKCOMPONENT>|<a [^>]*>.*?<\/a>)/g);
     
     return parts.map((part, index) => {
@@ -341,7 +278,7 @@ const CommonWebDesignMistakesBlog = ({
         ))}
 
         {section.listItems && (
-          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
+          <ul className="list-disc pl-6 mb-4 space-y-3 text-secondaryTextColor font-medium text-lg">
             {section.listItems.map((item, lIndex) => (
               <li key={`li-${lIndex}`} className="leading-relaxed">
                 {renderProcessedContent(processContent(item))}
@@ -351,9 +288,19 @@ const CommonWebDesignMistakesBlog = ({
         )}
 
         {section.subText && (
-          <p className="text-secondaryTextColor font-medium text-lg mb-6">
+          <p className="text-secondaryTextColor font-medium text-lg mb-4">
             {renderProcessedContent(processContent(section.subText))}
           </p>
+        )}
+
+        {section.solutionList && (
+          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
+            {section.solutionList.map((item, lIndex) => (
+              <li key={`solution-${lIndex}`} className="leading-relaxed">
+                {renderProcessedContent(processContent(item))}
+              </li>
+            ))}
+          </ul>
         )}
       </motion.div>
     ));
