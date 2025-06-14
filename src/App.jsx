@@ -26,6 +26,7 @@ import TopSeoStrategyBlog from "./pages/TopSeoStrategyBlog";
 import BestSeoPracticeBlog from "./pages/BestSeoPracticeBlog";
 import SeoStrategy from "./pages/SeoStrategy";
 import MobileFriendlyWebsiteBlog from "./pages/MobileFriendlyWebsiteBlog";
+import ChooseRighAgencyBlog from "./pages/ChooseRighAgencyBlog";
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
         <Route path="/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2" element={<SeoStrategy />} />
         <Route path="/blog/seo-best-practices-optimizing-for-search-engines-in-2024" element={<BestSeoPracticeBlog />} />
         <Route path="/blog/why-every-detroit-business-needs-a-mobile-friendly-website-in-2025" element={<MobileFriendlyWebsiteBlog />} />
+        <Route path="/blog/how-to-choose-the-right-web-design-agency-in-detroit" element={<ChooseRighAgencyBlog />} />
+
 
         <Route path="/team" element={<TeamMemberProfile />} />
         <Route path="/team/:memberName" element={<TeamMemberProfile />} />
