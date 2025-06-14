@@ -27,6 +27,8 @@ import BestSeoPracticeBlog from "./pages/BestSeoPracticeBlog";
 import SeoStrategy from "./pages/SeoStrategy";
 import MobileFriendlyWebsiteBlog from "./pages/MobileFriendlyWebsiteBlog";
 import ChooseRighAgencyBlog from "./pages/ChooseRighAgencyBlog";
+import SEOWebDesingBlog from "./pages/SEOWebDesingBlog";
+import CommonWebDesignMistakesBlog from "./pages/CommonWebDesignMistakesBlog";
 
 function App() {
   return (
@@ -61,6 +63,9 @@ function App() {
         <Route path="/blog/seo-best-practices-optimizing-for-search-engines-in-2024" element={<BestSeoPracticeBlog />} />
         <Route path="/blog/why-every-detroit-business-needs-a-mobile-friendly-website-in-2025" element={<MobileFriendlyWebsiteBlog />} />
         <Route path="/blog/how-to-choose-the-right-web-design-agency-in-detroit" element={<ChooseRighAgencyBlog />} />
+        <Route path="/blog/the-role-of-search-engine-optimisation-in-web-design-why-it-matters-in-2025" element={<SEOWebDesingBlog />} />
+        <Route path="/blog/5-common-web-design-mistakes-and-how-to-avoid-them-in-2025" element={<CommonWebDesignMistakesBlog />} />
+
 
 
         <Route path="/team" element={<TeamMemberProfile />} />

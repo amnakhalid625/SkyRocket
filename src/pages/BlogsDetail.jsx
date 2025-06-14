@@ -7,6 +7,12 @@ import BlogCategoryFilter from '../components/ButtonLine';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
+
+import blog1 from '../assets/images/seoTwo.jpg';
+import blog2 from '../assets/images/seoThree.jpg';
+import blog3 from '../assets/images/seo.png';
+import blog4 from '../assets/images/seoFour.jpg';
+
 const BlogsDetail = () => {
   const customArticlesData = [
     {
@@ -15,8 +21,8 @@ const BlogsDetail = () => {
       category: "Digital Marketing",
       date: "June 3, 2025",
       excerpt: "Stay ahead of the competition with these cutting-edge digital marketing strategies specifically designed for Detroit businesses. Learn what's working now.",
-      image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680fccd0b2b581e2890f7dbd_Skyrocket%20Business%20(1234%20x%201280%20px).jpg",
-      link: "/blog/digital-marketing-trends-detroit-2025"
+      image: blog1,
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility"
     },
     {
       id: 2,
@@ -24,8 +30,8 @@ const BlogsDetail = () => {
       category: "SEO",
       date: "June 1, 2025",
       excerpt: "Master local SEO techniques to dominate Detroit search results. Practical tips to get your business found by local customers searching online.",
-      image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/680fde25e7020eeba9df73d0_Skyrocket%20Business%20%20(990%20x%20900%20px).jpg",
-      link: "/blog/local-seo-optimization-detroit"
+      image: blog2,
+      link: "/blog/seo-best-practices-optimizing-for-search-engines-in-2024"
     },
     {
       id: 3,
@@ -33,8 +39,8 @@ const BlogsDetail = () => {
       category: "E-commerce",
       date: "May 30, 2025",
       excerpt: "Transform your Detroit retail business with a powerful e-commerce website. Learn the essential features and strategies for online success.",
-      image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6810e79c8309d2dc3b8b419a_Skyrocket%20Business%20%20(990%20x%20900%20px).png",
-      link: "/blog/ecommerce-development-guide-detroit"
+      image: blog3,
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
     },
     {
       id: 4,
@@ -42,8 +48,8 @@ const BlogsDetail = () => {
       category: "Social Media",
       date: "May 28, 2025",
       excerpt: "Boost your Detroit business with proven social media marketing strategies. Connect with your local community and grow your brand online.",
-      image: "https://cdn.prod.website-files.com/6807e00132c9ff6c11834b85/6810fbb665d1ed7e1c501249_Skyrocket%20Business%20%20(990%20x%20900%20px)%20(1).png",
-      link: "/blog/social-media-marketing-detroit-businesses"
+      image: blog4,
+      link: "/blog/why-every-detroit-business-needs-a-mobile-friendly-website-in-2025"
     },
   ];
 
