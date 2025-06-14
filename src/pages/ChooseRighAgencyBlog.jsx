@@ -5,22 +5,19 @@ import Articles from '../components/Articles';
 import dotIcon from '../assets/images/dot-icon.svg';
 import calendarIcon from '../assets/images/calendar-icon.svg';
 import mem2 from '../assets/images/member3.webp';
-import featureImg from '../assets/images/seo.png';
+import featureImg from '../assets/images/rightWebDesingImg.jpg';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-import seoImg from '../assets/images/blog2.jpg';
-import seoImgTwo from '../assets/images/rightWebDesingImg.jpg';
-import seoImgThree from '../assets/images/blogCard1.avif';
-import groupImg from '../assets/images/topSeoImg.jpeg';
-import { img } from 'framer-motion/client';
+import seoImg from '../assets/images/blogCard1.avif';
+import seoImgTwo from '../assets/images/blog1.jpg';
+import seoImgThree from '../assets/images/seo.png';
 import reviewImg from '../assets/images/reviews.jpg';
 import marketingImg from '../assets/images/marketing.jpg';
 import communicationImg from '../assets/images/communication.jpg';
+import goalImg from '../assets/images/goal.jpg';
 
-
-
-const ChooseRighAgencyBlog = ({
+const ChooseRightAgencyBlog = ({
   // Header section props
   category = "Digital Marketing",
   title = "How to Choose the Right Web Design Agency in Detroit",
@@ -49,194 +46,170 @@ const ChooseRighAgencyBlog = ({
       type: "section",
       heading: "Why Choosing the Right Web Design Partner Matters",
       paragraphs: [
-        "Your website is often the first thing customers see. It’s your digital storefront. And in today’s world, it’s one of your most powerful marketing tools.",
-        "A good agency won’t just give you a nice-looking site—they’ll help create a strong online presence that builds trust, drives traffic, and turns visitors into customers.",
-        "If you're in Detroit, working with a local agency that understands your audience and culture can give you a major edge. They’ll know the right tone, local SEO tips, and how to connect with the people around you."
+        "Your website is often the first thing customers see. It's your digital storefront. And in today's world, it's one of your most powerful marketing tools.",
+        "A good agency won't just give you a nice-looking site—they'll help create a strong online presence that builds trust, drives traffic, and turns visitors into customers.",
+        "If you're in Detroit, working with a local agency that understands your audience and culture can give you a major edge. They'll know the right tone, local SEO tips, and how to connect with the people around you."
       ]
     },
     {
       type: "section",
       heading: "1. Know Your Goals",
-      showImage: true,
+      image: goalImg,
       paragraphs: [
         "Start by getting clear on what you want from your website.",
+        "Ask yourself:"
       ],
       listItems: [
         "Are you building something brand new?",
         "Redesigning an old site?",
         "Do you need a store, a booking system, or a blog?",
-      ],
-      subText: ["Knowing this will help you find an agency with the right skills and save you time."]
-    },
-    {
-      type: "section",
-      heading: "Powerful Local SEO Strategies for Detroit Businesses",
-      subheadingOne: "1. Optimize Your Google My Business Profile",
-      paragraphsOne: [
-        "Google My Business is your digital storefront. It's what shows up when someone searches for your business on Google or Google Maps. To get the most out of it:"
-      ],
-      paragraph:["Ask yourself:"],
-      listItemsOne: [
-        "What’s the main goal of the site?",
+        "What's the main goal of the site?",
         "Who are you targeting?",
         "Do you want a custom design or a simple template?",
         "How important is SEO to your strategy?"
       ],
-    subText:["Being specific about what you need will make it easier to spot the agency that’s right for you."],
-      
-    
-
-
+      subText: "Being specific about what you need will make it easier to spot the agency that's right for you."
     },
     {
       type: "section",
       heading: "2. Look for Local Knowledge",
       paragraphs: [
         "There are plenty of agencies across the UK. But a Detroit-based one knows the local market—your customers, what they like, and how they search online.",
-        "A local team can also bring ideas that work well in your area, whether you're in retail, hospitality, services, or another sector. They’ll be familiar with trends in your community and create designs that feel relatable.",
-        "<strong>Tip:</strong> Check their website for local case studies and past clients in Detroit. It shows they’ve helped businesses like yours before"
+        "A local team can also bring ideas that work well in your area, whether you're in retail, hospitality, services, or another sector. They'll be familiar with trends in your community and create designs that feel relatable.",
+        "<strong>Tip:</strong> Check their website for local case studies and past clients in Detroit. It shows they've helped businesses like yours before"
       ]
     },
-      {
+    {
       type: "section",
       heading: "3. Check Their Portfolio",
-      <img src={reviewImg} alt="" />,
+      image: reviewImg,
       paragraphs: [
-        "A portfolio shows you what an agency can do. Don’t just look at how the websites look—check how they work.",
-        "What to look for:",
+        "A portfolio shows you what an agency can do. Don't just look at how the websites look—check how they work.",
+        "What to look for:"
       ],
-     listItemsTwo: [
+      listItems: [
         "Clean, modern design",
         "Works well on phones and tablets",
         "Fast loading times",
         "User-friendly navigation",
         "Testimonials or results from real businesses"
       ],
-    subText:["If they’ve worked with local companies or in your industry, that’s a big plus."],
-      
-    
+      subText: "If they've worked with local companies or in your industry, that's a big plus."
     },
     {
       type: "section",
       heading: "4. Read Reviews",
       paragraphs: [
-       " Google, Facebook, and sites like Clutch have reviews that can give you the real story. Take some time to read them.",
-       "<strong>Pay attention to:</strong>",
-        
+        "Google, Facebook, and sites like Clutch have reviews that can give you the real story. Take some time to read them.",
+        "<strong>Pay attention to:</strong>"
       ],
-      listItemsThree: [
+      listItems: [
         "Was the agency easy to work with?",
         "Did they finish the project on time?",
         "Were clients happy with the results?",
-        "Would clients recommend them to others?",
-
+        "Would clients recommend them to others?"
+      ],
+      subText: "Good reviews from other Detroit businesses show that the agency is trusted locally."
     },
-    subText:["Good reviews from other Detroit businesses show that the agency is trusted locally."],
+    {
+      type: "section",
+      heading: "5. Understand Their Process",
+      paragraphs: [
+        "Every agency works differently. A clear, step-by-step process means they know what they're doing and will keep your project on track.",
+        "Look for a team that offers:"
+      ],
+      listItems: [
+        "A discovery or planning session",
+        "Sitemap and wireframe creation",
+        "Design that fits your brand",
+        "Full development (frontend + backend)",
+        "Testing across devices",
+        "Post-launch support and updates"
+      ],
+      subText: "Ask for a timeline so you know when things will happen and when your site will go live."
     },
+    {
+      type: "section",
+      heading: "6. Ask About SEO and Marketing",
+      image: marketingImg,
+      paragraphs: [
+        "Even the best website won't help if no one sees it.",
+        "A strong agency should offer:"
+      ],
+      listItems: [
+        "Local SEO to help you show up in Detroit searches",
+        "Content creation and writing",
+        "Social media or ad campaigns",
+        "Tracking and reporting"
+      ],
+      subText: "This means your site won't just look good—it will perform too. Good SEO helps people find you online, especially those nearby."
+    },
+    {
+      type: "section",
+      heading: "7. Talk About Budget",
+      paragraphs: [
+        "Price matters—but don't just go with the cheapest option. Cheap sites often come with issues like bad design, slow updates, or hidden fees later.",
+        "<strong>What to ask:</strong>"
+      ],
+      listItems: [
+        "What's included in the price?",
+        "Is hosting or support part of the package?",
+        "How many changes or revisions are allowed?",
+        "Are there extra charges for updates?"
+      ],
+      subText: "A good agency will give you a clear quote with no surprises. It's better to invest once in something solid than to fix problems later."
+    },
+    {
+      type: "section",
+      heading: "8. Make Sure They Communicate Well",
+      image: communicationImg,
+      paragraphs: [
+        "You want a team that listens, answers quickly, and keeps you in the loop. Working with a Detroit-based team means you might be able to meet in person or catch up easily.",
+        "Look for:"
+      ],
+      listItems: [
+        "A dedicated contact person",
+        "Quick replies by phone or email",
+        "Support after your site goes live",
+        "Clear updates and timelines"
+      ],
+      subText: "Strong communication makes everything smoother and more enjoyable."
+    },
+    {
+      type: "section",
+      heading: "9. Meet the People (If You Can)",
+      paragraphs: [
+        "One of the best parts of working with a local agency? You can meet the actual people designing your site.",
+        "Getting to know your team builds trust, and they'll understand your goals better. You may even have mutual local connections—that always helps!",
+        "It also gives you peace of mind knowing who's behind the scenes."
+      ]
+    },
+    {
+      type: "section",
+      heading: "Final Thoughts",
+      paragraphs: [
+        "Choosing the right <LINK to=\"/services/detroit-website-design-and-development\">web design agency in Detroit</LINK> isn't just about flashy designs or cheap prices. It's about finding a team that understands your business, your goals, and your local market.",
+        "With the right partner, your website becomes more than a brochure—it becomes a tool that drives growth, builds trust, and helps your business stand out.",
+        "Focus on agencies with:"
+      ],
+      listItems: [
+        "Local knowledge",
+        "Great portfolios",
+        "Clear communication",
+        "A full range of digital services"
+      ],
+      subText: "Take your time, ask questions, and choose a partner who really gets your vision."
+    },
+    {
+      type: "section",
+      heading: "How Skyrocket Business Can Help",
+      paragraphs: [
+        "At <LINK to=\"/contact-us\">Skyrocket Business</LINK>, we don't just build websites—we craft digital experiences that help businesses grow. While based in Detroit, we proudly work with clients across the UK, including Detroit.",
+        "We understand the power of local connections, clean design, and smart strategy. Whether you need a fresh website, better SEO, or ongoing support, we've got your back.",
+        "Need help getting your Detroit business online or taking it to the next level? Reach out to Skyrocket Business today. Let's build something amazing together."
+      ]
+    }
   ],
-  {
-    type: "section",
-    heading: "5. Understand Their Process",
-    paragraphs: [
-      "Every agency works differently. A clear, step-by-step process means they know what they’re doing and will keep your project on track.",
-"Look for a team that offers:",
-    ],
-    listItemsFour: [
-      "A discovery or planning session",
-      "Sitemap and wireframe creation",
-      "Design that fits your brand",
-      "Full development (frontend + backend)",
-      "Testing across devices",
-      "Post-launch support and updates"
-    ],
-    subText:["Ask for a timeline so you know when things will happen and when your site will go live."],
-  },
-  {
-    type: "section",
-    heading: "6. Ask About SEO and Marketing",
-    <img src={marketingImg} alt="marketingImage" />,
-    paragraphs: [
-      "Even the best website won’t help if no one sees it.",
-      "A strong agency should offer:",
-    ],
-    listItemsFive: [
-      "Local SEO to help you show up in Detroit searches",
-      "Content creation and writing",
-      "Social media or ad campaigns",
-      "Tracking and reporting",
-    ],
-    subText:["This means your site won’t just look good—it will perform too. Good SEO helps people find you online, especially those nearby."],
-  },
-  {
-    type: "section",
-    heading: "7. Talk About Budget",
-    paragraphs: [
-      "Price matters—but don’t just go with the cheapest option. Cheap sites often come with issues like bad design, slow updates, or hidden fees later.",
-    "<strong>What to ask:</strong>",
-    ],
-    listItemsSix: [
-      "What’s included in the price?",
-      "Is hosting or support part of the package?",
-      "How many changes or revisions are allowed?",
-      "Are there extra charges for updates?",
-    ],
-    subText:["A good agency will give you a clear quote with no surprises. It’s better to invest once in something solid than to fix problems later."],
- },
- {
-    type: "section",
-    heading: "8. Make Sure They Communicate Well",
-    <img src={communicationImg} alt="communicationImage" />,
-    paragraphs: [
-      "You want a team that listens, answers quickly, and keeps you in the loop. Working with a Detroit-based team means you might be able to meet in person or catch up easily.",
-    "Look for:",
-    ],
-    listItemsSeven: [
-      "A dedicated contact person",
-      "Quick replies by phone or email",
-      "Support after your site goes live",
-      "Clear updates and timelines"
-    ],
-    subText:["Strong communication makes everything smoother and more enjoyable."],
- },
- {
-    type: "section",
-    heading: "9. Meet the People (If You Can)",
-    paragraphs: [
-      "One of the best parts of working with a local agency? You can meet the actual people designing your site.",
-    "Getting to know your team builds trust, and they’ll understand your goals better. You may even have mutual local connections—that always helps!",
-    "It also gives you peace of mind knowing who's behind the scenes."
-    ],
-  
- }
-
-  // Footer/CTA section
-  conclusion = {
-    heading: "Final Thoughts",
-    paragraphs: [
-      "Choosing the right <LINK to=\"/services/detroit-website-design-and-development\">web design agency in Detroit</LINK> isn’t just about flashy designs or cheap prices. It’s about finding a team that understands your business, your goals, and your local market."
-  
-  ,
-  "With the right partner, your website becomes more than a brochure—it becomes a tool that drives growth, builds trust, and helps your business stand out.",
-  "Focus on agencies with:",
-  ],
-  listItemsEight: [
-    "Local knowledge",
-    "Great portfolios",
-    "Clear communication",
-    "A full range of digital services" 
-
-  ],
-  subText:["Take your time, ask questions, and choose a partner who really gets your vision."],
-    ]
-  },
-  {
-    type: "section",
-    heading: "How Skyrocket Business Can Help",
-    paragraphs: [
-      "At <LINK to=\"/contact-us\">Skyrocket Business</LINK>, we don’t just build websites—we craft digital experiences that help businesses grow. While based in Detroit, we proudly work with clients across the UK, including Detroit. ",
-      "We understand the power of local connections, clean design, and smart strategy. Whether you need a fresh website, better SEO, or ongoing support, we’ve got your back.",
-      "Need help getting your Detroit business online or taking it to the next level? Reach out to Skyrocket Business today. Let’s build something amazing together."
-  }
 
   // Related articles section
   showRelatedArticles = true
@@ -245,30 +218,30 @@ const ChooseRighAgencyBlog = ({
   const defaultBlogPosts = [
     {
       id: 1,
-      title: "The Importance of Mobile-First Design for Local Businesses in 2025",
-      category: "Website Design",
-      date: "May 13, 2025",
-      excerpt: "Discover why mobile-first web design is crucial for local businesses in 2025. Learn how it boosts SEO, enhances user experience, and drives real-world results—especially for Detroit companies.",
-      image: seoImg,
-      link: "/blog/the-importance-of-mobile-first-design-for-local-businesses-in-2025"
-    },
-    {
-      id: 2,
-      title: "How to Choose the Right Web Design Agency in Detroit",
-      category: "Website Design",
-      date: "May 2, 2025",
-      excerpt: "Learn actionable tips to enhance your social media strategy.",
-      image: seoImgTwo,
-      link: "/blog/how-to-choose-the-right-web-design-agency-in-detroit"
-    },
-    {
-      id: 3,
       title: "The Role of Search Engine Optimisation in Web Design: Why It Matters in 2025",
       category: "Digital Marketing",
       date: "May 10, 2025",
-      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services.",
-      image: seoImgThree,
+      excerpt: "In this blog post, we explore the role of search engine optimisation (SEO) in web design and why it matters in 2025.",
+      image: seoImg,
       link: "/blog/the-role-of-search-engine-optimisation-in-web-design-why-it-matters-in-2025"
+    },
+    {
+      id: 2,
+      title: "Understanding User Experience (UX) and Its Impact on Conversion Rates",
+      category: "Website Design",
+      date: "May 14, 2025",
+      excerpt: "Learn actionable tips to enhance your social media strategy.",
+      image: seoImgTwo,
+      link: "/blog/understanding-user-experience-ux-and-its-impact-on-conversion-rates"
+    },
+    {
+      id: 3,
+      title: "Top SEO Strategies for Detroit Businesses to Gain Local Visibility",
+      category: "Digital Marketing",
+      date: "April 29, 2025",
+      excerpt: "Boost your Detroit business with expert local SEO strategies. Increase visibility, drive traffic, and attract more customers with Skyrocket Business's affordable services. ",
+      image: seoImgThree,
+      link: "/blog/top-seo-strategies-for-detroit-businesses-to-gain-local-visibility-lf8a2"
     }
   ];
 
@@ -336,102 +309,17 @@ const ChooseRighAgencyBlog = ({
           </h3>
         )}
 
-        {/* Section One */}
-        {section.subheadingOne && (
-          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
-            {section.subheadingOne}
-          </h4>
-        )}
-        {section.paragraphsOne && section.paragraphsOne.map((paragraph, pIndex) => (
-          <p key={`one-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-            {renderProcessedContent(processContent(paragraph))}
-          </p>
-        ))}
-        {section.listItemsOne && (
-          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
-            {section.listItemsOne.map((item, lIndex) => (
-              <li key={`one-li-${lIndex}`} className="leading-relaxed">
-                {renderProcessedContent(processContent(item))}
-              </li>
-            ))}
-          </ul>
+        {/* Show image right after heading if it exists */}
+        {section.image && (
+          <div className="my-6 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src={section.image}
+              alt={section.heading}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         )}
 
-        {/* Section Two */}
-        {section.subheadingTwo && (
-          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
-            {section.subheadingTwo}
-          </h4>
-        )}
-        {section.paragraphsTwo && section.paragraphsTwo.map((paragraph, pIndex) => (
-          <p key={`two-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-            {renderProcessedContent(processContent(paragraph))}
-          </p>
-        ))}
-        {section.listItemsTwo && (
-          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
-            {section.listItemsTwo.map((item, lIndex) => (
-              <li key={`two-li-${lIndex}`} className="leading-relaxed">
-                {renderProcessedContent(processContent(item))}
-              </li>
-            ))}
-          </ul>
-        )}
-        {section.subTextTwo && (
-          <p className="text-secondaryTextColor font-medium text-lg mb-6">
-            {renderProcessedContent(processContent(section.subTextTwo))}
-          </p>
-        )}
-
-        {/* Section Three */}
-        {section.subheadingThree && (
-          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
-            {section.subheadingThree}
-          </h4>
-        )}
-        {section.paragraphsThree && section.paragraphsThree.map((paragraph, pIndex) => (
-          <p key={`three-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-            {renderProcessedContent(processContent(paragraph))}
-          </p>
-        ))}
-
-        {/* Section Four */}
-        {section.subheadingFour && (
-          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
-            {section.subheadingFour}
-          </h4>
-        )}
-        {section.paragraphsFour && section.paragraphsFour.map((paragraph, pIndex) => (
-          <p key={`four-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-            {renderProcessedContent(processContent(paragraph))}
-          </p>
-        ))}
-
-        {/* Section Five */}
-        {section.subheadingFive && (
-          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
-            {section.subheadingFive}
-          </h4>
-        )}
-        {section.paragraphsFive && section.paragraphsFive.map((paragraph, pIndex) => (
-          <p key={`five-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-            {renderProcessedContent(processContent(paragraph))}
-          </p>
-        ))}
-
-        {/* Section Six */}
-        {section.subheadingSix && (
-          <h4 className="text-xl md:text-2xl font-medium text-textColor mb-4 mt-8">
-            {section.subheadingSix}
-          </h4>
-        )}
-        {section.paragraphsSix && section.paragraphsSix.map((paragraph, pIndex) => (
-          <p key={`six-p-${pIndex}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-            {renderProcessedContent(processContent(paragraph))}
-          </p>
-        ))}
-
-        {/* Regular paragraphs */}
         {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
           <p 
             key={`p-${pIndex}`} 
@@ -441,7 +329,6 @@ const ChooseRighAgencyBlog = ({
           </p>
         ))}
 
-        {/* Regular list items */}
         {section.listItems && (
           <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
             {section.listItems.map((item, lIndex) => (
@@ -452,15 +339,10 @@ const ChooseRighAgencyBlog = ({
           </ul>
         )}
 
-        {/* Only show image after point 2 */}
-        {section.showImage && (
-          <div className="my-8 rounded-xl overflow-hidden shadow-lg">
-            <img
-              src={groupImg}
-              alt="Detroit SEO Keywords"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+        {section.subText && (
+          <p className="text-secondaryTextColor font-medium text-lg mb-6">
+            {renderProcessedContent(processContent(section.subText))}
+          </p>
         )}
       </motion.div>
     ));
@@ -526,24 +408,6 @@ const ChooseRighAgencyBlog = ({
         {/* Blog Content */}
         <div className="max-w-3xl mx-auto px-2 sm:px-0">
           {renderContent()}
-
-          {/* Conclusion Section */}
-          <motion.div 
-            className="mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-2xl md:text-3xl lg:text-[40px] font-light text-textColor mb-6 leading-snug tracking-tight">
-              <strong>{conclusion.heading}</strong>
-            </h3>
-            {conclusion.paragraphs.map((paragraph, index) => (
-              <p key={`conclusion-${index}`} className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed">
-                {renderProcessedContent(processContent(paragraph))}
-              </p>
-            ))}
-          </motion.div>
         </div>
 
         {/* Related Articles Section */}
@@ -571,4 +435,4 @@ const ChooseRighAgencyBlog = ({
   );
 };
 
-export default ChooseRighAgencyBlog;
+export default ChooseRightAgencyBlog;
