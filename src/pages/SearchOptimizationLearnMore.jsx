@@ -1,4 +1,3 @@
-import React from 'react';
 import batchImg from "../assets/images/batch.svg";
 import puzzleImg from "../assets/images/puzzle.svg";
 import graphLineImg from "../assets/images/graphLine.svg";
@@ -7,19 +6,22 @@ import Hero from "../components/Hero";
 import ServicesGrid from "../components/ServicesGrid";
 import CaseStudiesSection from "../components/CaseStudySection";
 import Form from '../components/Form';
-import Footer from '../components/Footer';
 
 
 const SeachOptimizationLearnMore = () => {
 
   const customHeroData = {
-    badge: "Digital Strategy Development", 
+    badge: "DIGITAL STRATEGY DEVELOPMENT",
     title: "SEO Services That Bring Customers to You",
     subtitle: "",
-    description: "SEO isn’t just about ranking higher — it’s about getting the right eyes on your business.We create SEO strategies that drive organic traffic, improve your search rankings, and boost your visibility. From on-page optimization to strategic link building, we make sure your brand is found by the people who matter most — your future customers.",
-    primaryButton: "Get a Quote",
+    description: (
+      <>
+        SEO isn’t just about ranking higher — it’s about getting the right eyes on your business.<br />
+        We create SEO strategies that drive organic traffic, improve your search rankings, and boost your visibility. From on-page optimization to strategic link building, we make sure your brand is found by the people who matter most — your future customers.
+      </>
+    ), primaryButton: "Get a Quote",
     secondaryButton: "See all Services",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-us",
     features: [
       { icon: batchImg, title: "Award-Winning Team" },
       { icon: puzzleImg, title: "Tailored Solutions" },
@@ -28,8 +30,8 @@ const SeachOptimizationLearnMore = () => {
     heroImage: girlImg
   };
 
-  const title = "Detroit Social Media Management Services";
-  const subtitle = "At Skyrocket Business, we elevate your social media with tailored strategies that boost visibility and deliver real results. Whether increasing brand awareness, growing your community, or converting followers into loyal customers, we create authentic and engaging social media experiences.";
+  const title = "Search Engine Optimization Services";
+  const subtitle = "Our SEO services are designed to do more than just move you up the rankings — they’re built to drive real traffic, real engagement, and real growth. We focus on strategies that connect your brand with the right audience, building long-term visibility and lasting success.";
   const services = [];
   const buttonText = "Get a Quote";
   const buttonLink = "/contact-us";
@@ -87,19 +89,18 @@ const SeachOptimizationLearnMore = () => {
       />
 
       <ServicesGrid services={servicesToRender} title={title} subtitle={subtitle} buttonText={buttonText} buttonLink={buttonLink} />
- 
- 
-      <CaseStudiesSection/>
-<Form 
-  headerTitle="Ready to Get Found by More Customers?"
-  headerDescription="Let’s build an SEO strategy that doesn’t just get clicks — it gets results. Reach out today and let’s start growing your visibility and your business."
-  showContactInfo={false}
-  submitButtonText="Submit"
-  servicesPlaceholder="Search Engine Optimization" 
-/>
 
-<Footer />
- 
+
+      <CaseStudiesSection />
+      <Form
+        headerTitle="Ready to Get Found by More Customers?"
+        headerDescription="Let’s build an SEO strategy that doesn’t just get clicks — it gets results. Reach out today and let’s start growing your visibility and your business."
+        showContactInfo={false}
+        submitButtonText="Submit"
+        servicesPlaceholder="Search Engine Optimization"
+      />
+
+
     </div>
   );
 };

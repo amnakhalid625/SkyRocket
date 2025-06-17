@@ -1,4 +1,3 @@
-import React from 'react';
 import batchImg from "../assets/images/batch.svg";
 import puzzleImg from "../assets/images/puzzle.svg";
 import graphLineImg from "../assets/images/graphLine.svg";
@@ -7,19 +6,18 @@ import Hero from "../components/Hero";
 import ServicesGrid from "../components/ServicesGrid";
 import CaseStudiesSection from "../components/CaseStudySection";
 import Form from '../components/Form';
-import Footer from '../components/Footer';
 
 
 const PayClickLearnMore = () => {
 
   const customHeroData = {
-    badge: "Digital Strategy Development", 
-    title: "SEO Services That Bring Customers to You",
+    badge: "PAY-PER-CLICK ADVERTISING", 
+    title: "PPC isn’t just about clicks — it’s about conversions.",
     subtitle: "",
-    description: "SEO isn’t just about ranking higher — it’s about getting the right eyes on your business.We create SEO strategies that drive organic traffic, improve your search rankings, and boost your visibility. From on-page optimization to strategic link building, we make sure your brand is found by the people who matter most — your future customers.",
+    description: "We create high-impact PPC campaigns that don’t just drive traffic, but deliver real, measurable results. From search ads to retargeting, we focus on strategies that bring the right people to your site and turn them into loyal customers.",
     primaryButton: "Get a Quote",
     secondaryButton: "See all Services",
-    primaryButtonLink: "/contact",
+    primaryButtonLink: "/contact-us",
     features: [
       { icon: batchImg, title: "Award-Winning Team" },
       { icon: puzzleImg, title: "Tailored Solutions" },
@@ -98,7 +96,6 @@ const PayClickLearnMore = () => {
   servicesPlaceholder="PPC Campaigns" 
 />
 
-<Footer />
  
     </div>
   );

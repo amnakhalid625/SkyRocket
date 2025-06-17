@@ -29,6 +29,7 @@ import MobileFriendlyWebsiteBlog from "./pages/MobileFriendlyWebsiteBlog";
 import ChooseRighAgencyBlog from "./pages/ChooseRighAgencyBlog";
 import SEOWebDesingBlog from "./pages/SEOWebDesingBlog";
 import CommonWebDesignMistakesBlog from "./pages/CommonWebDesignMistakesBlog";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -78,6 +79,9 @@ function App() {
 
 
       </Routes>
+
+
+      <Footer /> 
     </Router>
   );
 }

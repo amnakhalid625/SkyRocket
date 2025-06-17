@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 
 const WebDevelopmentLearnMore = () => {
   const customHeroData = {
-    badge: "Digital Strategy Development", 
+    badge: "Digital Strategy Development",
     title: "Skyrocket Your Business with Powerful Website!",
     subtitle: "",
     description: "Your website is the hardest working member of your team, tirelessly engaging potential customers and driving sales — 24/7. Let's create a website that doesn't just look good, but works hard for you.",
@@ -30,29 +30,28 @@ const WebDevelopmentLearnMore = () => {
 
   return (
     <div>
-      <Hero 
-        heroData={customHeroData} 
+      <Hero
+        heroData={customHeroData}
         customStyles={{
           titleWidth: 'lg:max-w-xl'
         }}
-        showHeroImage={true}  
-        showFeatures={true}    
-        showBadge={true}        
-        showBadgeIcon={false}   
+        showHeroImage={true}
+        showFeatures={true}
+        showBadge={true}
+        showBadgeIcon={false}
       />
 
 
 
       <ServicesGrid />
       <CaseStudiesSection />
-<Form 
-  headerTitle="Let's Make Your Website Work for You"
-  headerDescription="Your website is your best salesperson..."
-  showContactInfo={false}
-  submitButtonText="Submit"
-  servicesPlaceholder="Web Design" 
-/>
-      <Footer />
+      <Form
+        headerTitle="Let's Make Your Website Work for You"
+        headerDescription="Your website is your best salesperson—let’s make it one that never sleeps. Ready to increase conversions and drive more sales? Let’s partner up and create a site that works as hard as you do."
+        showContactInfo={false}
+        submitButtonText="Submit"
+        servicesPlaceholder="Web Design"
+      />
     </div>
   )
 }

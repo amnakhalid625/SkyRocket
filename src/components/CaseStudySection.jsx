@@ -1,6 +1,9 @@
 import React from 'react';
 import { ArrowUpRight, BarChart3 } from 'lucide-react';
-import caseStudyImg from '../assets/images/project1.png'; 
+import caseStudyImg from '../assets/images/project1.png';
+import graphImg from '../assets/images/graph.svg';
+import navArrow from '../assets/images/NavArrow.svg';
+import { Link } from 'react-router-dom';
 
 const CaseStudyMainContent = ({
   tagText = "CASE STUDY",
@@ -12,64 +15,103 @@ const CaseStudyMainContent = ({
   secondaryButtonLink = "/case-studies"
 }) => {
   return (
-    <section className="w-full flex flex-col lg:flex-row items-center justify-between px-6 py-16 max-w-7xl mx-auto gap-10">
-      
+    <section className="w-full flex flex-col lg:flex-row items-center justify-between px-6 py-16 max-w-[83rem] mx-auto gap-10">
+
       {/* Left Content */}
       <div className="flex-1 space-y-6">
         {/* Tag */}
-        <span className="text-xs font-semibold bg-lime-300 text-black px-3 py-1 rounded-full inline-block">
+        <span className="inline-block bg-secondary text-textColor px-3 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-1">
           {tagText}
         </span>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        <h2 className="text-4xl md:text-[56px] font-medium  text-gray-900  leading-tight tracking-tighter max-w-2xl">
           {title}
         </h2>
-
-        {/* Stats Box */}
-        <div className="bg-gray-100 p-6 rounded-2xl flex items-start gap-4 max-w-xl">
-          <div className="bg-blue-600 text-white p-3 rounded-xl">
-            <BarChart3 size={24} />
+        {/* state box */}
+        <div class="bg-backgroundColor text-textColor rounded-3xl p-6 flex flex-col items-start gap-6 max-w-2xl">
+          <img
+            src={graphImg}
+            alt="graph icon"
+            class="w-14 h-14 object-contain"
+          />
+          <div class="text-2xl font-light leading-relaxed tracking-tight">
+            Increased organic traffic by <strong>150%</strong>, social media engagement by <strong>200%</strong>, and online sales by <strong>35%</strong> within six months.
           </div>
-          <p className="text-gray-700 text-lg">
-            {statsText}
-          </p>
         </div>
+
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 pt-4">
-          <a href={primaryButtonLink} className="bg-lime-400 text-black font-semibold px-6 py-3 rounded-full shadow hover:bg-lime-500 transition">
-            {primaryButtonText}
-          </a>
-          <a href={secondaryButtonLink} className="border border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-50 transition">
-            {secondaryButtonText}
-          </a>
+         <Link
+    to="/contact-us"
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    className="group inline-flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium justify-center"
+  >
+    <span className="transition-transform duration-300 ">
+      Get a Quote
+    </span>
+    <img
+      src={navArrow}
+      alt="navigation arrow"
+      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 font-bold"
+    />
+  </Link>
+            <Link
+            to="/case-studies"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="border border-primary hover:border-bluehover text-primary hover:text-bluehover font-medium py-3 px-5 rounded-full transition duration-200"
+          >
+          See  Case Studies
+          </Link>
         </div>
       </div>
 
-      {/* Right Preview Card */}
-      <div className="flex-1 max-w-xl w-full">
-        <div className="rounded-3xl border p-4 shadow-md bg-white">
-          <div className="rounded-2xl overflow-hidden">
-            <img 
-              src={caseStudyImg} 
-              alt="Case Study Preview" 
-              className="w-full h-auto object-cover" 
-            />
-          </div>
-          <div className="pt-4">
-            <h3 className="text-xl font-semibold text-gray-900">
-              LeHost Hair & Wig Shop: Boosting Online Presence and Sales
-            </h3>
-            <p className="text-gray-600 pt-1 text-sm">
-              We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic...
-            </p>
-          </div>
-          <div className="pt-3">
-            <ArrowUpRight className="text-lime-400" />
+    {/* Right card */}
+    <Link to='/case-study/lehost-hair-wig-shop-boosting-online-presence-and-sales' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} >
+<div className="flex-1 max-w-xl w-full">
+  <div className="group bg-white border border-gray-200 rounded-3xl p-6 flex flex-col h-full  transition-all duration-500 ease-in-out transform hover:-translate-y-1 cursor-pointer">
+    
+    
+    
+    
+    {/* Image Section with Tag */}
+    <div className="relative mb-6 overflow-hidden rounded-2xl">
+      <img
+        src={caseStudyImg}
+        alt="LeHost Hair & Wig Shop"
+        className="w-full h-90 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+      />
+      {/* Tag - same as case study */}
+      <div className="absolute top-4 left-4 bg-white backdrop-blur-sm text-textColor px-2 py-1 rounded-full text-sm font-medium transition-all duration-300 ease-in-out group-hover:bg-hoverColor group-hover:text-textColor">
+        Web Design & Marketing
+      </div>
+    </div>
+
+    {/* Content Section */}
+    <div className="flex-1 flex flex-col">
+      <div>
+        <h3 className="text-xl lg:text-2xl font-medium text-gray-900 mb-3 leading-tight transition-colors duration-300 group-hover:text-primary">
+          LeHost Hair & Wig Shop: Boosting Online<br /> Presence and Sales
+        </h3>
+        
+        {/* Description and Arrow in same row */}
+        <div className="flex justify-between items-start gap-4">
+          <p className="text-secondaryTextColor leading-relaxed  flex-2 font-medium transition-colors duration-300 group-hover:text-gray-800">
+            We redesigned LeHost Hair & Wig Shop's website and implemented targeted digital marketing strategies, resulting in a 50% traffic...
+          </p>
+          
+          {/* Arrow Icon */}
+          <div className="bg-secondary group-hover:bg-hoverColor rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">
+            <ArrowUpRight className="w-6 h-6 text-textColor transition-transform duration-300" />
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+</Link>
+
     </section>
   );
 };

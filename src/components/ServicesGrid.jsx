@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import navArrow from '../assets/images/NavArrow.svg';
+
 
 const ServicesGrid = ({ 
   title = "Detroit Website Design & Development Services",
@@ -7,7 +10,6 @@ const ServicesGrid = ({
   buttonText = "Get a Quote",
   buttonLink = "/contact-us"
 }) => {
-  // Default services data if none provided
   const defaultServices = [
     {
       id: 1,
@@ -50,44 +52,44 @@ const ServicesGrid = ({
   const servicesToRender = services.length > 0 ? services : defaultServices;
 
   return (
-    <div className="w-full bg-white py-16 px-6 lg:px-10">
+    <div className="w-full bg-backgroundColor py-14 px-6 lg:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block bg-secondary text-textColor px-3 py-[5px] mx-auto rounded-full text-[12px] font-semibold uppercase tracking-wider mb-3">
             services
           </div>
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-6 leading-wide  tracking-tight">
               {title}
             </h2>
           </div>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed">
+          <div className="max-w-2xl mx-auto">
+            <p className="text-lg text-secondaryTextColor font-medium leading-wide text-center">
               {subtitle}
             </p>
           </div>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 mt-[-10px]">
           {servicesToRender.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="bg-white rounded-[24px] p-6 sm:p-6 md:p-7 lg:p-6 transition-all duration-300 transform  border border-gray-100 w-full max-w-sm sm:max-w-full mx-auto"
             >
-              <div className="w-16 h-16 mb-6 flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 sm:mb-6 flex items-center justify-center">
                 <img 
                   src={service.icon} 
-                  alt="" 
+                  alt="service icon" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-semibold text-textColor mb-3 sm:mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-secondaryTextColor  font-medium text-sm sm:text-base leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -96,22 +98,23 @@ const ServicesGrid = ({
         </div>
 
         {/* CTA Button */}
-        <div className="text-center">
-          <a
-            href={buttonLink}
-            className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <span>{buttonText}</span>
-            <svg 
-              className="w-5 h-5" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
+      <div className="text-center">
+  <Link
+    to="/contact-us"
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    className="group inline-flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium justify-center"
+  >
+    <span className="transition-transform duration-300 group-hover:translate-x-1">
+      Get a Quote
+    </span>
+    <img
+      src={navArrow}
+      alt="navigation arrow"
+      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 font-bold"
+    />
+  </Link>
+</div>
+
       </div>
     </div>
   );

@@ -87,8 +87,9 @@ const ContentCreationLearnMore = () => {
 
       <ServicesGrid
         services={servicesToRender}
-        title="Our Content Services"
-        subtitle="We go beyond words — we build results-driven content experiences."
+        title="Content Creation & Marketing Services"
+        subtitle="
+Our Content Creation & Marketing service is crafted to tell your brand’s story, connect with the right audience, and drive real growth."
         buttonText="Get Started"
         buttonLink="/contact"
       />
@@ -103,7 +104,6 @@ const ContentCreationLearnMore = () => {
         servicesPlaceholder="Content Marketing"
       />
 
-      <Footer />
     </div>
   );
 };

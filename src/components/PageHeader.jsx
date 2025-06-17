@@ -43,8 +43,8 @@ const PageHeader = () => {
             transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
             viewport={{ once: true }}
           >
-            <a
-              href="/get-in-touch"
+            <Link
+              to="/contact-us"
               className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-3 py-3 rounded-full transition-all duration-300 ease-in-out font-medium min-w-[180px] justify-center"
             >
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -55,7 +55,7 @@ const PageHeader = () => {
                 alt="navigation arrow"
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 font-bold"
               />
-            </a>
+            </Link>
 
             <button className="border border-primary hover:border-bluehover text-primary hover:text-bluehover font-medium py-3 px-3 rounded-full transition duration-200 min-w-[180px]">
               Join the Team
