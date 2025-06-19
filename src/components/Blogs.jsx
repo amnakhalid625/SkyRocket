@@ -21,7 +21,7 @@ const Blogs = () => {
                 skyrocket business blog
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 sm:mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-medium text-textColor mb-4 sm:mb-6 leading-tight ">
                 The Skyrocket Business<br />Blog: Insights for your<br />Digital Growth
               </h2>
 

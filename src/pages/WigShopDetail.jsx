@@ -59,7 +59,7 @@ const ProjectDetail = ({
         </div>
 
         {/* Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.44fr_1fr] gap-2 mb-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.50fr_1fr] gap-2 mb-12 items-end">
           <div>
             <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight mb-4">
               {title}
@@ -77,12 +77,12 @@ const ProjectDetail = ({
 
         {/* Meta Info */}
         <div className="flex flex-wrap gap-12">
-          <div className="flex-1 min-w-[150px]">
+          <div className="flex-1 min-w-[150px] bg-red-400">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Client</div>
             <p className="font-light text-textColor text-lg">{client}</p>
           </div>
           
-          <div className="flex-1 min-w-[150px]">
+          <div className="flex-1 min-w-[150px] bg-blue-300">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Website</div>
             {website ? (
               <a 
@@ -94,16 +94,16 @@ const ProjectDetail = ({
                 {website}
               </a>
             ) : (
-              <p className="font-medium text-primary">N/A</p>
+              <p className="font-medium text-primary bg-purple-300">N/A</p>
             )}
           </div>
           
-          <div className="flex-1 min-w-[150px]">
+          <div className="flex-1 min-w-[150px] bg-pink-400">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Services</div>
             <p className="font-light text-textColor text-lg">{services}</p>
           </div>
           
-          <div className="flex-1 min-w-[150px]">
+          <div className="flex-1 min-w-[150px] bg-green-300">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Project Timeline</div>
             <p className="font-light text-textColor text-lg">{timeline}</p>
           </div>

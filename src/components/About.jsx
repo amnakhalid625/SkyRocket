@@ -102,7 +102,7 @@ const About = () => {
              onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="button bg-secondary text-textColor px-6 py-3 rounded-full font-semibold inline-flex items-center shadow-md hover:bg-hoverColor transition-all duration-200"
+              className="button bg-secondary text-textColor px-6 py-3 rounded-full font-semibold inline-flex items-center  hover:bg-hoverColor transition-all duration-200"
             >
               <span>Learn More</span>
               <img src={Arrow} alt="Arrow" className="w-4 h-4 ml-2" />

@@ -75,6 +75,18 @@ const ServicesSection = () => {
             ],
             link: "/services/pay-per-click-advertising",
         },
+          {
+            id: 6,
+            title: "Email Marketing",
+            description:
+                "Email is one of the most powerful ways to connect directly with your audience. We design tailored email campaigns that not only get opened but drive action. Whether you’re nurturing leads, promoting offers, or building long-term relationships, we create emails that convert and keep your brand top of mind.",
+            features: [
+                "Email That Converts",
+                "Targeted Campaigns",
+                "Nurture and Engage",
+            ],
+            link: "/services/email-marketing",
+        },
     ];
 
     // Create a motion-enhanced Link component

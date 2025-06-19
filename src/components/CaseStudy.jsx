@@ -47,7 +47,7 @@ const CaseStudies = () => {
             </motion.div>
 
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-textColor mb-4 sm:mb-6 leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] max-w-3xl font-medium text-textColor mb-4 sm:mb-6 leading-wider  tracking-tight"
               variants={itemVariants}
             >
               Transforming Brands with Detroit Web Design & Marketing Excellence.
@@ -57,7 +57,7 @@ const CaseStudies = () => {
               className="flex flex-col lg:flex-row items-start justify-between lg:items-center gap-4 sm:gap-6"
               variants={itemVariants}
             >
-              <p className="text-base sm:text-lg text-secondaryTextColor max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg text-secondaryTextColor max-w-2xl leading-wider tracking-tight font-medium">
                 Here are some of our standout case studies that showcase our expertise and commitment to excellence.
               </p>
 

@@ -54,7 +54,7 @@ const CaseStudyCards = ({ caseStudies = [] }) => {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <motion.div
-            className="group bg-white border border-gray-200 rounded-3xl p-6 h-full flex flex-col hover:shadow-lg transition-all duration-500 ease-in-out transform hover:-translate-y-1 cursor-pointer"
+            className="group bg-white border border-gray-200 rounded-3xl p-6 h-full flex flex-col  transition-all duration-500 ease-in-out transform hover:-translate-y-1 cursor-pointer"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -75,11 +75,11 @@ const CaseStudyCards = ({ caseStudies = [] }) => {
             <div className="flex-1 flex flex-col">
               <div>
                 <h3
-                  className="text-xl lg:text-2xl font-medium text-gray-900 mb-3 leading-tight transition-colors duration-300 group-hover:text-primary"
+                  className="text-xl lg:text-2xl font-medium text-gray-900 mb-3 leading-tight tracking-tight transition-colors duration-300 group-hover:text-primary"
                   dangerouslySetInnerHTML={{ __html: study.title }}
                 />
                 <div className="flex justify-between items-start gap-4">
-                  <p className="text-secondaryTextColor leading-relaxed flex-1 transition-colors duration-300 group-hover:text-gray-800">
+                  <p className="text-secondaryTextColor font-medium leading-relaxed flex-1 transition-colors duration-300 group-hover:text-gray-800">
                     {study.description}
                   </p>
                   <div className="bg-secondary group-hover:bg-hoverColor rounded-full p-3 transition-all duration-500 ease-in-out group-hover:rotate-45">

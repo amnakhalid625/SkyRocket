@@ -54,7 +54,7 @@ const Form = ({
               <div className="inline-block bg-secondary text-textColor px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
                 {headerTag}
               </div>
-              <h2 className="text-4xl lg:text-[56px] font-semibold text-textColor mb-4 leading-tight tracking-tight max-w-4xl">
+              <h2 className="text-4xl lg:text-[56px] font-medium text-textColor mb-4 leading-tight tracking-tight max-w-4xl">
                 {headerTitle}
               </h2>
               <p className="text-secondaryTextColor text-lg leading-relaxed">

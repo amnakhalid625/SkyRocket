@@ -69,20 +69,20 @@ const Articles = ({
             }}
           >
 
-            <div className={`w-full overflow-hidden rounded-[24px] mb-3 ${imageHeight}`}>
+            <div className={`w-full overflow-hidden rounded-[24px]  mb-3 ${imageHeight}`}>
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-[24px]"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 rounded-[24px] "
               />
             </div>
 
             {(showCategory || showDate) && (
-              <div className="flex items-center text-sm text-textsecondaryTextColor mb-2 font-medium">
+              <div className="flex items-center text-base  text-secondaryTextColor mb-2 font-medium mt-3">
                 {showCategory && (
                   <>
-                    <span className="text-secondaryTextColor">{post.category}</span>
-                    {showDate && <img src={dotIcon} alt="dot" className="mx-2 w-1 h-1" />}
+                    <span className="text-secondaryTextColor  font-medium text-base">{post.category}</span>
+                    {showDate && <img src={dotIcon} alt="dot" className="mx-2 w-[6px] h-[6px]" />}
                   </>
                 )}
                 {showDate && (
@@ -94,8 +94,8 @@ const Articles = ({
               </div>
             )}
 
-            <div className="flex-grow flex flex-col">
-              <h3 className="text-2xl font-medium text-textColor mb-2 leading-tight">
+            <div className="flex-grow flex flex-col ">
+              <h3 className="mt-3 text-2xl font-medium text-textColor mb-2 leading-tight tracking-tight group-hover:text-primary transition-colors duration-300">
                 {post.title}
               </h3>
               {showExcerpt && (

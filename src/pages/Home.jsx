@@ -7,7 +7,6 @@ import CaseStudies from '../components/CaseStudy'
 import Testimonials from '../components/Testimonials'
 import Blogs from '../components/Blogs'
 import Contact from '../components/Contact'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -20,7 +19,6 @@ const Home = () => {
     <Testimonials />
     <Blogs />
     <Contact />
-    <Footer />
     </>
   )
 }
