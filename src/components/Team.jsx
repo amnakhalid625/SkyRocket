@@ -133,8 +133,11 @@ className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col
 
         {/* CTA Button */}
         <div className="text-center mt-3">
-          <a
-            href="/get-in-touch"
+          <Link
+            to="/contact-us"
+                                onClick={() => {
+               window.scrollTo({ top: 0, behavior: 'smooth' });
+             }}
             className="group inline-flex items-center gap-2 bg-secondary hover:bg-hoverColor text-textColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium"
           >
             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -145,7 +148,7 @@ className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col
               alt="navigation arrow"
               className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
