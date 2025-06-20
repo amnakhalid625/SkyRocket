@@ -20,7 +20,7 @@ const defaultData = {
       },
       {
         title: "Weak Social Media Engagement",
-        description: "They weren’t seeing much interaction on their social media channels, making it difficult to grow their audience."
+        description: "They weren't seeing much interaction on their social media channels, making it difficult to grow their audience."
       },
       {
         title: "Limited Brand Visibility",
@@ -67,10 +67,10 @@ const ProjectOverview = ({ data = defaultData }) => {
   return (
 
     <>
-    <div className="px-10 py-8">
+    <div className="px-10 py-2">
       {/* Results Section */}
-      <div className="max-w-3xl mx-auto relative">
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 bg-primary text-white text-center rounded-3xl p-12 overflow-hidden">
+      <div className="max-w-4xl mx-auto relative">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 bg-primary text-white text-center rounded-3xl p-8 overflow-hidden">
           {/* Top-right image */}
           <img
             src={pattern1}
@@ -86,8 +86,8 @@ const ProjectOverview = ({ data = defaultData }) => {
           
           {/* Result stats */}
           {resultsData.map((item, index) => (
-            <div key={index} className="flex flex-col items-center justify-center z-10 p-5">
-              <div className="text-4xl font-medium mb-2 tracking-tight leading-tight">{item.value}</div>
+            <div key={index} className="flex flex-col items-center justify-center z-10 p-3">
+              <div className="text-4xl font-medium mb-1 tracking-tight leading-tight">{item.value}</div>
               <div className="text-lg">{item.label}</div>
             </div>
           ))}
@@ -95,34 +95,34 @@ const ProjectOverview = ({ data = defaultData }) => {
       </div>
 
       {/* Description + Details Section */}
-      <div className="max-w-3xl mx-auto mt-10 text-lg tracking-tight leading-wider">
-        <div className="prose prose-lg text-secondaryTextColor">
+      <div className="max-w-3xl mx-auto mt-8 text-lg tracking-tight leading-wide">
+        <div className="prose prose-base text-secondaryTextColor">
           <p>{description}</p>
 
-          <h2 className="text-2xl lg:text-4xl font-semibold mt-8 mb-4 text-textColor">{challenges.title}</h2>
-          <p className="mb-4">{challenges.description}</p>
-          <ul className="list-disc pl-6 mb-6">
+          <h2 className="text-xl lg:text-3xl font-semibold mt-6 mb-3 text-textColor">{challenges.title}</h2>
+          <p className="mb-3">{challenges.description}</p>
+          <ul className="list-disc pl-6 mb-4">
             {challenges.items.map((item, index) => (
-              <li key={index} className="mb-2">
+              <li key={index} className="mb-1">
                 <strong>{item.title}</strong>: {item.description}
               </li>
             ))}
           </ul>
 
-          <h2 className="text-2xl lg:text-4xl font-semibold mt-8 mb-4 text-textColor">{solutions.title}</h2>
-          <p className="mb-4 font-medium">{solutions.description}</p>
-          <ul className="list-disc pl-6 mb-6">
+          <h2 className="text-xl lg:text-3xl font-semibold mt-6 mb-3 text-textColor">{solutions.title}</h2>
+          <p className="mb-3 font-medium">{solutions.description}</p>
+          <ul className="list-disc pl-6 mb-4">
             {solutions.items.map((item, index) => (
-              <li key={index} className="mb-2 font-normal">
+              <li key={index} className="mb-1 font-normal">
                 <strong>{item.title}</strong>: {item.description}
               </li>
             ))}
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-4 lg:text-4xl text-textColor">{results.title}</h2>
+          <h2 className="text-xl font-semibold mt-6 mb-3 lg:text-3xl text-textColor">{results.title}</h2>
           <ul className="list-disc pl-6">
             {results.items.map((item, index) => (
-              <li key={index} className="mb-2">{item.label}</li>
+              <li key={index} className="mb-1">{item.label}</li>
             ))}
           </ul>
         </div>

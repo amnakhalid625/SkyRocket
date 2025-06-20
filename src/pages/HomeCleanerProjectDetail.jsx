@@ -6,7 +6,6 @@ import CaseStudyCards from '../components/CaseStudyCards';
 import project1 from '../assets/images/project3.png';
 import project2 from '../assets/images/webCard.png';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 const ProjectDetail = ({ 
   heroImage,
@@ -187,7 +186,6 @@ const overviewdefaultData = {
       {/* Contact component moved outside the main container */}
       <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
 
-      <Footer />
     </>
   );
 };

@@ -1,13 +1,9 @@
 import ProjectOverview from '../components/ProjectOverview';
 import project1 from '../assets/images/project1.png';
-
-
-
 import CaseStudyCards from '../components/CaseStudyCards';
 import project3 from '../assets/images/project3.png';
 import project5 from '../assets/images/project2.png';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 const ProjectDetail = ({ 
   heroImage,
@@ -27,8 +23,7 @@ const ProjectDetail = ({
       alt: 'LeHost Hair & Wig Shop',
       tag: 'Web Design & Digital Marketing',
       title: 'Nutrivita Shop: Boosting E-commerce Sales with a Streamlined Online Store',
-      description:
-        "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions.",
+      description: "Skyrocket Business redesigned Nutrivita Shop's website, optimized for SEO and mobile, resulting in a 60% increase in traffic and a 40% rise in conversions.",
       link: '/case-study/nutrivita-shop-boosting-e-commerce-sales-with-a-streamlined-online-store',
     },
     {
@@ -37,15 +32,14 @@ const ProjectDetail = ({
       alt: 'Mop and Glow Cleaning Company',
       tag: 'Website Design & Digital Marketing',
       title: 'Mop and Glow Cleaning Company: Building Trust and Driving Local Leads',
-      description:
-        "We designed Mop and Glow’s website and launched a local SEO strategy—leading to a 75% traffic boost and 60% more leads in just two months.",
+      description: "We designed Mop and Glow's website and launched a local SEO strategy—leading to a 75% traffic boost and 60% more leads in just two months.",
       link: '/case-study/mop-and-glow-cleaning-company-building-trust-and-driving-local-leads',
     },
   ];
 
   return (
     <>
-      <div className="w-full max-w-[83rem] mx-auto px-8 py-8 mt-4">
+      <div className="w-full max-w-[83rem] mx-auto px-4 sm:px-8 py-8 mt-4">
         {/* Hero Image */}
         <div className="mb-12">
           <img 
@@ -54,12 +48,12 @@ const ProjectDetail = ({
             alt={altText}
             sizes="100vw"
             srcSet={heroImageSrcSet}
-            className="w-full h-[500px] object-cover rounded-3xl"
+            className="w-full h-auto md:h-[500px] object-cover rounded-3xl"
           />
         </div>
 
         {/* Hero Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.50fr_1fr] gap-2 mb-12 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.50fr_1fr] gap-8 mb-12 items-end">
           <div>
             <h1 className="text-4xl lg:text-[56px] font-medium text-textColor leading-tight tracking-tight mb-4">
               {title}
@@ -73,37 +67,41 @@ const ProjectDetail = ({
         </div>
 
         {/* Border */}
-        <div className="h-px bg-[#eaeaea] my-12"></div>
+        <div className="h-px bg-[#eaeaea] w-full my-12"></div>
 
-        {/* Meta Info */}
-        <div className="flex flex-wrap gap-12">
-          <div className="flex-1 min-w-[150px] bg-red-400">
+        {/* Meta Info - Perfectly spaced with Timeline at end */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {/* Client */}
+          <div>
             <div className="font-medium text-base text-secondaryTextColor mb-2">Client</div>
             <p className="font-light text-textColor text-lg">{client}</p>
           </div>
           
-          <div className="flex-1 min-w-[150px] bg-blue-300">
+          {/* Website */}
+          <div>
             <div className="font-medium text-base text-secondaryTextColor mb-2">Website</div>
             {website ? (
               <a 
                 href={website}
-                className="font-light underline text-textColor text-base hover:underline"
+                className="font-light underline text-textColor text-lg hover:text-primary transition-colors"
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                {website}
+                {website.replace(/^https?:\/\//, '')}
               </a>
             ) : (
-              <p className="font-medium text-primary bg-purple-300">N/A</p>
+              <p className="font-light text-textColor text-lg">N/A</p>
             )}
           </div>
           
-          <div className="flex-1 min-w-[150px] bg-pink-400">
+          {/* Services */}
+          <div>
             <div className="font-medium text-base text-secondaryTextColor mb-2">Services</div>
             <p className="font-light text-textColor text-lg">{services}</p>
           </div>
           
-          <div className="flex-1 min-w-[150px] bg-green-300">
+          {/* Project Timeline - Right aligned */}
+          <div className="sm:text-right">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Project Timeline</div>
             <p className="font-light text-textColor text-lg">{timeline}</p>
           </div>
@@ -114,21 +112,11 @@ const ProjectDetail = ({
         
         {/* Pass case studies data to CaseStudyCards component */}
         <CaseStudyCards caseStudies={caseStudies} />
-
-        {/* Responsive Styles */}
-        <style jsx>{`
-          @media (max-width: 768px) {
-            .grid.grid-cols-\\[1\\.44fr_1fr\\] {
-              grid-template-columns: 1fr;
-            }
-          }
-        `}</style>
       </div>
 
-      {/* Contact component moved outside the main container */}
+      {/* Contact component */}
       <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
 
-      <Footer />
     </>
   );
 };
