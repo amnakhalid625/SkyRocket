@@ -1,23 +1,20 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // ← yeh add karo
+import { useLocation } from 'react-router-dom'; 
 import SecondPageHeader from '../components/SecondPageHeader';
 import ServicesCard from '../components/ServicesCard';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 const ServicesDetail = () => {
-  const { pathname } = useLocation(); // ← yeh add karo
+  const { pathname } = useLocation(); 
 
   useEffect(() => {
-    window.scrollTo(0, 0); // ← yeh scroll-to-top ka kaam karega
-  }, [pathname]); // ← jab route change ho ya component open ho
-
+    window.scrollTo(0, 0); 
+  }, [pathname]); 
   return (
     <>
       <SecondPageHeader />
       <ServicesCard />
       <Contact secondButtonText="Case Studies" secondButtonHref="/case-studies" />
-      <Footer />
     </>
   );
 };

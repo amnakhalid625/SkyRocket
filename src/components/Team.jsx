@@ -83,8 +83,14 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <Link
               key={member.id}
+
               to={`/team/${member.name.toLowerCase().replace(/\s+/g, '-')}`}
-className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col text-center no-underline group cursor-pointer transform transition-all duration-300 hover:-translate-y-1"              onMouseEnter={() => setHoveredMember(member.id)}
+
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+
+              className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col text-center no-underline group cursor-pointer transform transition-all duration-300 hover:-translate-y-1" onMouseEnter={() => setHoveredMember(member.id)}
               onMouseLeave={() => setHoveredMember(null)}
               style={{
                 color: '#525866',
@@ -135,9 +141,9 @@ className="w-full max-w-[90%] sm:max-w-[80%] md:max-w-full mx-auto flex flex-col
         <div className="text-center mt-3">
           <Link
             to="/contact-us"
-                                onClick={() => {
-               window.scrollTo({ top: 0, behavior: 'smooth' });
-             }}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="group inline-flex items-center gap-2 bg-secondary hover:bg-hoverColor text-textColor px-6 py-3 rounded-full transition-all duration-300 ease-in-out font-medium"
           >
             <span className="transition-transform duration-300 group-hover:translate-x-1">

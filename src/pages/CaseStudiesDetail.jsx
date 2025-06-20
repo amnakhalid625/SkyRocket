@@ -3,7 +3,6 @@ import navArrow from '../assets/images/NavArrow.svg';
 import WebCard from '../components/WebCard';
 import CaseStudyCards from '../components/CaseStudyCards';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 import projectThree from '../assets/images/project3.png';
 import projectFour from '../assets/images/project4.png';
 
@@ -66,7 +65,7 @@ const CaseStudiesDetail = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="px-4 sm:px-6 md:padding-global pb-12 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28">
+      <section className="px-4 sm:px-6 md:padding-global pb-5 sm:pb-5 md:pb-5 lg:pb-5 xl:pb-10">
         <div className="mx-auto max-w-7xl space-y-16 md:space-y-20 lg:space-y-24">
           <WebCard />
           
@@ -78,7 +77,7 @@ const CaseStudiesDetail = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="px-4 sm:px-6 md:padding-global pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+      <section className="px-4 sm:px-6 md:padding-global pb-10 sm:pb-5 md:pb-5 lg:pb-10">
         <div className="mx-auto max-w-7xl">
           <Contact 
             headingText="Unleash Your Brand's Potential with Skyrocket!" 
@@ -87,7 +86,6 @@ const CaseStudiesDetail = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

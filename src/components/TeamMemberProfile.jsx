@@ -18,7 +18,6 @@ import instagram from '../assets/images/contactInsta.svg';
 const TeamMemberProfile = () => {
   const { memberName } = useParams();
 
-  // Sample team data
   const teamMembers = [
     {
       id: 1,
@@ -48,7 +47,7 @@ const TeamMemberProfile = () => {
         { name: "Instagram", url: "https://instagram.com/", icon: instagram }
       ]
     },
-    // Add other team members here with the same structure
+
     {
       id: 2,
       name: "John Doe",
@@ -73,9 +72,133 @@ const TeamMemberProfile = () => {
       ],
       socialLinks: [
         { name: "LinkedIn", url: "https://www.linkedin.com/", icon: linkedIn },
-        { name: "Twitter", url: "https://www.x.com/", icon: twitter }
+        { name: "Twitter", url: "https://www.x.com/", icon: twitter },
+        { name: "Instagram", url: "https://instagram.com/", icon: instagram }
+
       ]
+    },
+
+   {
+  id: 3,
+  name: "Sarah Davis",
+  slug: "sarah-davis",
+  position: "Senior Marketing Strategist",
+  image: member3,
+  bio: "Marketing strategist with 8+ years of experience in brand building, digital campaigns, and audience engagement.",
+  about: [
+    "Sarah specializes in aligning marketing efforts with business goals to ensure measurable growth.",
+    "She has a proven track record in running successful multi-channel campaigns across email, social media, and paid media."
+  ],
+  experience: [
+    {
+      title: "Background Experience",
+      description: "Sarah has led marketing strategy for startups and agencies, crafting campaigns that significantly improved customer engagement and retention."
     }
+  ],
+  highlights: [
+    "Grew organic followers by 300% for a beauty brand in 6 months",
+    "Developed lead generation funnel resulting in 4x conversions",
+    "Speaker at multiple digital marketing summits"
+  ],
+  socialLinks: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/", icon: linkedIn },
+    { name: "Instagram", url: "https://instagram.com/", icon: instagram },
+        { name: "Instagram", url: "https://instagram.com/", icon: instagram }
+
+  ]
+},
+{
+  id: 4,
+  name: "Alex Kim",
+  slug: "alex-kim",
+  position: "Head of SEO",
+  image: member4,
+  bio: "SEO specialist with a decade of experience boosting online visibility for top brands.",
+  about: [
+    "Alex has a strong background in both on-page and off-page SEO, having worked with e-commerce, SaaS, and local businesses.",
+    "He is driven by data, continuously optimizing strategies through analytics and search trends."
+  ],
+  experience: [
+    {
+      title: "Background Experience",
+      description: "Led SEO campaigns that resulted in over 300% traffic growth. Known for implementing cutting-edge SEO tools and strategies to keep clients ahead in SERPs."
+    }
+  ],
+  highlights: [
+    "Increased organic traffic for a client by 5x within 6 months",
+    "Certified Google Analytics and SEMrush expert",
+    "Guest author on leading SEO blogs"
+  ],
+  socialLinks: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/", icon: linkedIn },
+    { name: "Twitter", url: "https://www.x.com/", icon: twitter },
+        { name: "Instagram", url: "https://instagram.com/", icon: instagram }
+
+  ]
+},
+
+{
+  id: 5,
+  name: "Tom Clark",
+  slug: "tom-clark",
+  position: "PPC Specialist",
+  image: member5,
+  bio: "Performance marketing expert with a passion for ROI-focused ad strategies.",
+  about: [
+    "Tom manages paid media campaigns across Google Ads, Meta Ads, and YouTube, specializing in CPC optimization and audience segmentation.",
+    "He enjoys A/B testing and conversion tracking to drive real business results."
+  ],
+  experience: [
+    {
+      title: "Background Experience",
+      description: "Managed $1M+ in ad spend across platforms, optimizing campaigns for e-commerce and lead generation businesses."
+    }
+  ],
+  highlights: [
+    "Reduced cost per acquisition by 35% for key clients",
+    "Certified in Google Ads & Facebook Blueprint",
+    "Regularly conducts PPC training workshops"
+  ],
+  socialLinks: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/", icon: linkedIn },
+    { name: "Instagram", url: "https://instagram.com/", icon: instagram },
+        { name: "Instagram", url: "https://instagram.com/", icon: instagram }
+
+  ]
+},
+
+{
+  id: 6,
+  name: "Nina Roberts",
+  slug: "nina-roberts",
+  position: "Data Analyst",
+  image: member6,
+  bio: "Data storyteller and strategist who transforms raw numbers into actionable insights.",
+  about: [
+    "Nina is skilled in SQL, Tableau, Python, and Excel. She designs dashboards and reports that empower teams to make informed decisions.",
+    "Her focus is on business intelligence and performance analysis across digital channels."
+  ],
+  experience: [
+    {
+      title: "Background Experience",
+      description: "Worked with marketing and product teams to improve retention rates, user experience, and ad performance through deep data analysis."
+    }
+  ],
+  highlights: [
+    "Built automated reporting system saving 15+ hours per week",
+    "Published case studies on data-driven growth",
+    "Guest lecturer for university analytics courses"
+  ],
+  socialLinks: [
+    { name: "LinkedIn", url: "https://www.linkedin.com/", icon: linkedIn },
+    { name: "Twitter", url: "https://www.x.com/", icon: twitter },
+        { name: "Instagram", url: "https://instagram.com/", icon: instagram }
+
+  ]
+}
+
+
+  
   ];
 
   const member = teamMembers.find(m => m.slug === memberName);

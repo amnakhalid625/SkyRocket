@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import navArrow from '../assets/images/NavArrow.svg';
-import Footer from './Footer';
 
 const Faqs = () => {
   const [expandedFaq, setExpandedFaq] = useState(null);
@@ -131,13 +130,13 @@ const Faqs = () => {
           <div className="mt-6 mb-12">
             <Link
               to="/contact-us"
-              className="inline-flex items-center justify-center bg-secondary text-textColor font-medium px-6 py-3 rounded-full shadow-md hover:bg-hoverColor"
+              className="inline-flex items-center justify-center bg-secondary text-textColor font-medium px-6 py-3 rounded-full  hover:bg-hoverColor "
            
            onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
            >
-              <span className="mr-2">Get in Touch</span>
+              <span className="mr-2 transition-transform duration-300 group-hover:translate-x-1">Get in Touch</span>
               <img
                 src={navArrow}
                 alt="arrow"
@@ -148,7 +147,6 @@ const Faqs = () => {
         </div>
       </div>
 
-      <Footer />
     </>
   );
 };

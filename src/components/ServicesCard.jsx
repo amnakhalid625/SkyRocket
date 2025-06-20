@@ -74,11 +74,11 @@ const ServicesCard = () => {
   ];
 
   return (
-    <div className="bg-primary px-4 sm:px-8 py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden">
-      <img src={servicesPattern} alt="servicesPattern" className="absolute top-0 right-0 z-0" />
+    <div className="bg-primary px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12 lg:py-16 relative overflow-hidden">
+      <img src={servicesPattern} alt="servicesPattern" className="absolute top-0 right-0 z-0 w-full sm:w-1/2 md:w-1/3" />
 
-      <div className="relative z-10 max-w-[1270px] mx-auto pt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <div className="relative z-10 max-w-[1270px] mx-auto pt-8 sm:pt-12 md:pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           {services.map((service) => (
             <MotionLink
               key={service.id}
@@ -86,17 +86,17 @@ const ServicesCard = () => {
                 group
                 bg-white 
                 rounded-3xl 
-                p-8 lg:p-12 
+                p-6 sm:p-8 md:p-10 lg:p-12 
                 shadow-sm
                 transition-colors duration-300 ease-in-out
                 hover:bg-secondary
                 relative 
                 overflow-hidden 
-                flex flex-col gap-8
-                min-w-[600px]
+                flex flex-col gap-6 sm:gap-8
+                w-full
                 cursor-pointer
               `}
-              style={{ minHeight: '500px' }}
+              style={{ minHeight: '400px', maxWidth: '100%' }}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -106,19 +106,19 @@ const ServicesCard = () => {
                 navigate(service.to);
               }}
             >
-              <div className="font-medium text-accent">{service.id}</div>
-              <h3 className="text-3xl font-medium text-textColor leading-tight">
+              <div className="font-medium text-accent text-sm sm:text-base">{service.id}</div>
+              <h3 className="text-2xl sm:text-3xl font-medium text-textColor leading-tight">
                 {service.title}
               </h3>
-              <p className="text-secondaryTextColor text-base leading-relaxed">
+              <p className="text-secondaryTextColor text-sm sm:text-base leading-relaxed">
                 {service.description}
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {service.features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <img src={tickImage} alt="tick" className="w-6 h-6 flex-shrink-0" />
-                    <span className="text-base font-bold text-textColor">
+                  <div key={i} className="flex items-center gap-3 sm:gap-4">
+                    <img src={tickImage} alt="tick" className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-bold text-textColor">
                       {feature}
                     </span>
                   </div>
@@ -131,7 +131,7 @@ const ServicesCard = () => {
                     flex items-center space-x-2 
                     bg-secondary 
                     text-textColor 
-                    px-6 py-3 
+                    px-4 sm:px-6 py-2 sm:py-3 
                     rounded-full 
                     transition-colors duration-300 ease-in-out 
                     font-medium justify-center w-fit
@@ -145,7 +145,7 @@ const ServicesCard = () => {
                   <img
                     src={navArrow}
                     alt="navigation arrow"
-                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:invert"
+                    className="h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:invert"
                   />
                 </div>
               </div>
@@ -159,14 +159,14 @@ const ServicesCard = () => {
                     : 'c09'
                 }_${service.graphic}`}
                 alt=""
-                className={`absolute ${service.graphicPosition} w-64 object-contain`}
+                className={`absolute ${service.graphicPosition} w-40 sm:w-48 md:w-56 lg:w-64 object-contain hidden sm:block`}
               />
             </MotionLink>
           ))}
         </div>
       </div>
 
-      <img src={servicesPattern2} alt="servicesPattern2" className="absolute bottom-0 left-0 z-0" />
+      <img src={servicesPattern2} alt="servicesPattern2" className="absolute bottom-0 left-0 z-0 w-full sm:w-1/2 md:w-1/3" />
     </div>
   );
 };
