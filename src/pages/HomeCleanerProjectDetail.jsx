@@ -7,7 +7,7 @@ import project1 from '../assets/images/project3.png';
 import project2 from '../assets/images/webCard.png';
 import Contact from '../components/Contact';
 
-const ProjectDetail = ({ 
+const ProjectDetail = ({
   heroImage,
   heroImageSrcSet,
   title,
@@ -42,63 +42,63 @@ const ProjectDetail = ({
   ];
 
 
-const overviewdefaultData = {
-  resultsData: [
-    { value: "75%", label: "increase in Website Traffic" },
-    { value: "60%", label: "More Quote Requests" },
-    { value: "45%", label: "Reduction in Unsubscribe Rates" },
-    { value: "120%", label: "Increase in Social Media Engagement" }
-  ],
-  description: "Mop and Glow, a local cleaning company, needed a strong digital presence to build trust and attract new clients. Catalysty began by designing a fresh, mobile-friendly website, then launched targeted local marketing to generate leads and grow their business.",
-  challenges: {
-    title: "The Challenge",
-    description: "LeHost Hair & Wig Shop faced several challenges that were holding them back:",
-    items: [
-      {
-        title: "Outdated Website",
-        description: "Their old site didn’t reflect their professionalism or reliability."
-      },
-      {
-        title: "Low Inquiries",
-        description: "They weren’t receiving enough quote requests or calls."
-      },
-      {
-        title: "Poor Local Visibility",
-        description:"They struggled to appear in local search results."
-      }
-    ]
-  },
-  solutions: {
-    title: "The Solution",
-    description: "Skyrocket Business took a step-by-step approach to solve these challenges:",
-    items: [
-      {
-        title: "Website Design: ",
-        description: "We built a clean, modern, and easy-to-navigate website that clearly explained their services and made it simple for users to request a quote."
-      },
-      {
-        title: "Local SEO Optimization:",
-        description: "Improved their Google visibility with on-page SEO tailored to local search intent."
-      },
-      {
-        title: "Trust-Building Content:",
-        description: " Created pages highlighting their services, team, and testimonials to boost credibility."
-      },
-      {
-        title: "Lead Capture Tools: ",
-        description: "Added forms and click-to-call buttons to drive conversions."
-      }
-    ]
-  },
-  results: {
-    title: "Results",
-    items: [
-      { metric: "Website Traffic", growth: "75%", label: "Website Traffic grew by 50%, with more qualified local visitors." },
-      { metric: "Social Media Engagement", growth: "60%", label: " helping them scale faster." },
-      { metric: "Stronger brand presence", growth: "45%", label: "leading to increased client trust and repeat business." }
-    ]
-  }
-};
+  const overviewdefaultData = {
+    resultsData: [
+      { value: "75%", label: "increase in Website Traffic" },
+      { value: "60%", label: "More Quote Requests" },
+      { value: "45%", label: "Reduction in Unsubscribe Rates" },
+      { value: "120%", label: "Increase in Social Media Engagement" }
+    ],
+    description: "Mop and Glow, a local cleaning company, needed a strong digital presence to build trust and attract new clients. Catalysty began by designing a fresh, mobile-friendly website, then launched targeted local marketing to generate leads and grow their business.",
+    challenges: {
+      title: "The Challenge",
+      description: "LeHost Hair & Wig Shop faced several challenges that were holding them back:",
+      items: [
+        {
+          title: "Outdated Website",
+          description: "Their old site didn’t reflect their professionalism or reliability."
+        },
+        {
+          title: "Low Inquiries",
+          description: "They weren’t receiving enough quote requests or calls."
+        },
+        {
+          title: "Poor Local Visibility",
+          description: "They struggled to appear in local search results."
+        }
+      ]
+    },
+    solutions: {
+      title: "The Solution",
+      description: "Skyrocket Business took a step-by-step approach to solve these challenges:",
+      items: [
+        {
+          title: "Website Design: ",
+          description: "We built a clean, modern, and easy-to-navigate website that clearly explained their services and made it simple for users to request a quote."
+        },
+        {
+          title: "Local SEO Optimization:",
+          description: "Improved their Google visibility with on-page SEO tailored to local search intent."
+        },
+        {
+          title: "Trust-Building Content:",
+          description: " Created pages highlighting their services, team, and testimonials to boost credibility."
+        },
+        {
+          title: "Lead Capture Tools: ",
+          description: "Added forms and click-to-call buttons to drive conversions."
+        }
+      ]
+    },
+    results: {
+      title: "Results",
+      items: [
+        { metric: "Website Traffic", growth: "75%", label: "Website Traffic grew by 50%, with more qualified local visitors." },
+        { metric: "Social Media Engagement", growth: "60%", label: " helping them scale faster." },
+        { metric: "Stronger brand presence", growth: "45%", label: "leading to increased client trust and repeat business." }
+      ]
+    }
+  };
 
 
   return (
@@ -106,9 +106,9 @@ const overviewdefaultData = {
       <div className="w-full max-w-[83rem] mx-auto px-8 py-8 mt-4">
         {/* Hero Image */}
         <div className="mb-12">
-          <img 
+          <img
             src={heroImage}
-            loading="eager" 
+            loading="eager"
             alt={altText}
             sizes="100vw"
             srcSet={heroImageSrcSet}
@@ -139,14 +139,14 @@ const overviewdefaultData = {
             <div className="font-medium text-base text-secondaryTextColor mb-2 ">Client</div>
             <p className="font-light text-textColor text-lg">{client}</p>
           </div>
-          
+
           <div className="flex-1 min-w-[150px] ">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Website</div>
             {website ? (
-              <a 
+              <a
                 href={website}
                 className="font-light underline text-textColor text-base hover:underline"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 {website}
@@ -155,12 +155,12 @@ const overviewdefaultData = {
               <p className="font-medium text-primary">N/A</p>
             )}
           </div>
-          
+
           <div className="flex-1 min-w-[450px] ">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Services</div>
             <p className="font-light text-textColor text-lg">{services}</p>
           </div>
-          
+
           <div className="flex-1 min-w-[150px]">
             <div className="font-medium text-base text-secondaryTextColor mb-2">Project Timeline</div>
             <p className="font-light text-textColor text-lg">{timeline}</p>
@@ -168,8 +168,8 @@ const overviewdefaultData = {
         </div>
 
         {/* Include ProjectOverview component */}
-        <ProjectOverview  data={overviewdefaultData} />
-        
+        <ProjectOverview data={overviewdefaultData} />
+
         {/* Pass case studies data to CaseStudyCards component */}
         <CaseStudyCards caseStudies={caseStudies} />
 

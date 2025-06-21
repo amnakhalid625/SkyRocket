@@ -12,7 +12,7 @@ import Form from '../components/Form';
 const EmailMarketingLearnMore = () => {
 
   const customHeroData = {
-    badge: "Email Marketing", 
+    badge: "Email Marketing",
     title: "Skyrocket Your Business with Powerful Email Marketing",
     subtitle: "",
     description: "Email is one of the most powerful ways to connect directly with your audience. We design tailored email campaigns that not only get opened but drive action. Whether you’re nurturing leads, promoting offers, or building long-term relationships, we create emails that convert and keep your brand top of mind.",
@@ -86,18 +86,18 @@ const EmailMarketingLearnMore = () => {
       />
 
       <ServicesGrid services={servicesToRender} title={title} subtitle={subtitle} buttonText={buttonText} buttonLink={buttonLink} />
- 
- 
-      <CaseStudiesSection/>
-<Form 
-  headerTitle="Ready to Turn Emails Into Revenue?"
-  headerDescription="Let's build email campaigns that not only connect — but convert."
-  showContactInfo={false}
-  submitButtonText="Submit"
-  servicesPlaceholder="Email Marketing" 
-/>
 
- 
+
+      <CaseStudiesSection />
+      <Form
+        headerTitle="Ready to Turn Emails Into Revenue?"
+        headerDescription="Let's build email campaigns that not only connect — but convert."
+        showContactInfo={false}
+        submitButtonText="Submit"
+        servicesPlaceholder="Email Marketing"
+      />
+
+
     </div>
   );
 };

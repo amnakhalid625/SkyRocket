@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 import { motion } from 'framer-motion'; 
 import Articles from '../components/Articles';
 import dotIcon from '../assets/images/dot-icon.svg';
@@ -270,13 +269,13 @@ const SEOWebDesignBlog = ({
           subsection.content.map((content, i) => {
             if (typeof content === 'string') {
               return (
-                <p key={i} className="mb-4 text-secondaryTextColor font-medium text-lg leading-relaxed">
+                <p key={i} className="mb-4 text-secondaryTextColor font-medium text-base md:text-lg leading-relaxed">
                   {renderProcessedContent(processContent(content))}
                 </p>
               );
             } else if (content.listItems) {
               return (
-                <ul key={i} className="list-disc pl-6 mb-4 space-y-2 text-secondaryTextColor font-medium text-lg">
+                <ul key={i} className="list-disc pl-6 mb-4 space-y-2 text-secondaryTextColor font-medium text-base md:text-lg">
                   {content.listItems.map((item, idx) => (
                     <li key={idx} className="leading-relaxed">
                       {renderProcessedContent(processContent(item))}
@@ -288,7 +287,7 @@ const SEOWebDesignBlog = ({
             return null;
           })
         ) : (
-          <p className="mb-4 text-secondaryTextColor font-medium text-lg leading-relaxed">
+          <p className="mb-4 text-secondaryTextColor font-medium text-base md:text-lg leading-relaxed">
             {renderProcessedContent(processContent(subsection.content))}
           </p>
         )}
@@ -307,18 +306,19 @@ const SEOWebDesignBlog = ({
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         {section.heading && (
-          <h3 className="text-2xl md:text-3xl lg:text-[40px] font-light text-textColor mb-6 tracking-tight leading-tight">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-light text-textColor mb-6 tracking-tight leading-tight">
             <strong>{section.heading}</strong>
           </h3>
         )}
 
         {/* Show image right after heading if it exists */}
         {section.image && (
-          <div className="my-6 rounded-xl overflow-hidden shadow-lg">
+          <div className="my-6 rounded-xl overflow-hidden ">
             <img
               src={section.image}
               alt={section.heading}
               className="w-full h-auto object-cover"
+              loading="lazy"
             />
           </div>
         )}
@@ -326,7 +326,7 @@ const SEOWebDesignBlog = ({
         {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
           <p 
             key={`p-${pIndex}`} 
-            className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed"
+            className="mb-6 text-secondaryTextColor font-medium text-base md:text-lg leading-relaxed"
           >
             {renderProcessedContent(processContent(paragraph))}
           </p>
@@ -335,7 +335,7 @@ const SEOWebDesignBlog = ({
         {section.subSections && renderSubSections(section.subSections)}
 
         {section.listItems && (
-          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
+          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-base md:text-lg">
             {section.listItems.map((item, lIndex) => (
               <li key={`li-${lIndex}`} className="leading-relaxed">
                 {renderProcessedContent(processContent(item))}
@@ -345,7 +345,7 @@ const SEOWebDesignBlog = ({
         )}
 
         {section.subText && (
-          <p className="text-secondaryTextColor font-medium text-lg mb-6">
+          <p className="text-secondaryTextColor font-medium text-base md:text-lg mb-6">
             {renderProcessedContent(processContent(section.subText))}
           </p>
         )}
@@ -369,26 +369,27 @@ const SEOWebDesignBlog = ({
           >
             {category}
           </motion.div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-textColor mb-6 max-w-5xl mx-auto mt-5 leading-wider tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-medium text-textColor mb-6 max-w-5xl mx-auto mt-5 leading-wider tracking-tight">
             {title}
           </h1>
-          <p className="text-lg text-secondaryTextColor font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-secondaryTextColor font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
 
           {/* Author & Date */}
-          <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 mb-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 mb-8 md:mb-12">
             <div className="flex items-center space-x-3 mb-4 sm:mb-0">
               <img
                 src={author.image}
                 alt={author.name}
                 className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                loading="lazy"
               />
               <span className="text-secondaryTextColor font-medium">{author.name}</span>
             </div>
             <div className="flex items-center space-x-2">
               <img src={dotIcon} alt="dot" className="hidden sm:block" />
-              <img src={calendarIcon} alt="calendar" className="h-6 w-6" />
+              <img src={calendarIcon} alt="calendar" className="h-5 w-5" />
               <span className="font-medium text-secondaryTextColor text-sm sm:text-base">
                 {publishDate}
               </span>
@@ -398,7 +399,7 @@ const SEOWebDesignBlog = ({
 
         {/* Featured Image */}
         <motion.div 
-          className="mb-12 md:mb-16"
+          className="mb-8 md:mb-12 lg:mb-16"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -406,7 +407,8 @@ const SEOWebDesignBlog = ({
           <img
             src={featuredImage}
             alt={title}
-            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl shadow-lg"
+            className="w-full h-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl md:rounded-2xl "
+            loading="lazy"
           />
         </motion.div>
 
@@ -416,26 +418,25 @@ const SEOWebDesignBlog = ({
         </div>
 
         {/* Related Articles Section */}
-        {showRelatedArticles && (
-          <motion.div 
-            className="mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className='text-3xl p-4 sm:text-4xl md:text-[56px] font-medium text-textColor mb-8 sm:mb-10 leading-tight tracking-tight'>
-              Related Articles
-            </h2>
-            <div className="">
-              <Articles blogPosts={defaultBlogPosts} />
-            </div>
-          </motion.div>
-        )}
+{showRelatedArticles && (
+  <motion.div 
+    className="mt-12 md:mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
+    <h2 className='text-4xl md:text-[56px] font-medium text-textColor mb-6 sm:mb-8 md:mb-10 leading-tight tracking-tight px-2'>
+      Related Articles
+    </h2>
+    <div className="px-2 sm:px-0">
+      <Articles blogPosts={defaultBlogPosts} />
+    </div>
+  </motion.div>
+)}
       </div>
 
       <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
-      <Footer />
     </>
   );
 };

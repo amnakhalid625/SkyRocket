@@ -7,7 +7,6 @@ import calendarIcon from '../assets/images/calendar-icon.svg';
 import mem2 from '../assets/images/member3.webp';
 import featureImg from '../assets/images/rightWebDesingImg.jpg';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 import seoImg from '../assets/images/blogCard1.avif';
 import seoImgTwo from '../assets/images/blog1.jpg';
@@ -311,11 +310,11 @@ const ChooseRightAgencyBlog = ({
 
         {/* Show image right after heading if it exists */}
         {section.image && (
-          <div className="my-6 rounded-xl overflow-hidden shadow-lg">
+          <div className="my-6 rounded-xl overflow-hidden">
             <img
               src={section.image}
               alt={section.heading}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto max-h-[400px] md:max-h-[500px] object-cover"
             />
           </div>
         )}
@@ -323,14 +322,14 @@ const ChooseRightAgencyBlog = ({
         {section.paragraphs && section.paragraphs.map((paragraph, pIndex) => (
           <p 
             key={`p-${pIndex}`} 
-            className="mb-6 text-secondaryTextColor font-medium text-lg leading-relaxed"
+            className="mb-6 text-secondaryTextColor font-medium text-base md:text-lg leading-relaxed"
           >
             {renderProcessedContent(processContent(paragraph))}
           </p>
         ))}
 
         {section.listItems && (
-          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-lg">
+          <ul className="list-disc pl-6 mb-8 space-y-3 text-secondaryTextColor font-medium text-base md:text-lg">
             {section.listItems.map((item, lIndex) => (
               <li key={`li-${lIndex}`} className="leading-relaxed">
                 {renderProcessedContent(processContent(item))}
@@ -340,7 +339,7 @@ const ChooseRightAgencyBlog = ({
         )}
 
         {section.subText && (
-          <p className="text-secondaryTextColor font-medium text-lg mb-6">
+          <p className="text-secondaryTextColor font-medium text-base md:text-lg mb-6">
             {renderProcessedContent(processContent(section.subText))}
           </p>
         )}
@@ -401,7 +400,7 @@ const ChooseRightAgencyBlog = ({
           <img
             src={featuredImage}
             alt={title}
-            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl shadow-lg"
+            className="w-full h-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl md:rounded-2xl"
           />
         </motion.div>
 
@@ -413,16 +412,16 @@ const ChooseRightAgencyBlog = ({
         {/* Related Articles Section */}
         {showRelatedArticles && (
           <motion.div 
-            className="mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
+            className="mt-12 md:mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className='text-3xl p-4 sm:text-4xl md:text-[56px] font-medium text-textColor mb-8 sm:mb-10 leading-tight tracking-tight'>
+            <h2 className='text-3xl md:text-[56px] font-medium text-textColor mb-6 sm:mb-8 md:mb-10 leading-tight tracking-tight px-2'>
               Related Articles
             </h2>
-            <div className="">
+            <div className="px-2 sm:px-0">
               <Articles blogPosts={defaultBlogPosts} />
             </div>
           </motion.div>
@@ -430,7 +429,6 @@ const ChooseRightAgencyBlog = ({
       </div>
 
       <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
-      <Footer />
     </>
   );
 };

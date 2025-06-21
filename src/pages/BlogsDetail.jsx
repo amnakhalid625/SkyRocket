@@ -5,7 +5,6 @@ import BlogCards from '../components/BlogCard';
 import Articles from '../components/Articles';
 import BlogCategoryFilter from '../components/ButtonLine';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 
 import blog1 from '../assets/images/seoTwo.jpg';
@@ -122,7 +121,7 @@ const BlogsDetail = () => {
         </div>
 
         {/* Contact Section */}
-        <section className="px-4 sm:px-6 md:padding-global pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+        <section className="px-4 sm:px-6 md:padding-global pb-5 sm:pb-5 md:pb-5 lg:pb-10">
           <div className="mx-auto max-w-7xl">
             <Contact
               headingText="Unleash Your Brand's Potential with Skyrocket!"
@@ -131,7 +130,6 @@ const BlogsDetail = () => {
           </div>
         </section>
 
-        <Footer />
       </section>
     </>
   );

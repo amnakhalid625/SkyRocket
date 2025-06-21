@@ -7,7 +7,6 @@ import calendarIcon from '../assets/images/calendar-icon.svg';
 import mem2 from '../assets/images/member3.webp';
 import featureImg from '../assets/images/seo.png';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 import seoImg from '../assets/images/blog2.jpg';
 import seoImgTwo from '../assets/images/rightWebDesingImg.jpg';
@@ -339,7 +338,7 @@ const SeoStrategy = ({
 
         {/* Only show image after point 2 */}
         {section.showImage && (
-          <div className="my-8 rounded-xl overflow-hidden shadow-lg">
+          <div className="my-8 rounded-xl overflow-hidden ">
             <img
               src={groupImg}
               alt="Detroit SEO Keywords"
@@ -404,7 +403,7 @@ const SeoStrategy = ({
           <img
             src={featuredImage}
             alt={title}
-            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl shadow-lg"
+            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl "
           />
         </motion.div>
 
@@ -432,26 +431,25 @@ const SeoStrategy = ({
         </div>
 
         {/* Related Articles Section */}
-        {showRelatedArticles && (
-          <motion.div 
-            className="mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className='text-3xl p-4 sm:text-4xl md:text-[56px] font-medium text-textColor mb-8 sm:mb-10 leading-tight tracking-tight'>
-              Related Articles
-            </h2>
-            <div className="">
-              <Articles blogPosts={defaultBlogPosts} />
-            </div>
-          </motion.div>
-        )}
+     {showRelatedArticles && (
+  <motion.div 
+    className="mt-12 md:mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
+    <h2 className='text-4xl md:text-[56px] font-medium text-textColor mb-6 sm:mb-8 md:mb-10 leading-tight tracking-tight px-2'>
+      Related Articles
+    </h2>
+    <div className="px-2 sm:px-0">
+      <Articles blogPosts={defaultBlogPosts} />
+    </div>
+  </motion.div>
+)}
       </div>
 
       <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
-      <Footer />
     </>
   );
 };

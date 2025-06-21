@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
+import { motion } from 'framer-motion';
 import Articles from '../components/Articles';
 import dotIcon from '../assets/images/dot-icon.svg';
 import calendarIcon from '../assets/images/calendar-icon.svg';
 import mem1 from '../assets/images/member1.webp';
 import featureImg from '../assets/images/blog3.jpg';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 import seoImg from '../assets/images/rightWebDesingImg.jpg';
 import seoImgTwo from '../assets/images/blog1.jpg';
@@ -284,7 +284,7 @@ const WebDesignPost = ({
           <img
             src={featuredImage}
             alt={title}
-            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl shadow-md"
+            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl "
           />
         </div>
 
@@ -306,20 +306,25 @@ const WebDesignPost = ({
         </div>
 
         {/* Related Articles Section */}
-        {showRelatedArticles && (
-          <div className="mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2">
-            <h2 className='text-3xl p-4 sm:text-4xl md:text-[56px] font-medium text-textColor mb-8 sm:mb-10 leading-tight tracking-tight'>
-              Related Articles
-            </h2>
-            <div className="">
-              <Articles blogPosts={defaultBlogPosts} />
-            </div>
-          </div>
-        )}
+       {showRelatedArticles && (
+  <motion.div 
+    className="mt-12 md:mt-16 max-w-[90rem] px-4 sm:px-4 lg:px-2"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+  >
+    <h2 className='text-4xl md:text-[56px] font-medium text-textColor mb-6 sm:mb-8 md:mb-10 leading-tight tracking-tight px-2'>
+      Related Articles
+    </h2>
+    <div className="px-2 sm:px-0">
+      <Articles blogPosts={defaultBlogPosts} />
+    </div>
+  </motion.div>
+)}
       </div>
 
       <Contact headingText="Unleash Your Brand's Potential with Catalysty!" />
-      <Footer />
     </>
   );
 };

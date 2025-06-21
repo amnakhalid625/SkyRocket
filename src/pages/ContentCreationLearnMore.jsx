@@ -2,7 +2,6 @@ import Hero from "../components/Hero";
 import ServicesGrid from "../components/ServicesGrid";
 import CaseStudiesSection from "../components/CaseStudySection";
 import Form from "../components/Form";
-import Footer from "../components/Footer";
 
 import batchImg from "../assets/images/batch.svg";
 import puzzleImg from "../assets/images/puzzle.svg";
