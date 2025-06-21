@@ -36,6 +36,9 @@ export default {
       screens: {
         'custom-md': '982px',
       },
+      fontWeight:
+      {
+        'light': 330,}
     },
   },
   plugins: [],
