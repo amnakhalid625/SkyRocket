@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import navArrow from '../assets/images/NavArrow.svg';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
@@ -25,6 +26,11 @@ const Navbar = () => {
     { name: 'Blog', to: '/blogs' },
     { name: 'Contact', to: '/contact-us' },
   ];
+
+  // Check if a nav link is active
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <>
@@ -74,7 +80,9 @@ const Navbar = () => {
               <Link 
                 key={item.name} 
                 to={item.to} 
-                className="hover:text-accent transition-colors duration-200 ease-in-out"
+                className={`hover:text-accent transition-colors duration-200 ease-in-out ${
+                  isActive(item.to) ? 'text-accent' : ''
+                }`}
               >
                 {item.name}
               </Link>
@@ -85,7 +93,9 @@ const Navbar = () => {
           <div className="flex">
             <Link 
               to="/contact-us" 
-              className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
+              className={`group flex items-center space-x-2 ${
+                isActive('/contact-us') ? 'bg-accent' : 'bg-secondary hover:bg-hoverColor'
+              } text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out`}
             >
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 Contact Us
@@ -131,7 +141,9 @@ const Navbar = () => {
                 key={item.name} 
                 to={item.to} 
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-4 text-2xl text-textColor hover:text-accent transition-colors duration-200"
+                className={`block py-4 text-2xl ${
+                  isActive(item.to) ? 'text-accent' : 'text-textColor hover:text-accent'
+                } transition-colors duration-200`}
               >
                 {item.name}
               </Link>
