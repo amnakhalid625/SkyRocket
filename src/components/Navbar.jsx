@@ -89,13 +89,11 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Contact Button */}
+          {/* Contact Button - Fixed to always show same color */}
           <div className="flex">
             <Link 
               to="/contact-us" 
-              className={`group flex items-center space-x-2 ${
-                isActive('/contact-us') ? 'bg-accent' : 'bg-secondary hover:bg-hoverColor'
-              } text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out`}
+              className="group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
             >
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 Contact Us
