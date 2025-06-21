@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import AboutMap from './AboutMap';
-import Footer from './Footer';
 import Form from './Form';
 
 const ContactForm = () => {
@@ -14,7 +13,6 @@ const ContactForm = () => {
 
 <Form />
       <AboutMap />
-      <Footer />
     </>
   );
 };

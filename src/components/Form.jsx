@@ -3,7 +3,6 @@ import linkedin from '../assets/images/contactLinkedIn.svg';
 import Fb from '../assets/images/contactfb.svg';
 import insta from '../assets/images/contactInsta.svg';
 import twitter from '../assets/images/contactTwitter.svg';
-import { motion } from 'framer-motion';
 import Swal from 'sweetalert2';
 
 const Form = ({
@@ -39,17 +38,11 @@ const Form = ({
   });
 
   return (
-    <div className=" md:min-h-[40vh] py-20 mt-10 bg-white mx-auto px-6 sm:px-10 lg:px-20">
+    <div className="md:min-h-[40vh] py-20 mt-10 bg-white mx-auto px-6 sm:px-10 lg:px-20">
       <div className="max-w-[83rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Column */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
+          <div className="space-y-8">
             <div>
               <div className="inline-block bg-secondary text-textColor px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
                 {headerTag}
@@ -96,16 +89,10 @@ const Form = ({
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
 
           {/* Right Column (Form) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="lg:pl-8 pb-0 sm:pb-8"
-          >
+          <div className="lg:pl-8 pb-0 sm:pb-8">
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-base font-medium text-secondaryTextColor mb-2">
@@ -199,16 +186,14 @@ const Form = ({
                 />
               </div>
 
-              <motion.button
+              <button
                 type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="w-full bg-secondary hover:bg-hoverColor text-textColor text-lg font-medium py-3 px-6 rounded-full transition-colors duration-200"
               >
                 {submitButtonText}
-              </motion.button>
+              </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

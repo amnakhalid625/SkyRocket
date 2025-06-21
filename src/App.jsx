@@ -30,6 +30,7 @@ import ChooseRighAgencyBlog from "./pages/ChooseRighAgencyBlog";
 import SEOWebDesingBlog from "./pages/SEOWebDesingBlog";
 import CommonWebDesignMistakesBlog from "./pages/CommonWebDesignMistakesBlog";
 import Footer from "./components/Footer";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -71,6 +72,8 @@ function App() {
 
         <Route path="/team" element={<TeamMemberProfile />} />
         <Route path="/team/:memberName" element={<TeamMemberProfile />} />
+
+          <Route path="*" element={<NotFoundPage/>} />
 
 
 
