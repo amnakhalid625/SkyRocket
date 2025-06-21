@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
+  // Automatically scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-md w-full text-center">
@@ -28,7 +33,13 @@ const NotFoundPage = () => {
         {/* Optional: Contact Support */}
         <div className="mt-8">
           <p className="text-secondaryTextColor mb-2">
-            Need help? <Link to="/contact-us" className="text-primary underline">Contact our support team</Link>
+            Need help? <Link 
+              to="/contact-us" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-primary underline"
+            >
+              Contact our support team
+            </Link>
           </p>
         </div>
       </div>

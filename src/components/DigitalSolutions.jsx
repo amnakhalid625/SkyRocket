@@ -89,7 +89,6 @@ const ServicesSection = () => {
         },
     ];
 
-    // Create a motion-enhanced Link component
     const MotionLink = motion(Link);
 
     return (
@@ -126,7 +125,7 @@ const ServicesSection = () => {
                         OUR SERVICES
                     </motion.div>
                     <motion.h1
-                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight px-2 break-words"
+                        className="text-3xl  md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-white mb-3 sm:mb-4 md:mb-6 lg:mb-8 leading-tight px-2 break-words"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
@@ -134,7 +133,7 @@ const ServicesSection = () => {
                         Skyrocket Your Business with All-in-One Digital Solutions
                     </motion.h1>
                     <motion.p
-                        className="text-sm sm:text-base md:text-lg lg:text-[18px] text-white max-w-xs sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words"
+                        className="text-base sm:text-base md:text-lg lg:text-[18px] text-white max-w-base sm:max-w-lg md:max-w-2xl mx-auto tracking-tightest mb-6 sm:mb-8 px-2 break-words"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
@@ -153,7 +152,7 @@ const ServicesSection = () => {
                         return (
                             <motion.div
                                 key={service.id}
-                                className={`services-wrap rounded-2xl sm:rounded-3xl transition-all duration-300 transform hover:scale-[1.01] shadow-lg hover:shadow-xl overflow-hidden ${isOpen ? 'bg-secondary' : 'bg-white'
+                                className={` rounded-2xl sm:rounded-3xl   hover:scale-[1.01] shadow-lg hover:shadow-xl overflow-hidden ${isOpen ? 'bg-secondary' : 'bg-white'
                                     }`}
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -162,7 +161,7 @@ const ServicesSection = () => {
                                 whileTap={{ scale: 0.99 }}
                             >
                                 <motion.div
-                                    className="services-heading-wrap flex justify-between items-center p-3 sm:p-8 md:p-6 lg:p-8 xl:p-10 cursor-pointer"
+                                    className="services-heading-wrap flex justify-between items-center p-4 sm:p-8 md:p-6 lg:p-8 xl:p-10 cursor-pointer"
                                     onClick={() => toggleService(index)}
                                 >
                                     <div className="services-heading-left flex items-center flex-1 min-w-0">
@@ -179,7 +178,7 @@ const ServicesSection = () => {
                                             className="heading-style-h3 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-medium text-textColor pr-2 break-words min-w-0 flex-1"
                                             initial={{ opacity: 0, x: -10 }}
                                             animate={{ opacity: 1, x: 0 }}
-                                            transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
+                                            transition={{ duration: 0.2, delay: 0.9 + index * 0.1 }}
                                         >
                                             {service.title}
                                         </motion.h3>

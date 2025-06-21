@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import linkedin from '../assets/images/contactLinkedIn.svg';
 import Fb from '../assets/images/contactfb.svg';
 import insta from '../assets/images/contactInsta.svg';
@@ -38,11 +39,16 @@ const Form = ({
   });
 
   return (
-    <div className="md:min-h-[40vh] py-20 mt-10 bg-white mx-auto px-6 sm:px-10 lg:px-20">
-      <div className="max-w-[83rem] mx-auto">
+    <div className="md:min-h-[40vh] py-10 mt-10 bg-white mx-auto px-6 sm:px-10 lg:px-20">
+      <div className="max-w-[80rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column */}
-          <div className="space-y-8">
+          {/* Left Column with animation */}
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <div>
               <div className="inline-block bg-secondary text-textColor px-4 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
                 {headerTag}
@@ -89,10 +95,15 @@ const Form = ({
                 </div>
               </div>
             )}
-          </div>
+          </motion.div>
 
-          {/* Right Column (Form) */}
-          <div className="lg:pl-8 pb-0 sm:pb-8">
+          {/* Right Column (Form) with animation */}
+          <motion.div
+            className="lg:pl-8 pb-0 sm:pb-8"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-base font-medium text-secondaryTextColor mb-2">
@@ -193,7 +204,7 @@ const Form = ({
                 {submitButtonText}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
