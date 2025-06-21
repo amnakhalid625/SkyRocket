@@ -11,7 +11,7 @@ const Contact = ({
   headingText = 'Skyrocket Results with Marketing That Makes Sense!',
 }) => {
   return (
-    <div className="section-cta py-20 ">
+    <section className="section-cta py-20">
       <div className="px-4 sm:px-6">
         <div className="max-w-[83rem] mx-auto">
           <div
@@ -25,16 +25,14 @@ const Contact = ({
                 backgroundPosition: 'right center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'contain',
-                right: '0',
-                transformOrigin: 'right center',
               }}
             ></div>
 
             {/* Text Content */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: 'easeOut' }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
               className="cta-content relative z-10 text-center lg:text-left"
             >
@@ -45,7 +43,7 @@ const Contact = ({
                 {headingText}
               </h2>
               <div className="max-w-lg mx-auto lg:mx-0">
-                <p className=" text-lg leading-relaxed mb-8 text-white tracking-tight">
+                <p className="text-lg leading-relaxed mb-8 text-white tracking-tight">
                   Join the hundreds of satisfied clients who have transformed their business with Skyrocket Business. Contact us today to get started!
                 </p>
               </div>
@@ -53,27 +51,24 @@ const Contact = ({
 
             {/* Button Group */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
               className="button-group relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-end items-center lg:items-end text-center"
             >
               <Link
                 to="/contact-us"
-
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
-                className=" font-medium group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 100); 
+}}
 
-
-
+                className="font-medium group flex items-center space-x-2 bg-secondary hover:bg-hoverColor text-textColor px-5 py-3 rounded-full transition-all duration-300 ease-in-out"
               >
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
-
                   Get in Touch
-
                 </span>
                 <img
                   src={arrowIcon}
@@ -81,21 +76,24 @@ const Contact = ({
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                 />
               </Link>
+
               <Link
                 to={secondButtonHref}
                 className={secondButtonClassName}
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }}
+              onClick={() => {
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, 100); 
+}}
+
               >
                 {secondButtonText}
               </Link>
-
             </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
