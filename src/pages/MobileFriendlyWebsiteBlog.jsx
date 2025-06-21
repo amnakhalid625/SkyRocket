@@ -262,7 +262,7 @@ const MobileFriendlyWebsiteBlog = ({
           <img
             src={featuredImage}
             alt={title}
-            className="w-full h-auto sm:h-80 md:h-96 lg:h-[31.25rem] object-cover rounded-[24px] md:rounded-2xl "
+            className="w-full h-auto sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-xl md:rounded-2xl  "
           />
         </motion.div>
 
