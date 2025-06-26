@@ -13,7 +13,7 @@ import seoImgTwo from '../assets/images/seoThree.jpg';
 import seoImgThree from '../assets/images/seoTwo.jpg';
 import goalImg from '../assets/images/personClean.jpg';
 import personClean from '../assets/images/personClean2.jpg';
-import addToCart from '../assets/images/addToCard.jpg';
+import addToCart from '../assets/images/addtoCard.jpg';
 import clutteredImg from '../assets/images/clutteredImg.jpg';
 import CTAImg from '../assets/images/CTA.jpg';
 
