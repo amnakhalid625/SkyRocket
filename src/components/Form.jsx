@@ -32,17 +32,60 @@ const Form = ({
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    companyName: '',
+    company: '',
     services: '',
     budget: '',
     message: ''
   });
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formDataToSend = new FormData(e.target);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        Swal.fire({
+          title: "Good job!",
+          text: "Message sent successfully!",
+          icon: "success"
+        });
+        e.target.reset();
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          services: '',
+          budget: '',
+          message: ''
+        });
+      } else {
+        throw new Error(result.message || 'Submission failed.');
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        text: error.message || 'Something went wrong!'
+      });
+    }
+  };
+
   return (
     <div className="md:min-h-[40vh] py-10 mt-10 bg-white mx-auto px-6 sm:px-10 lg:px-20">
       <div className="max-w-[80rem] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column with animation */}
+          {/* Left Column */}
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -30 }}
@@ -75,7 +118,6 @@ const Form = ({
                     {phone}
                   </a>
                 </div>
-
                 <div className="col-span-2">
                   <h3 className="font-semibold text-textColor mb-3">Follow us!</h3>
                   <div className="flex space-x-4">
@@ -97,14 +139,16 @@ const Form = ({
             )}
           </motion.div>
 
-          {/* Right Column (Form) with animation */}
+          {/* Right Column (Form) */}
           <motion.div
             className="lg:pl-8 pb-0 sm:pb-8"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="access_key" value="ad14a798-144a-4cad-ae51-67054cc247ac" />
+
               <div>
                 <label htmlFor="name" className="block text-base font-medium text-secondaryTextColor mb-2">
                   {nameLabel}
@@ -113,9 +157,11 @@ const Form = ({
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                 />
               </div>
 
@@ -129,20 +175,22 @@ const Form = ({
                     id="email"
                     name="email"
                     value={formData.email}
+                    onChange={handleChange}
                     placeholder="abc@company.com"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                     required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   />
                 </div>
                 <div>
-                  <label htmlFor="companyName" className="block text-base font-medium text-secondaryTextColor mb-2">
+                  <label htmlFor="company" className="block text-base font-medium text-secondaryTextColor mb-2">
                     {companyLabel}
                   </label>
                   <input
                     type="text"
-                    id="companyName"
-                    name="companyName"
-                    value={formData.companyName}
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     placeholder="ABC Corp."
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   />
@@ -158,6 +206,8 @@ const Form = ({
                     id="services"
                     name="services"
                     value={formData.services}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white"
                   >
                     <option value="">{servicesPlaceholder}</option>
@@ -175,6 +225,7 @@ const Form = ({
                     id="budget"
                     name="budget"
                     value={formData.budget}
+                    onChange={handleChange}
                     placeholder="$500-$5,000"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg"
                   />
@@ -189,11 +240,12 @@ const Form = ({
                   id="message"
                   name="message"
                   value={formData.message}
+                  onChange={handleChange}
                   placeholder="Write Your Message..."
                   rows={5}
                   maxLength={5000}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-vertical"
                   required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-vertical"
                 />
               </div>
 
